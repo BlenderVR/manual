@@ -1,0 +1,32 @@
+# generic files to ignore
+.*
+
+# python temp paths
+__pycache__/
+*.py[cod]
+_venv/
+venv/
+
+
+# editors
+*~
+*.swp
+*.swo
+*#
+*.sublime-project
+*.sublime-workspace
+
+# ms-windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# commonly used paths for generation
+/html
+/_html
+/manual/contents_quicky.rst
+
+# local patches
+/*.patch
+/*.diff
+
