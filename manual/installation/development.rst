@@ -59,7 +59,7 @@ Required for Blender development
 Quick Setup
 -----------
 
-This quick setup assume you have the requirements installed, and doesn't provide the explanation of what you are doing.
+Type the following commands in your terminal. If you are developing in Windows we recommend you to use Power Shell or similar.
 
 .. code-block:: bash
 
