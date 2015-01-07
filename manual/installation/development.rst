@@ -67,9 +67,10 @@ Type the following commands in your terminal. If you are developing in Windows w
   $ pip install virtualenv
   $ virtualenv venv
   $ source venv/bin/activate
-  $ pip requirements -r requirements.txt
   $ pyside_postinstall.py -install
   $ git clone https://github.com/BlenderVR/blender-vr.git
+  $ pip requirements -r blender-vr/requirements.txt
+  $ deactivate
 
 
 Getting Samples
@@ -102,4 +103,5 @@ Acquiring Blender
 Blender-VR requires a modified version of `Blender <http://www.blender.org>`_. You can download a pre-compiled version of Blender for your system
 
 
+To simply download the Blender required to your platform check the `User Installation <installation.html#acquiring-blender>`_ guide.
 Most of the time you won't need to modify and rebuild Blender, so those instructions are specified separately.

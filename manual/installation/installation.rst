@@ -6,7 +6,7 @@ In order to install Blender-VR you need this guide.
 
 .. note ::
 
-  If you need the full development setup make sure to follow the `Development Environment <development>`_ guide.
+  If you need the full development setup make sure to follow the `Development Environment <development.html>`_ guide.
 
 
 Document Sections
