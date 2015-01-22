@@ -100,8 +100,7 @@ Alternatively if you want to access the repository via GIT you can do::
 Acquiring Blender
 -----------------
 
-Blender-VR requires a modified version of `Blender <http://www.blender.org>`_. You can download a pre-compiled version of Blender for your system
+Blender-VR requires a vanilla Blender 2.74 or newer.
+If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_. 
 
-
-To simply download the Blender required to your platform check the `User Installation <installation.html#acquiring-blender>`_ guide.
-Most of the time you won't need to modify and rebuild Blender, so those instructions are specified separately.
+To download the Blender required to your platform check the `User Installation <installation.html#acquiring-blender>`_ guide.

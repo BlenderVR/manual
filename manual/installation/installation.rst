@@ -47,8 +47,8 @@ All Time Mandatory
 ******************
 
 * `Python <http://www.python.org/>`_
-* `Blender-VR Sources <http://www.dalaifelinto.com/ftp/blender-vr/blender-vr.zip>`_ (download and unzip in the top folder)
-* `Blender Binary <Acquiring Blender>`_ (download and uncompress in the top folder)
+* `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it to **blender-vr**)
+* `Blender Binary <#acquiring-blender>`_ (download and uncompress in the top folder, rename it to **blender**)
 
 
 Required for Interface Development
@@ -78,15 +78,13 @@ Type the following commands in your terminal. If you are in Windows we recommend
 Acquiring Blender
 -----------------
 
-*At this moment there is no patched Linux or Windows builds available. In those cases after you download and uncompress Blender you need to rename the folder to* **blender** *for consistency.*
+Blender-VR requires `Blender 2.74 <http://www.blender.org/download>`_ or newer. Optionally you can use  a patched version of Blender 2.73a available here for all the supported platforms.
 
-Blender-VR requires a modified version of `Blender <http://www.blender.org>`_. You can download a pre-compiled version of Blender for your system
-
-* `Mac OSX 64 bit: Blender 2.72 Patched <http://www.dalaifelinto.com/ftp/blender-vr/blender/blender-272-patch-osx.zip>`_. [1]_
-* `Windows 32 bit: Blender 2.72 Official <http://mirror.cs.umn.edu/blender.org/release/Blender2.72/blender-2.72b-windows32.zip>`_. [2]_
-* `Windows 64 bit: Blender 2.72 Official <http://mirror.cs.umn.edu/blender.org/release/Blender2.72/blender-2.72b-windows64.zip>`_. [2]_
-* `Linux 32 bit: *Blender 2.72 Official <http://mirror.cs.umn.edu/blender.org/release/Blender2.72/blender-2.72b-linux-glibc211-i686.tar.bz2>`_. [3]_
-* `Linux 64 bit: *Blender 2.72 Official <http://mirror.cs.umn.edu/blender.org/release/Blender2.72/blender-2.72b-linux-glibc211-x86_64.tar.bz2>`_. [3]_
+* `Mac OSX 64 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/blender-2.73-5c6ef95-OSX-10.6-x86_64.zip>`_. [1]_
+* `Windows 32 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/https://builder.blender.org/download/blender-2.73-5c6ef95-win32.zip>`_. [2]_
+* `Windows 64 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/blender-2.73-5c6ef95-win64.zip>`_. [2]_
+* `Linux 32 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/blender-2.73-5c6ef95-linux-glibc211-i686.tar.bz2>`_. [3]_
+* `Linux 64 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/blender-2.73-5c6ef95-linux-glibc211-x86_64.tar.bz2>`_. [3]_
 
 .. [1] Requires Mac OSX 10.6+
 .. [2] Compatible with Windows 8, 7, Vista. If Blender reports an error on startup, please install the `Visual C++ 2013 Redistributable Package <http://www.microsoft.com/en-us/download/details.aspx?id=40784>`_.
