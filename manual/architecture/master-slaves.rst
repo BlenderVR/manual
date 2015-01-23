@@ -29,7 +29,7 @@ Slaves
 Playing blender animations on slaves has been reported to conflict with the update
 coming from the master and may produces flicking.
 
-To avoid that (and restrict calculation of scene updates), slave nodes are suspended (`bge.logic.getCurrentScene().suspend()`) during Blender-VR runs.
+To avoid that (and restrict calculation of scene updates), slave nodes are suspended (``bge.logic.getCurrentScene().suspend()``) during Blender-VR runs.
 
-Even if you `resume()` the scene, the next execution of `Blender-VR` will `suspend()` it on the slaves.
+Even if you ``resume()`` the scene, the next execution of Blender-VR will ``suspend()`` it on the slaves.
 
