@@ -4,8 +4,7 @@ Open Sound Control (OSC)
 
 .. note ::
 
-  Document need to be reviewed. The download engine needs to be hosted in the new site.
-  Also the documentation need to be tested to see if it is still valid.
+  Document need to be reviewed. Also the documentation need to be tested to see if it is still valid.
 
 OSC is a protocol used to send / receive data through applications. See
 http://opensoundcontrol.org.
@@ -30,3 +29,12 @@ etc.), the rest of the sound adding process takes place in Blender-VR.
 
 See ``samples/BlenderCave_OSC.blend`` and ``samples/BlenderCave_OSC_API.blend``
 LIMSI members, see http://wikivenise.limsi.fr/index.php/Open_Sound_Control .
+
+Downloads
+---------
+
+* `Blender-VR Sound Rendering Engine (.zip) <http://dalaifelinto.com/blendervr/ftp/blendervr_sound_rendering_engine_v4.zip>`_ version 4
+
+This is an example of a flexible sound rendering engine developed under MaxMSP which is fully controlled from the OSC messages received from BlenderCave.
+
+One may obviously use it with any other software (it's all about dynamic autonomous instantiations, should be modified to be used as a simple GUI Sound Rendering Engine).
