@@ -11,6 +11,21 @@ By default (and you should not change it) this file is in the same folder than t
 
 Refer to the `Complete API <http://blender-vr.readthedocs.org>`_ for all the available commands and funcionality.
 
+Document Sections
+-----------------
+
+  * `Minimal Processor File`_
+  * `Basic Processor File`_
+  * `Debugging Processor Through Log Messages`_
+  * `Keyboard and Mouse`_
+  * `Choose Objects to Synchronize`_
+  * `Processor Inheritance`_
+  * `Master-Slaves Communication`_
+  * `Stream: Processor as Synchronized Object`_
+  * `One-Shot: Specifically Send a Data`_
+  * `Run() Method`_
+  * `Console-"Virtual Environment" Communication`_
+
 Minimal Processor File
 ----------------------
 
@@ -149,7 +164,7 @@ Stream: Processor as Synchronized Object
 ----------------------------------------
 
 You can register your processor as a synchronized object.
-As such, at each frame, the synchronizer will ask the master's processor (through ``getSynchronizerBuffer()`` method) the buffer to send to the slaves. Then, if the buffer is not empty (getSynchronizerBuffer() doesn't return ``None``), each slave, __in the same frame__, will receive it through its ``processSynchronizerBuffer()`` method.
+As such, at each frame, the synchronizer will ask the master's processor (through ``getSynchronizerBuffer()`` method) the buffer to send to the slaves. Then, if the buffer is not empty (getSynchronizerBuffer() doesn't return ``None``), each slave, *in the same frame*, will receive it through its ``processSynchronizerBuffer()`` method.
 
 To register your processor, you must call from the constructor of your "virtual environment" processor:
 

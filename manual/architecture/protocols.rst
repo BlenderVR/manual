@@ -4,6 +4,13 @@ UI ↔ Daemon Network Protocol
 
 First of all, to avoid problem of paths resolutions, the UI must run in the same context (computer and user), than the daemon.
 
+Document Sections
+-----------------
+
+  * `Base Protocol`_
+  * `Get/Set Settings`_
+  * `Simulation`_
+
 Base Protocol
 -------------
 

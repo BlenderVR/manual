@@ -10,6 +10,21 @@ To simplify, the ``console`` is run by the user, use PySide but cannot import ``
 
 From the `processor file <processor-file.html>`_ perspective there is even a third mode, the ``update loader``. This mode is a glue between the previous ones. In the ``update loader`` the ``.blend`` file is changed on-the-fly so when it runs into the ``virtual environment`` it interacts with the ``console`` and with eventual interaction devices.
 
+Document Sections
+-----------------
+
+* `Console`_
+
+  * `Configuration File`_
+  * `Active Screen Set`_
+  * `Simulation File`_
+  * `Start/Stop`_
+  * `Debug Window per Screen`_
+  * `Standard/Error Outputs`_
+  * `Log Level`_
+
+* `Daemons`_
+
 Console
 -------
 

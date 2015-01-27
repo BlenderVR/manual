@@ -10,8 +10,17 @@ OSC is a protocol used to send / receive data through applications. See
 http://opensoundcontrol.org.
 
 Blender-VR includes a MaxMSP (http://cycling74.com) Sound Rendering Engine
-available at http://blendercave.limsi.fr/doku.php. It is however possible (and advised) to
+available at `Downloads`_. It is however possible (and advised) to
 make it work with any other OSC client and fathom it for other purposes.
+
+Document Sections
+-----------------
+
+  * `Interaction Setup`_
+  * `Downloads`_
+
+Interaction Setup
+-----------------
 
 While the OSC API allows to easily send OSC (UDP) flags, the MaxMSP associated
 Sound Rendering Engine has been design to receive an process these flags.

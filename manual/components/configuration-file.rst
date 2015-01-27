@@ -10,6 +10,18 @@ It also includes a ``blenderVR`` section which only option is the network port u
 .. note::
   Use of space in ``screen`` name should work. Beware still Windows users.
 
+Document Sections
+-----------------
+
+  * `Redundant Sections`_
+  * `Code Execution`_
+  * `Starter Section`_
+  * `Anchor`_
+  * `Users Section`_
+  * `Computers Section`_
+  * `Screens Section`_
+  * `Sample Configuration File`_
+
 Redundant Sections
 ------------------
 

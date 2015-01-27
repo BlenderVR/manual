@@ -14,7 +14,16 @@ In Blender-VR, the receiving of VRPN messages and definition of associated metho
 is done in the ``<blender_scene_name>.processor.py`` script attached to a scene (see
 examples in the `samples <../installation/installation.html#getting-samples>`_ folder).
 
-To be able to interact in your blenderCAVE scene with a VRPN compatible interface you
+Document Sections
+-----------------
+
+  * `Interaction Setup`_
+  * `Example with a Nintendo Wii Controller`_
+
+Interaction Setup
+----------------------
+
+To be able to interact in your Blender-VR scene with a VRPN compatible interface you
 will have to:
 
   1. Define the interface in your ``vprn.cfg`` script
