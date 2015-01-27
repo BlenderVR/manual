@@ -2,9 +2,19 @@
 Development
 ############
 
-.. note ::
+The Blender-VR project is open-source and open for external collaboration.
 
-  Document to be written.
+Links
+-----
+
+* `All Repositories <https://github.com/BlenderVR>`_
+* `Source Code Repository <https://github.com/BlenderVR/blender-vr>`_
+* `Manual Repository <https://github.com/BlenderVR/manual>`_
+* `Samples Repository <https://github.com/BlenderVR/samples>`_
+* `Bug List <https://github.com/BlenderVR/blender-vr/issues>`_
+
+Development Documents
+----------------------
 
 .. toctree::
    :maxdepth: 1
