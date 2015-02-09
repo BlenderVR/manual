@@ -44,10 +44,13 @@ Example with a Nintendo Wii Controller
 .. code:: xml
 
   <processor>
-    <vrpn>
-      <analog name="WiiMote0" host="<vrpnServer@>" processor_method="wiiAnalog"/>
-      <button name="WiiMote0" host="<vrpnServer@>" processor_method="wiiButton"/>
-    </vrpn>
+    (...)
+    <plugins>
+      <vrpn>
+        <analog name="WiiMote0" host="localhost" processor_method="wiiAnalog"/>
+        <button name="WiiMote0" host="localhost" processor_method="wiiButton"/>
+      </vrpn>
+    </plugins>
   </processor>
 
 *Analog will receive accelerometer data from the WiiMote, button only the pressed button states.*
@@ -56,11 +59,19 @@ Example with a Nintendo Wii Controller
 
 .. code:: python
 
-  def wiiAnalog(self, info):
-    print ("Analog from Wii through VPRN ", info)
+  import blendervr
 
-  def wiiButton(self, info):
-    print ("Button from Wii through VPRN ", info)
+  if blendervr.is_virtual_environment():
+    import bge
+
+    class Processor(blendervr.processor.getProcessor()):
+      (...)
+
+      def wiiAnalog(self, info):
+        print ("Analog from Wii through VPRN ", info)
+
+      def wiiButton(self, info):
+        print ("Button from Wii through VPRN ", info)
 
 Here, both functions will be executed whenever the VRPN server receives data from the
 WiiMote (the wiiButton when your touch a button, the wiiAnalog when you move the
