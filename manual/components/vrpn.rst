@@ -47,8 +47,8 @@ Example with a Nintendo Wii Controller
     (...)
     <plugins>
       <vrpn>
-        <analog name="WiiMote0" host="localhost" processor_method="wiiAnalog"/>
-        <button name="WiiMote0" host="localhost" processor_method="wiiButton"/>
+        <analog device="WiiMote0" host="localhost" processor_method="wiiAnalog"/>
+        <button device="WiiMote0" host="localhost" processor_method="wiiButton"/>
       </vrpn>
     </plugins>
   </processor>
