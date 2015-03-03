@@ -40,7 +40,11 @@ Some elements can be specific to one node, other shared. For instance, the ``ble
       </system>
     </computer>
     <computer name='left computer' hostname='left.fqdn' />
-    <computer name='right computer' hostname='right.fqdn' />
+    <computer name='right computer' hostname='right.fqdn'>
+      <system>
+        <library path='/usr/local/lib/vrpn/' />
+      </system>
+    </computer>
   </computers>
 
 In this example, ``left computer`` and ``right computer`` nodes will use ``/usr/local/blender/2.74/bin/blenderplayer`` whereas ``front computer`` node will use ``/usr/bin/blenderplayer``.
@@ -190,6 +194,31 @@ The ``root`` parameter specifies the root path of blenderVR (where resides the `
 owever, due to `not homogenous paths between nodes <#anchor>`_, you may have to define it for each system.
 
 See `Anchor <#anchor>`_ to know the purpose of anchor parameter.
+
+Library Path Sub-Section
+========================
+
+Plugins often relies on external libraries. If the library is not bundled in the ``blenderplayer`` python folder, the library folder can be specified with the ``library`` element.
+If any library is defined in a system section, they all must be defined.
+
+In the example below both OSC and VRPN library folders are specified for the OSX system, while the Linux stations shared the same system as defined in the top of the ``computers`` section.
+
+.. code:: xml
+
+  <computers>
+    <system>
+      <library path="/usr/local/lib/vrpn/" />
+      <library path="/usr/local/lib/osc/" />
+    </system>
+    <computer name='OSX station' hostname='mac'>
+      <system>
+        <library path="/User/dev/vrpn/build/python/" />
+        <library path="/User/dev/osc/lib/" />
+      </system>
+    </computer>
+    <computer name='Linux station A' hostname='linux_a' />
+    <computer name='Linux station B' hostname='linux_b' />
+  </computers>
 
 Login Sub-Section
 =================

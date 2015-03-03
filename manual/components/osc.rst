@@ -24,19 +24,28 @@ Interaction Setup
 
 While the OSC API allows to easily send OSC (UDP) flags, the MaxMSP associated
 Sound Rendering Engine has been design to receive an process these flags.
-Once you’ve opened the Blender-VR_Sound_Rendering_Engine_vX.maxpat on the
-OSC server as defined in the ``.xml`` configuration file
+Once you’ve opened the ``Blender-VR_Sound_Rendering_Engine_vX.maxpat`` on the
+OSC server as defined in the ``.xml`` configuration file:
 
 .. code:: xml
 
   <processor>
-    <osc host='serverName' port='3819'/>
+    (...)
+    <plugins>
+      <osc host='serverName' port='3819'/>
+        <user listener='Binaural 1' viewer='user A' />
+        <user listener='Ambisonic' />
+      </osc>
+    </plugins>
   </processor>
 
-and modified it to fit to your needs (spatializer, speakers mapping, microphone inputs,
+And modified it to fit to your needs (spatializer, speakers mapping, microphone inputs,
 etc.), the rest of the sound adding process takes place in Blender-VR.
 
-See ``samples/BlenderCave_OSC.blend`` and ``samples/BlenderCave_OSC_API.blend``
+.. note::
+  You also need to specify the folder containing your osc library in the `configuration file <configuration-file.html#library-path-sub-section>`__.
+
+See ``samples/BlenderCave_OSC.blend`` and ``samples/BlenderCave_OSC_API.blend``.
 LIMSI members, see http://wikivenise.limsi.fr/index.php/Open_Sound_Control .
 
 Downloads
