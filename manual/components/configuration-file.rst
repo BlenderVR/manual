@@ -45,7 +45,7 @@ Some elements can be specific to one node, other shared. For instance, the ``ble
 
 In this example, ``left computer`` and ``right computer`` nodes will use ``/usr/local/blender/2.74/bin/blenderplayer`` whereas ``front computer`` node will use ``/usr/bin/blenderplayer``.
 
-The ``system`` section is called //rendundant// as many entries will use the same information
+The ``system`` section is called *rendundant* as many entries will use the same information.
 
 
 Code Execution
