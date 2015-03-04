@@ -48,7 +48,7 @@ Required for Interface Development
 *At this moment those packages are always required, but the plans are to make them optional.*
 
 * `PIP <https://pip.pypa.io/en/latest/installing.html>`_
-* `QT 4.8 <https://qt-project.org/downloads#qt-lib/>`_
+* `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
 
 
 Required for Blender development
@@ -64,12 +64,12 @@ Type the following commands in your terminal. If you are developing in Windows w
 .. code-block:: bash
 
   $ cd $INSTALL_DIR
-  $ pip install virtualenv
-  $ virtualenv venv
+  $ pip3 install virtualenv
+  $ pyvenv venv
   $ source venv/bin/activate
-  $ pyside_postinstall.py -install
   $ git clone https://github.com/BlenderVR/blender-vr.git
-  $ pip requirements -r blender-vr/requirements.txt
+  $ pip3 install -r blender-vr/requirements.txt
+  $ pyside_postinstall.py -install
   $ deactivate
 
 

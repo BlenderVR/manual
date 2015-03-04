@@ -59,7 +59,8 @@ Required for Interface Development
 * `PIP <https://pip.pypa.io/en/latest/installing.html>`_
 * `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
 
-*MacOS: open Qt.mpkg with "mouse right click -> open" to avoid popup window "can't install, non identified developer"*
+.. note::
+  MacOS: open Qt.mpkg with mouse right click -> Open, to avoid popup window "can't install, non identified developer".
 
 Quick Setup
 -----------
@@ -75,7 +76,8 @@ Type the following commands in your terminal. If you are in Windows we recommend
   $ pip3 install -r blender-vr/requirements.txt
   $ pyside_postinstall.py -install
 
-*MacOS: running these lines may popup a notification window asking to "download the command line developer tools", go for it*
+.. note::
+  MacOS: running these lines may popup window "download the command line developer tools", go for it.
 
 Acquiring Blender
 -----------------
