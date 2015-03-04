@@ -11,7 +11,7 @@ In order to install Blender-VR you need this guide.
 
 Document Sections
 -----------------
-* `Folders Structure`_
+* `Folder Structure`_
 * `Requirements`_
 * `Quick Setup`_
 * `Acquiring Blender`_
@@ -59,6 +59,7 @@ Required for Interface Development
 * `PIP <https://pip.pypa.io/en/latest/installing.html>`_
 * `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
 
+*MacOS: open Qt.mpkg with "mouse right click -> open" to avoid popup window "can't install, non identified developer"*
 
 Quick Setup
 -----------
@@ -74,7 +75,7 @@ Type the following commands in your terminal. If you are in Windows we recommend
   $ pip3 install -r blender-vr/requirements.txt
   $ pyside_postinstall.py -install
 
-*On MacOS: running these lines may popup a notification window asking to "download the command line developer tools", go for it*
+*MacOS: running these lines may popup a notification window asking to "download the command line developer tools", go for it*
 
 Acquiring Blender
 -----------------

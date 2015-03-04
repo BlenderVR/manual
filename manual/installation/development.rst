@@ -8,13 +8,13 @@ Most of the time you won't need to modify and rebuild Blender, so those instruct
 
 Document Sections
 -----------------
-* `Folders Structure`_
+* `Folder Structure`_
 * `Requirements`_
 * `Quick Setup`_
 * `Getting Samples`_
 * `Acquiring Blender`_
 
-Folders Structure
+Folder Structure
 -----------------
 ``//blender-vr/``
 *Blender-VR Source Code*
@@ -101,6 +101,6 @@ Acquiring Blender
 -----------------
 
 Blender-VR requires a vanilla Blender 2.74 or newer.
-If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_. 
+If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_.
 
 To download the Blender required to your platform check the `User Installation <installation.html#acquiring-blender>`_ guide.
