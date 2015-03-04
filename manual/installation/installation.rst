@@ -19,7 +19,7 @@ Document Sections
 * `Running`_
 
 
-Folders Structure
+Folder Structure
 -----------------
 
 After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual.e
@@ -57,7 +57,7 @@ Required for Interface Development
 *At this moment those packages are always required, but the plans are to make them optional.*
 
 * `PIP <https://pip.pypa.io/en/latest/installing.html>`_
-* `QT 4.8 <https://qt-project.org/downloads#qt-lib/>`_
+* `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
 
 
 Quick Setup
@@ -68,12 +68,13 @@ Type the following commands in your terminal. If you are in Windows we recommend
 .. code-block:: bash
 
   $ cd $INSTALL_DIR
-  $ pip install virtualenv
-  $ virtualenv venv
+  $ pip3 install virtualenv
+  $ pyvenv venv
   $ source venv/bin/activate
-  $ pip requirements -r blender-vr/requirements.txt
+  $ pip3 install -r blender-vr/requirements.txt
   $ pyside_postinstall.py -install
 
+*On MacOS: running these lines may popup a notification window asking to "download the command line developer tools", go for it*
 
 Acquiring Blender
 -----------------
