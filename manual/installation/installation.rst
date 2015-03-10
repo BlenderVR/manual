@@ -1,6 +1,6 @@
-==================
-Installation Guide
-==================
+=================
+Install BlenderVR
+=================
 
 In order to install Blender-VR you need this guide.
 
@@ -12,17 +12,17 @@ In order to install Blender-VR you need this guide.
 Document Sections
 -----------------
 * `Folder Structure`_
-* `Requirements`_
-* `Quick Setup`_
 * `Acquiring Blender`_
-* `Getting Samples`_
+* `Acquiring BlenderVR and Basic sample scenes`_
+* `Install dependecies`_
+* `Quick Setup`_
 * `Running`_
 
 
 Folder Structure
------------------
+----------------
 
-After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual.e
+After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual.
 
 ``//blender-vr/``
 *Blender-VR Source Code*
@@ -36,53 +36,11 @@ After all the downloads and installations you should end up with the following f
 ``//venv/``
 *Python Virtual Environment*
 
-
-Requirements
-------------
-.. _requirements:
-
-Install those packages or make sure you have them in your system.
-
-All Time Mandatory
-******************
-
-* `Python <http://www.python.org/>`_
-* `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it to **blender-vr**)
-* `Blender Binary <#acquiring-blender>`_ (download and uncompress in the top folder, rename it to **blender**)
-
-
-Required for Interface Development
-**********************************
-
-*At this moment those packages are always required, but the plans are to make them optional.*
-
-* `PIP <https://pip.pypa.io/en/latest/installing.html>`_
-* `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
-
-.. note::
-  MacOS: open Qt.mpkg with mouse right click -> Open, to avoid popup window "can't install, non identified developer".
-
-Quick Setup
------------
-
-Type the following commands in your terminal. If you are in Windows we recommend you to use Power Shell or similar.
-
-.. code-block:: bash
-
-  $ cd $INSTALL_DIR
-  $ pip3 install virtualenv
-  $ pyvenv venv
-  $ source venv/bin/activate
-  $ pip3 install -r blender-vr/requirements.txt
-  $ pyside_postinstall.py -install
-
-.. note::
-  MacOS: running these lines may popup window "download the command line developer tools", go for it.
-
 Acquiring Blender
 -----------------
 
-Blender-VR requires `Blender 2.74 <http://www.blender.org/download>`_ or newer. Optionally you can use  a patched version of Blender 2.73a available here for all the supported platforms.
+Blender-VR requires `Blender 2.74 <http://www.blender.org/download>`_ or newer.
+Optionally you can use  a patched version of Blender 2.73a available here for all the supported platforms.
 
 * `Mac OSX 64 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/blender-2.73-5c6ef95-OSX-10.6-x86_64.zip>`_. [1]_
 * `Windows 32 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/https://builder.blender.org/download/blender-2.73-5c6ef95-win32.zip>`_. [2]_
@@ -94,9 +52,10 @@ Blender-VR requires `Blender 2.74 <http://www.blender.org/download>`_ or newer. 
 .. [2] Compatible with Windows 8, 7, Vista. If Blender reports an error on startup, please install the `Visual C++ 2013 Redistributable Package <http://www.microsoft.com/en-us/download/details.aspx?id=40784>`_.
 .. [3] Requires glibc 2.11. Suits most recent GNU/Linux distributions
 
+Acquiring BlenderVR and Basic sample scenes
+-------------------------------------------
 
-Getting Samples
----------------
+* `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it to **blender-vr**)
 
 Before getting started is recommended to look at the available samples.
 The basic sample should help testing if everything was installed correctly, as well as testing the configuration file of your VR lab.
@@ -117,16 +76,85 @@ To check which samples are available visit the `Samples Repository <https://gith
 (Or simply `svn checkout` the required sample with SVN Tortoise).
 
 
+Install dependecies
+-------------------
+
+Install those packages or make sure you have them in your system.
+
+All Time Mandatory
+******************
+
+* `Python <http://www.python.org/>`_
+
+
+Required for Interface Development
+**********************************
+
+*At this moment those packages are always required, but the plans are to make them optional.*
+
+* `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
+* `PIP <https://pip.pypa.io/en/latest/installing.html>`_ (the Python install should have installed pip, we advise you to try to use it in the `Quick Setup <#quick-setup>`_ section and install it if it's indeed uninstalled)
+
+.. note::
+  MacOS: open Qt.mpkg with mouse right click -> Open, to avoid popup window "can't install, non identified developer".
+
+Quick Setup
+-----------
+
+Type the following commands in your terminal. If you are in Windows we recommend you to use Power Shell or similar.
+
+On OSX/Linux:
+
+.. code-block:: bash
+
+  $ cd $INSTALL_DIR
+  $ pip3 install virtualenv
+  $ pyvenv venv
+  $ source venv/bin/activate
+  $ pip3 install -r blender-vr/requirements.txt
+  $ pyside_postinstall.py -install
+
+.. note::
+  MacOS: running these lines may popup window "download the command line developer tools", go for it.
+
+On Windows:
+
+.. code-block:: bash
+
+  $ cd $INSTALL_DIR
+  $ pip3 install virtualenv
+  $ virtualenv venv
+  $ .\\venv\\Scripts\\activate
+  $ pip3 install -r blender-vr/requirements.txt
+  $ python3 .\\venv\\Scripts\\pyside_postinstall.py -install
+  $ python3 .\\blender-vr\\blenderVR
+
+You may have to add the path to the python binary, e.g.
+
+.. code-block:: bash
+
+  $ [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\\Python34\\;C:\\Python34\\Scripts\\")
+
 Running
 -------
 
 Type the following commands in your terminal. If you are in Windows we recommend you to use Power Shell or similar.
+
+On OSX/Linux:
 
 .. code-block:: bash
 
   $ cd $INSTALL_DIR
   $ source venv/bin/activate
   $ ./blender-vr/blenderVR
+
+On Windows:
+
+.. code-block:: bash
+
+  $ cd $INSTALL_DIR
+  $ .\\venv\\Scripts\\activate
+  $ python3 .\\blender-vr\\blenderVR
 
 You should now see a window popping up. Congratulations your installation was a success. Once you are done running Blender-VR you can end the virtual environment:
 

@@ -1,8 +1,11 @@
-====================================
-Development Environment Installation
-====================================
+=======================================
+Install for Future BlenderVR Developers
+=======================================
 
-This guide walks you over the basic steps of setting up a development environment for Blender-VR.
+This guide walks you over the basic steps of setting up a development environment for BlenderVR.
+
+.. note ::
+  For casual BlenderVR users, please refer to the `Install BlenderVR <installation.html>`_ page.
 
 Most of the time you won't need to modify and rebuild Blender, so those instructions are specified separately.
 
