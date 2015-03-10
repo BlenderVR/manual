@@ -93,10 +93,11 @@ Required for Interface Development
 *At this moment those packages are always required, but the plans are to make them optional.*
 
 * `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
-* `PIP <https://pip.pypa.io/en/latest/installing.html>`_ (the Python install should have installed pip, we advise you to try to use it in the `Quick Setup <#quick-setup>`_ section and install it if it's indeed uninstalled)
+* `PIP <https://pip.pypa.io/en/latest/installing.html>`_ (the Python install should have installed pip, try to use it in the next Section before installing)
 
 .. note::
   MacOS: open Qt.mpkg with mouse right click -> Open, to avoid popup window "can't install, non identified developer".
+
 
 Quick Setup
 -----------
@@ -124,16 +125,16 @@ On Windows:
   $ cd $INSTALL_DIR
   $ pip3 install virtualenv
   $ virtualenv venv
-  $ .\\venv\\Scripts\\activate
+  $ .\venv\Scripts\activate
   $ pip3 install -r blender-vr/requirements.txt
-  $ python3 .\\venv\\Scripts\\pyside_postinstall.py -install
-  $ python3 .\\blender-vr\\blenderVR
+  $ python3 .\venv\Scripts\pyside_postinstall.py -install
+  $ python3 .\blender-vr\blenderVR
 
 You may have to add the path to the python binary, e.g.
 
 .. code-block:: bash
 
-  $ [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\\Python34\\;C:\\Python34\\Scripts\\")
+  $ [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python34\;C:\Python34\Scripts\")
 
 Running
 -------
@@ -153,8 +154,8 @@ On Windows:
 .. code-block:: bash
 
   $ cd $INSTALL_DIR
-  $ .\\venv\\Scripts\\activate
-  $ python3 .\\blender-vr\\blenderVR
+  $ .\venv\Scripts\activate
+  $ python3 .\blender-vr\blenderVR
 
 You should now see a window popping up. Congratulations your installation was a success. Once you are done running Blender-VR you can end the virtual environment:
 
