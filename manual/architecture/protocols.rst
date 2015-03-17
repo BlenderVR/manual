@@ -1,6 +1,11 @@
 ============================
-UI ↔ Daemon Network Protocol
+UI - Daemon Network Protocol
 ============================
+
+.. DPQ removed, failed latex compilation
+.. ============================
+.. UI ↔ Daemon Network Protocol
+.. ============================
 
 First of all, to avoid problem of paths resolutions, the UI must run in the same context (computer and user), than the daemon.
 

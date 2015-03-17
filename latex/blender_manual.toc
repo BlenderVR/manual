@@ -1,0 +1,98 @@
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Installation}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Install BlenderVR}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Document Sections}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Folder Structure}{1}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Acquiring Blender}{1}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Acquiring BlenderVR}{2}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Download Samples Scenes}{2}{subsection.1.1.5}
+\contentsline {subsection}{\numberline {1.1.6}Install dependecies}{2}{subsection.1.1.6}
+\contentsline {subsubsection}{All Time Mandatory}{2}{subsubsection*.3}
+\contentsline {subsection}{\numberline {1.1.7}Quick Setup}{2}{subsection.1.1.7}
+\contentsline {subsection}{\numberline {1.1.8}Running}{3}{subsection.1.1.8}
+\contentsline {section}{\numberline {1.2}Install for Future blenderVR Developers}{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Document Sections}{5}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Acquiring Blender}{5}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Acquiring BlenderVR}{5}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Download Samples Scenes}{5}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Requirements}{6}{subsection.1.2.5}
+\contentsline {subsubsection}{All Time Mandatory}{6}{subsubsection*.5}
+\contentsline {subsubsection}{Required for Interface Development}{6}{subsubsection*.6}
+\contentsline {subsection}{\numberline {1.2.6}Quick Setup and Running}{6}{subsection.1.2.6}
+\contentsline {chapter}{\numberline {2}First Run}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Document Sections}{7}{section.2.1}
+\contentsline {section}{\numberline {2.2}Launch Blender-VR}{7}{section.2.2}
+\contentsline {section}{\numberline {2.3}Open the Simulation File}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Edit the Configuration File}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Run}{8}{section.2.5}
+\contentsline {chapter}{\numberline {3}How to Use}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}User Interface}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Document Sections}{9}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Console}{9}{subsection.3.1.2}
+\contentsline {subsubsection}{Configuration File}{10}{subsubsection*.7}
+\contentsline {subsubsection}{Active Screen Set}{10}{subsubsection*.8}
+\contentsline {subsubsection}{Simulation File}{10}{subsubsection*.9}
+\contentsline {subsubsection}{Start/Stop}{10}{subsubsection*.10}
+\contentsline {subsubsection}{Debug Window per Screen}{10}{subsubsection*.11}
+\contentsline {subsubsection}{Standard/Error Outputs}{11}{subsubsection*.12}
+\contentsline {subsubsection}{Log Level}{11}{subsubsection*.13}
+\contentsline {subsection}{\numberline {3.1.3}Daemons}{11}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Processor File}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Document Sections}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Minimal Processor File}{12}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Basic Processor File}{13}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Debugging Processor Through Log Messages}{13}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Keyboard and Mouse}{14}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Choose Objects to Synchronize}{14}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Processor Inheritance}{14}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Master-Slaves Communication}{15}{subsection.3.2.8}
+\contentsline {subsection}{\numberline {3.2.9}Stream: Processor as Synchronized Object}{15}{subsection.3.2.9}
+\contentsline {subsection}{\numberline {3.2.10}One-Shot: Specifically Send a Data}{15}{subsection.3.2.10}
+\contentsline {subsection}{\numberline {3.2.11}Run() Method}{15}{subsection.3.2.11}
+\contentsline {subsection}{\numberline {3.2.12}Console-``Virtual Environment'' Communication}{16}{subsection.3.2.12}
+\contentsline {section}{\numberline {3.3}Configuration File}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Document Sections}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Redundant Sections}{16}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Code Execution}{17}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Starter Section}{17}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Anchor}{18}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Users Section}{18}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Computers Section}{18}{subsection.3.3.7}
+\contentsline {subsubsection}{System Section}{19}{subsubsection*.14}
+\contentsline {subsubsection}{Library Path Sub-Section}{19}{subsubsection*.15}
+\contentsline {subsubsection}{Login Sub-Section}{19}{subsubsection*.16}
+\contentsline {subsubsection}{Daemon Sub-Section}{20}{subsubsection*.17}
+\contentsline {subsubsection}{Blenderplayer Sub-Section}{20}{subsubsection*.18}
+\contentsline {subsection}{\numberline {3.3.8}Screens Section}{20}{subsection.3.3.8}
+\contentsline {subsection}{\numberline {3.3.9}Sample Configuration File}{21}{subsection.3.3.9}
+\contentsline {section}{\numberline {3.4}Virtual Reality Private Network (VRPN)}{23}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Document Sections}{23}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Interaction Setup}{23}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Example with a Nintendo Wii Controller}{23}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Open Sound Control (OSC)}{24}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Document Sections}{24}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Interaction Setup}{24}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Downloads}{25}{subsection.3.5.3}
+\contentsline {chapter}{\numberline {4}Architecture}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Master and Slaves}{26}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Document Sections}{26}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Master}{26}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Slaves}{26}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Notion of Vehicle}{27}{section.4.2}
+\contentsline {section}{\numberline {4.3}UI - Daemon Network Protocol}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Document Sections}{27}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Base Protocol}{27}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Get/Set Settings}{28}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Simulation}{28}{subsection.4.3.4}
+\contentsline {chapter}{\numberline {5}Development}{29}{chapter.5}
+\contentsline {section}{\numberline {5.1}Links}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Development Documents}{29}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Documentation}{29}{subsection.5.2.1}
+\contentsline {subsubsection}{Document Sections:}{29}{subsubsection*.19}
+\contentsline {subsubsection}{Language and Format}{29}{subsubsection*.20}
+\contentsline {subsubsection}{Requirements}{30}{subsubsection*.21}
+\contentsline {subsubsection}{Quick Setup}{30}{subsubsection*.22}
+\contentsline {subsubsection}{How to Build}{30}{subsubsection*.23}
+\contentsline {paragraph}{User Manual}{30}{paragraph*.24}
+\contentsline {paragraph}{Souce Code API}{30}{paragraph*.25}
+\contentsline {subsubsection}{How to Edit}{30}{subsubsection*.26}

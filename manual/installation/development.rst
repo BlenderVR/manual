@@ -46,7 +46,7 @@ To download the latest blenderVR git version (master HEAD):
 If you do not intend to modify blenderVR source code, simply download the `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
 
 Download Samples Scenes
-----------------------
+-----------------------
 
 Regarding blenderVR samples, Git is not a good system to work on binary files, so it's recommended to use the SVN protocol to interact with the samples repository instead:
 
