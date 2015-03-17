@@ -1,85 +1,51 @@
 =======================================
-Install for Future BlenderVR Developers
+Install for Future blenderVR Developers
 =======================================
 
-This guide walks you over the basic steps of setting up a development environment for BlenderVR.
+This guide walks you over the basic steps of setting up a development environment for blenderVR.
 
 .. note ::
-  For casual BlenderVR users, please refer to the `Install BlenderVR <installation.html>`_ page.
+  For casual blenderVR users, please refer to the `Install blenderVR <installation.html>`_ page.
+
+The install is the same than described in `Install blenderVR <installation.html>`_ but for:
+
+* git clone of the blenderVR repository, to freely modify and eventually commit your modifications.
+* svn/git clone of the blenderVR samples, to eventually add your own demo scenes to the blenderVR samples repository
+* manual compilation of Blender, if you need to modify its source code.
 
 Most of the time you won't need to modify and rebuild Blender, so those instructions are specified separately.
 
 Document Sections
 -----------------
-* `Folder Structure`_
-* `Requirements`_
-* `Quick Setup`_
-* `Getting Samples`_
 * `Acquiring Blender`_
+* `Acquiring BlenderVR and Basic sample scenes`_
+* `Requirements`_
+* `Quick Setup and Running`_
 
-Folder Structure
+
+Acquiring Blender
 -----------------
-``//blender-vr/``
-*Blender-VR Source Code*
 
-``//blender/``
-*Blender Binaries*
+Blender-VR requires a vanilla Blender 2.74 or newer.
 
-``//samples/``
-*Blender-VR Samples*
+If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_.
 
-``//venv/``
-*Python Virtual Environment*
+Else, download the sources provided in `Acquiring Blender <installation.html#acquiring-blender>`_.
 
 
-Requirements
-------------
-.. _requirements:
+Acquiring BlenderVR and Basic sample scenes
+-------------------------------------------
 
-Install those packages or make sure you have them in your system.
-
-All Time Mandatory
-******************
-
-* `GIT <http://git-scm.com/>`_
-* `Python <http://www.python.org/>`_
-
-
-Required for Interface Development
-**********************************
-
-*At this moment those packages are always required, but the plans are to make them optional.*
-
-* `PIP <https://pip.pypa.io/en/latest/installing.html>`_
-* `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
-
-
-Required for Blender development
-********************************
-
-*Many packages, listed separately.*
-
-Quick Setup
------------
-
-Type the following commands in your terminal. If you are developing in Windows we recommend you to use Power Shell or similar.
+To download the latest blenderVR git version (master HEAD):
 
 .. code-block:: bash
 
-  $ cd $INSTALL_DIR
-  $ pip3 install virtualenv
-  $ pyvenv venv
-  $ source venv/bin/activate
   $ git clone https://github.com/BlenderVR/blender-vr.git
-  $ pip3 install -r blender-vr/requirements.txt
-  $ pyside_postinstall.py -install
-  $ deactivate
+
+If you do not intend to modify blenderVR source code, simply download the `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
 
 
-Getting Samples
----------------
-
-Git is not a good system to work on binary files, so it's recommended to use the SVN protocol to interact with this repository instead.
+Regarding blenderVR samples, Git is not a good system to work on binary files, so it's recommended to use the SVN protocol to interact with the samples repository instead:
 
 .. code-block:: bash
 
@@ -100,10 +66,28 @@ Alternatively if you want to access the repository via GIT you can do::
   $ git clone https://github.com/BlenderVR/samples.git
 
 
-Acquiring Blender
------------------
+Requirements
+------------
+.. _requirements:
 
-Blender-VR requires a vanilla Blender 2.74 or newer.
-If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_.
+Install those packages or make sure you have them in your system.
 
-To download the Blender required to your platform check the `User Installation <installation.html#acquiring-blender>`_ guide.
+All Time Mandatory
+******************
+
+* `GIT <http://git-scm.com/>`_
+* `Python <http://www.python.org/>`_
+
+
+Required for Interface Development
+**********************************
+
+*At this moment the following packages are always required, but the plans are to make them optional.*
+
+* `PIP <https://pip.pypa.io/en/latest/installing.html>`_
+* `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
+
+Quick Setup and Running
+-----------------------
+
+see `Quick Setup and Running <installation.html#quick-setup>`_ in the Install blenderVR Section.

@@ -22,7 +22,7 @@ Document Sections
 Folder Structure
 ----------------
 
-After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual.
+After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual (the directory holding these files is  referred as $INSTALL_DIR in the next sections).
 
 ``//blender-vr/``
 *Blender-VR Source Code*
@@ -55,11 +55,9 @@ Optionally you can use  a patched version of Blender 2.73a available here for al
 Acquiring BlenderVR and Basic sample scenes
 -------------------------------------------
 
-* `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it to **blender-vr**)
+* `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it **blender-vr**)
 
-Before getting started is recommended to look at the available samples.
-The basic sample should help testing if everything was installed correctly, as well as testing the configuration file of your VR lab.
-The other samples are to be used as reference to develop other VR projects.
+Before getting started, you'll probably want to take a look at the available blenderVR ".blend" sample scenes.
 
 * Download `All Samples <https://github.com/BlenderVR/samples/archive/master.zip>`_
 
@@ -86,11 +84,7 @@ All Time Mandatory
 
 * `Python <http://www.python.org/>`_
 
-
-Required for Interface Development
-**********************************
-
-*At this moment those packages are always required, but the plans are to make them optional.*
+*Future developments will make the following packages optional:*
 
 * `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
 * `PIP <https://pip.pypa.io/en/latest/installing.html>`_ (the Python install should have installed pip, try to use it in the next Section before installing)
@@ -102,7 +96,7 @@ Required for Interface Development
 Quick Setup
 -----------
 
-Type the following commands in your terminal. If you are in Windows we recommend you to use Power Shell or similar.
+Type the following commands in your terminal. If you are in Windows we recommend you to use `Power Shell <https://technet.microsoft.com/en-us/scriptcenter/default>`_ or similar.
 
 On OSX/Linux:
 
@@ -126,7 +120,7 @@ On Windows:
   $ pip3 install virtualenv
   $ virtualenv venv
   $ .\venv\Scripts\activate
-  $ pip3 install -r blender-vr/requirements.txt
+  $ pip3 install -r blender-vr\requirements.txt
   $ python3 .\venv\Scripts\pyside_postinstall.py -install
   $ python3 .\blender-vr\blenderVR
 
@@ -136,10 +130,12 @@ You may have to add the path to the python binary, e.g.
 
   $ [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python34\;C:\Python34\Scripts\")
 
+*(For PowerShell to automatically add this path at startup, add this line to a file named e.g. profile.ps1 that you'll place in your WindowsPowerShell directory)*
+
 Running
 -------
 
-Type the following commands in your terminal. If you are in Windows we recommend you to use Power Shell or similar.
+Type the following commands in your terminal. If you are in Windows we recommend you to use `Power Shell <https://technet.microsoft.com/en-us/scriptcenter/default>`_ or similar.
 
 On OSX/Linux:
 
@@ -157,7 +153,14 @@ On Windows:
   $ .\venv\Scripts\activate
   $ python3 .\blender-vr\blenderVR
 
-You should now see a window popping up. Congratulations your installation was a success. Once you are done running Blender-VR you can end the virtual environment:
+You should now see the blenderVR window popping up (see figure below). Congratulations your installation was a success!
+
+.. figure:: /images/user-interface.jpg
+  :width: 300px
+  :figwidth: 300px
+  :align: center
+
+Once you are done running Blender-VR you can end the virtual environment running the command:
 
 .. code-block:: bash
 

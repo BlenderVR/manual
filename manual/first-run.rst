@@ -16,7 +16,7 @@ Document Sections
 Launch Blender-VR
 -----------------
 
-Start by `running Blender-VR <installation/installation.html#running>`_. Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
+Start by opening the blenderVR GUI (see `running Blender-VR <installation/installation.html#running>`_). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
 
 Open the Simulation File
 ------------------------
