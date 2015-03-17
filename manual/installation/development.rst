@@ -79,7 +79,7 @@ All Time Mandatory
 ******************
 
 * `GIT <http://git-scm.com/>`_
-* `Python <http://www.python.org/>`_
+* `Python 3.4 <https://www.python.org/downloads/release/python-343/>`_
 
 
 Required for Interface Development

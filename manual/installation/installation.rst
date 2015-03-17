@@ -86,7 +86,7 @@ Install those packages or make sure you have them in your system.
 All Time Mandatory
 ******************
 
-* `Python <http://www.python.org/>`_
+* `Python 3.4 <https://www.python.org/downloads/release/python-343/>`_
 
 *Future developments will make the following packages optional:*
 
