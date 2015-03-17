@@ -13,7 +13,8 @@ Document Sections
 -----------------
 * `Folder Structure`_
 * `Acquiring Blender`_
-* `Acquiring BlenderVR and Basic sample scenes`_
+* `Acquiring BlenderVR`_
+* `Download Samples Scenes`_
 * `Install dependecies`_
 * `Quick Setup`_
 * `Running`_
@@ -52,10 +53,13 @@ Optionally you can use  a patched version of Blender 2.73a available here for al
 .. [2] Compatible with Windows 8, 7, Vista. If Blender reports an error on startup, please install the `Visual C++ 2013 Redistributable Package <http://www.microsoft.com/en-us/download/details.aspx?id=40784>`_.
 .. [3] Requires glibc 2.11. Suits most recent GNU/Linux distributions
 
-Acquiring BlenderVR and Basic sample scenes
--------------------------------------------
+Acquiring BlenderVR
+-------------------
 
 * `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it **blender-vr**)
+
+Download Samples Scenes
+-----------------------
 
 Before getting started, you'll probably want to take a look at the available blenderVR ".blend" sample scenes.
 
@@ -155,9 +159,9 @@ On Windows:
 
 You should now see the blenderVR window popping up (see figure below). Congratulations your installation was a success!
 
-.. figure:: /images/user-interface.jpg
-  :width: 300px
-  :figwidth: 300px
+.. figure:: /images/user-interface-1.png
+  :width: 600px
+  :figwidth: 600px
   :align: center
 
 Once you are done running Blender-VR you can end the virtual environment running the command:

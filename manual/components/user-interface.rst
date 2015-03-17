@@ -28,44 +28,59 @@ Document Sections
 Console
 -------
 
-The so called ``console`` is the GUI of Blender-VR. It allows you to choose the configuration file(s) (``configuration`` tab), the screen set to use and the simulation file in any tab. In the ``Run`` tab, you can start and stop Blender-VR and have the log of the ``console``.
 
-You can load the ``console`` by invoking ``./blenderVR path/blenderVR`` (clicking on it or running from a ``console``). You can also add ``blenderVR`` inside a ``bin`` folder that is included inside your ``PATH`` environment variable.
+The so called ``console`` is the GUI of Blender-VR. It allows you to choose the configuration file, the screen set to use, the simulation file (.blend) or to run blenderVR.
 
-By default, the ``console`` does not "known" anything. You have to manually set configuration file, active screen-set, simulation file ... However, it stores these relevant informations in its internal data store path (see above). So you have to set these informations the first time you run Blender-VR and they remain active (across different running) until you change it with the GUI.
+.. You can load the ``console`` by invoking ``./blenderVR path/blenderVR`` (clicking on it or running from a ``console``). You can also add ``blenderVR`` inside a ``bin`` folder that is included inside your ``PATH`` environment variable.
 
-.. figure:: /images/user-interface.jpg
-  :width: 600px
-  :figwidth: 600px
+.. figure:: /images/user-interface-1and2.png
+  :width: 700px
+  :figwidth: 700px
   :align: center
 
-  Console Graphical User Interface
+  Console Graphical User Interface (left: ``Configuration`` tab, right: ``Run`` tab)
 
+
+By default, the ``console`` does not "know" anything. You have to manually set configuration file, active screen-set, simulation file ... However, it stores these relevant informations in its internal data store path (see above). So you have to set these informations the first time you run Blender-VR and they remain active (across different running) until you change it with the GUI.
 
 Configuration File
 ==================
 
-You can specify the ``XML`` file inside the ``configuration`` tab. Don't forget to click on ``> Load configuration`` to ask Blender-VR to read the configuration file (and store it inside its internal data file) ! You should go to ``run`` tab and select ``debug`` inside the log window to see if there is bug inside your configuration file.
+You can specify the ``XML`` file inside the ``configuration`` tab (A-1). Don't forget to click on ``> Load configuration`` (A-2) to ask Blender-VR to read the configuration file (and store it inside its internal data file) ! You should go to ``run`` tab (B) and select ``debug`` (3b) inside the log window (3) to see if there is bug inside your configuration file.
 
 Active Screen Set
 =================
 
-You can choose any screen set that is defined inside your ``XML`` configuration file. You also must click on ``> Load screen set`` to make it active (and register it for further Blender-VR usage). The current active screen set is displayed on the right.
+You can choose any screen set (4) that is defined inside your ``XML`` configuration file. You also must click on ``> Load screen set`` (5) to make it active (and register it for further Blender-VR usage). The current active screen set is displayed on the right.
 
 Simulation File
 ===============
 
-Here, you must select the ``.blend`` file you want to load. For the beginning, you should try the ``basic.blend``, that you can get from the `samples repository <../installation/installation.html#getting-samples>`_.
+Here, you must select the ``.blend`` file you want to load (6). For the beginning, you should try the ``basic.blend``, that you can get from the `samples repository <../installation/installation.html#getting-samples>`_. You can manually select a processor file (7) or activate the ``NameLink`` (8) for blenderVR to automatically look for a <name_of_blender_scene>.processor.py file in the directory of the .blend  file. You will learn to create your own .blend scenes and processor files via the samples and going though the `blenderVR API <http://blender-vr.readthedocs.org>`_.
 
 Start/Stop
 ==========
 
-When everything is defined you can try to start/stop by going to the ``Run`` tab. Have a look at the main log window below the Start and the Stop buttons.
+When everything is defined you can try to start/stop (9) by going to the ``Run`` tab. Have a look at the main log window below the Start and the Stop buttons.
 
 Debug Window per Screen
 =======================
 
-You can also have a look at the per screen log window : menu ``Windows`` > ``Screens`` and select the screen that you want to debug. We suggest, at the beginning, to debug your XML `configuration file <configuration-file.html>`_, to set it to debug mode and activate ``Standard output`` and ``Error output``.
+Once the configuration file and the screen set are loaded, you can also have a look at the per screen log window : top screen menu ``Windows`` > ``Screens`` and select the screen that you want to debug. We suggest, at the beginning, to debug your XML `configuration file <configuration-file.html>`_, to set it to debug mode and activate ``Standard output`` and ``Error output``.
+
+.. figure:: /images/select-screen.png
+  :width: 400px
+  :figwidth: 400px
+  :align: center
+
+  Top screen ``Windows`` menu.
+
+.. figure:: /images/screen-window.png
+  :width: 700px
+  :figwidth: 700px
+  :align: center
+
+  Screen window for screen named ``full left`` in the configuration file.
 
 Standard/Error Outputs
 ======================
@@ -75,7 +90,7 @@ They will display ``stdout`` and ``stderr`` of the instance of blenderplayer. Th
 Log Level
 =========
 
-The log level is usefull when blenderplayer runs properly. It can display errors of your `processor file <processor-file.html>`_.
+The log level (3b) is usefull when blenderplayer runs properly. It can display errors of your `processor file <processor-file.html>`_ in the log window (3).
 
 Daemons
 -------

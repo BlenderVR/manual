@@ -97,7 +97,7 @@ You should instead use the Blender-VR standard logger usable inside any blenderV
   self.logger.debug("blah blah ...")
 
 *blah blah ...* is whatever you want, comma separated, as long as there is a "stringification" method (``__str__``) for each element.
-The `logger <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=logger#module-blendervr.tools.logger>`_ object inherits from python ``login`` module. Thus, you can replace ``debug`` by ``info``, ``warning``, ``error``, ``critical``. Depending on the log window level selection (see the screen window of the ``Run`` tab of the console), you will see your message or not.
+The `logger <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=logger#module-blendervr.tools.logger>`_ object inherits from python ``login`` module. Thus, you can replace ``debug`` by ``info``, ``warning``, ``error``, ``critical``. Depending on the log window level selection (see the screen window of the ``Run`` tab of the `Console <user-interface.html#console>`_), you will see your message or not.
 
 You can also use `self.logger.log_traceback(False) <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=log_traceback#blendervr.tools.logger.Logger.log_traceback>`_ to display the traceback of your program. ``True`` in parenthesis means an error, then Blender-VR will stop running in "Virtual Environment". This traceback is available inside as well as outside an exception.
 

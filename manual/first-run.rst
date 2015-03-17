@@ -4,7 +4,7 @@ First Run
 
 
 .. note::
-  After the `installation <installation/installation.html>`_ you should make sure everything is working before going on your own. For this first run you will need at least the basic sample from the `samples repository <installation/installation.html#getting-samples>`_.
+  After the `installation <installation/installation.html>`_ you should make sure everything is working before going on your own. For this first run you will need at least the basic sample from the `samples repository <installation/installation.html#download-samples-scenes>`_.
 
 Document Sections
 -----------------
@@ -16,17 +16,18 @@ Document Sections
 Launch Blender-VR
 -----------------
 
-Start by opening the blenderVR GUI (see `running Blender-VR <installation/installation.html#running>`_). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
+Start by opening the blenderVR GUI (see `Running BlenderVR <installation/installation.html#running>`_ in the Install section). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
+It is advised to understand how to manipulate the `User Interface <components/user-interface.html>`_ before going any further.
 
 Open the Simulation File
 ------------------------
 
-In the `Simulation File <components/user-interface.html#simulation-file>`_ select the ``basic.blend`` file. Mark ``NameLink`` for the ``basic.processor.py`` to be automatically selected as the `processor file <components.html#processor-file>`_.
+In the `Simulation File <components/user-interface.html#simulation-file>`_ select the ``basic.blend`` file. Mark ``NameLink`` for the ``basic.processor.py`` to be automatically selected as the `Processor File <components/processor-file.html>`_.
 
 Edit the Configuration File
 ---------------------------
 
-You now need a valid `configuration file <components/configuration-file.html>`_ to run Blender-VR. Make sure to follow the correct instructions and set a correct ``blender`` and ``blenderplayer`` paths.
+You now need a valid `Configuration File <components/configuration-file.html>`_ to run Blender-VR. Make sure to follow the correct instructions and set a correct ``blender`` and ``blenderplayer`` paths.
 
 Remember to `select and load <components/user-interface.html#configuration-file>`_ the configuration file.
 

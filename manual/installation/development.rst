@@ -18,7 +18,8 @@ Most of the time you won't need to modify and rebuild Blender, so those instruct
 Document Sections
 -----------------
 * `Acquiring Blender`_
-* `Acquiring BlenderVR and Basic sample scenes`_
+* `Acquiring BlenderVR`_
+* `Download Samples Scenes`_
 * `Requirements`_
 * `Quick Setup and Running`_
 
@@ -33,8 +34,8 @@ If you ever need to modify and rebuild Blender for further customizations, pleas
 Else, download the sources provided in `Acquiring Blender <installation.html#acquiring-blender>`_.
 
 
-Acquiring BlenderVR and Basic sample scenes
--------------------------------------------
+Acquiring BlenderVR
+-------------------
 
 To download the latest blenderVR git version (master HEAD):
 
@@ -44,6 +45,8 @@ To download the latest blenderVR git version (master HEAD):
 
 If you do not intend to modify blenderVR source code, simply download the `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
 
+Download Samples Scenes
+----------------------
 
 Regarding blenderVR samples, Git is not a good system to work on binary files, so it's recommended to use the SVN protocol to interact with the samples repository instead:
 
