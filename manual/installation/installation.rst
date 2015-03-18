@@ -115,10 +115,10 @@ On OSX/Linux:
 
 .. note::
   MacOS: running these lines may popup window "download the command line developer tools", go for it.
-  
-  Linux: If the "pyvenv venv" command fails, you can try the command "pyvenv-3.4 venv"
-  
-  Linux: If pyvenv command fails due to mising ensurepip module, try `this script <https://gist.github.com/uranusjr/d03a49767c7c307be5ed>`_ 
+
+  Linux: If the "pyvenv venv" command fails, you can try the command "pyvenv-3.4 venv".
+
+  Linux: If pyvenv command fails due to mising ensurepip module, try `this script <https://gist.github.com/uranusjr/d03a49767c7c307be5ed>`_ .
 
 On Windows:
 
