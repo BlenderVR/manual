@@ -7,3 +7,4 @@ Installation
 
    installation.rst
    development.rst
+   install-plugins.rst
