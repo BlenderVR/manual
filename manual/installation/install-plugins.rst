@@ -52,9 +52,8 @@ Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/oculu
 Oculus Rift DK2
 ---------------
 
-This section guides you through the installation required to run the oculus rift dk2 with blenderVR.
-
-The following install procedure involves:
+This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`_ with blenderVR.
+The install procedure involves:
 
 * install java
 * install dk2-blender-java-web-sockets
@@ -67,7 +66,7 @@ This java-websocket is a local server (to be launched on the machine to which th
 
 Install `Java <https://www.java.com/fr/download/>`_ on your machine (try to type ``java`` in a terminal window to see if it's not already installed).
 
-Download `dk2-blender-java-web-sockets-master.zip <https://github.com/tltmedia/dk2-blender-java-web-sockets/archive/master.zip>`_ rename it ``dk2-blender-java-web-sockets`` and move it to $INSTALL_DIR/plugins.
+Download `dk2-blender-java-web-sockets-master.zip <https://github.com/tltmedia/dk2-blender-java-web-sockets/archive/master.zip>`_ or clone the `Git repository <https://github.com/tltmedia/dk2-blender-java-web-sockets>`_, rename it ``dk2-blender-java-web-sockets`` and move it to $INSTALL_DIR/plugins.
 
 Install Python dependecies
 
