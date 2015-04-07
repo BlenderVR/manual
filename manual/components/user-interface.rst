@@ -29,9 +29,9 @@ Console
 -------
 
 
-The so called ``console`` is the GUI of BlenderVR. It allows you to choose the configuration file, the screen set to use, the simulation file (.blend) or to run blenderVR.
+The so called ``console`` is the GUI of BlenderVR. It allows you to choose the configuration file, the screen set to use, the simulation file (.blend) or to run BlenderVR.
 
-.. You can load the ``console`` by invoking ``./blenderVR path/blenderVR`` (clicking on it or running from a ``console``). You can also add ``blenderVR`` inside a ``bin`` folder that is included inside your ``PATH`` environment variable.
+.. You can load the ``console`` by invoking ``./BlenderVR path/BlenderVR`` (clicking on it or running from a ``console``). You can also add ``BlenderVR`` inside a ``bin`` folder that is included inside your ``PATH`` environment variable.
 
 .. figure:: /images/user-interface-1and2.png
   :width: 700px
@@ -56,7 +56,7 @@ You can choose any screen set (4) that is defined inside your ``XML`` configurat
 Simulation File
 ===============
 
-Here, you must select the ``.blend`` file you want to load (6). For the beginning, you should try the ``basic.blend``, that you can get from the `samples repository <../installation/installation.html#getting-samples>`_. You can manually select a processor file (7) or activate the ``NameLink`` (8) for blenderVR to automatically look for a <name_of_blender_scene>.processor.py file in the directory of the .blend  file. You will learn to create your own .blend scenes and processor files via the samples and going though the `blenderVR API <http://blender-vr.readthedocs.org>`_.
+Here, you must select the ``.blend`` file you want to load (6). For the beginning, you should try the ``basic.blend``, that you can get from the `samples repository <../installation/installation.html#getting-samples>`_. You can manually select a processor file (7) or activate the ``NameLink`` (8) for BlenderVR to automatically look for a <name_of_blender_scene>.processor.py file in the directory of the .blend  file. You will learn to create your own .blend scenes and processor files via the samples and going though the `BlenderVR API <http://blender-vr.readthedocs.org>`_.
 
 Start/Stop
 ==========

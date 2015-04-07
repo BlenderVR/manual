@@ -1,16 +1,16 @@
 =======================================
-Install for Future blenderVR Developers
+Install for Future BlenderVR Developers
 =======================================
 
-This guide walks you over the basic steps of setting up a development environment for blenderVR.
+This guide walks you over the basic steps of setting up a development environment for BlenderVR.
 
 .. note ::
-  For casual blenderVR users, please refer to the `Install blenderVR <installation.html>`_ page.
+  For casual BlenderVR users, please refer to the `Install BlenderVR <installation.html>`_ page.
 
-The install is the same than described in `Install blenderVR <installation.html>`_ but for:
+The install is the same than described in `Install BlenderVR <installation.html>`_ but for:
 
-* git clone of the blenderVR repository, to freely modify and eventually commit your modifications.
-* svn/git clone of the blenderVR samples, to eventually add your own demo scenes to the blenderVR samples repository
+* git clone of the BlenderVR repository, to freely modify and eventually commit your modifications.
+* svn/git clone of the BlenderVR samples, to eventually add your own demo scenes to the BlenderVR samples repository
 * manual compilation of Blender, if you need to modify its source code.
 
 Most of the time you won't need to modify and rebuild Blender, so those instructions are specified separately.
@@ -37,18 +37,18 @@ Else, download the sources provided in `Acquiring Blender <installation.html#acq
 Acquiring BlenderVR
 -------------------
 
-To download the latest blenderVR git version (master HEAD):
+To download the latest BlenderVR git version (master HEAD):
 
 .. code-block:: bash
 
   $ git clone https://github.com/BlenderVR/blender-vr.git
 
-If you do not intend to modify blenderVR source code, simply download the `BlenderVR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
+If you do not intend to modify BlenderVR source code, simply download the `BlenderVR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
 
 Download Samples Scenes
 -----------------------
 
-Regarding blenderVR samples, Git is not a good system to work on binary files, so it's recommended to use the SVN protocol to interact with the samples repository instead:
+Regarding BlenderVR samples, Git is not a good system to work on binary files, so it's recommended to use the SVN protocol to interact with the samples repository instead:
 
 .. code-block:: bash
 
@@ -93,4 +93,4 @@ Required for Interface Development
 Quick Setup and Running
 -----------------------
 
-see `Quick Setup and Running <installation.html#quick-setup>`_ in the Install blenderVR Section.
+see `Quick Setup and Running <installation.html#quick-setup>`_ in the Install BlenderVR Section.

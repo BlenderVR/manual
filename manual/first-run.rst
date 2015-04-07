@@ -16,7 +16,7 @@ Document Sections
 Launch BlenderVR
 -----------------
 
-Start by opening the blenderVR GUI (see `Running BlenderVR <installation/installation.html#running>`_ in the Install section). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
+Start by opening the BlenderVR GUI (see `Running BlenderVR <installation/installation.html#running>`_ in the Install section). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
 It is advised to understand how to manipulate the `User Interface <components/user-interface.html>`_ before going any further.
 
 Open the Simulation File

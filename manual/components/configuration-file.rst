@@ -5,7 +5,7 @@ Configuration File
 The BlenderVR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run BlenderVR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
 
 This file must contain at least four sections, plus the ``plugins`` section.
-It also includes a ``blenderVR`` section which only option is the network port used for the synchronization between the rendering nodes.
+It also includes a ``BlenderVR`` section which only option is the network port used for the synchronization between the rendering nodes.
 
 .. note::
   Use of space in ``screen`` name should work. Beware still Windows users.
@@ -55,7 +55,7 @@ The ``system`` section is called *redundant* as many entries will use the same i
 Code Execution
 --------------
 
-In the XML file, you can use back-quote to execute code. First, the XML parser will try to execute this code as python code in blenderVR environment system (with all variables and import present in the blenderVR XML parser). If it fails, then, it tries as bash code and take the stdout result. If none is valid it raises an error.
+In the XML file, you can use back-quote to execute code. First, the XML parser will try to execute this code as python code in BlenderVR environment system (with all variables and import present in the BlenderVR XML parser). If it fails, then, it tries as bash code and take the stdout result. If none is valid it raises an error.
 
 For instance,
 
@@ -112,7 +112,7 @@ Anchor
 
 On some devices, the paths are not homogeneous: the root path (repository) of ``.blend`` files on the console is not the same than on the master and/or on the slaves.
 
-To fix that, blenderVR uses the notion of **Anchor**: it is a node specific absolute path on all nodes that prefixes each relative path for blender and processor files.
+To fix that, BlenderVR uses the notion of **Anchor**: it is a node specific absolute path on all nodes that prefixes each relative path for blender and processor files.
 
 It is a kind of least common multiple path. For instance, with two computers:
 
@@ -180,7 +180,7 @@ The ``system`` redundant section defines many things:
 
 .. code:: xml
 
-  <system root='C:\\program\\blenderVR' anchor='U:\\blender_files'>
+  <system root='C:\\program\\BlenderVR' anchor='U:\\blender_files'>
     <login remote_command="ssh `self._attributs_inheritance['hostname']`"/>
       <daemon>
         <environment>SystemRoot=C:\\Windows</environment>
@@ -190,7 +190,7 @@ The ``system`` redundant section defines many things:
       </blenderplayer>
     </system>
 
-The ``root`` parameter specifies the root path of blenderVR (where resides the ``blenderVR`` python script, the ``modules`` folder, etc.). By default, it is set to blenderVR root path on the console computer.
+The ``root`` parameter specifies the root path of BlenderVR (where resides the ``BlenderVR`` python script, the ``modules`` folder, etc.). By default, it is set to BlenderVR root path on the console computer.
 However, due to `not homogeneous paths between nodes <#anchor>`_, you may have to define it for each system.
 
 See `Anchor <#anchor>`_ to know the purpose of anchor parameter.
@@ -266,7 +266,7 @@ This section defines how to run ``blenderplayer``.
 
 .. code:: xml
 
-  <blenderplayer executable='C:\\blenderVR\\blender\\v2.74\\blenderplayer.exe'>
+  <blenderplayer executable='C:\\BlenderVR\\blender\\v2.74\\blenderplayer.exe'>
     <environment>PYTHONPATH=C:\\Python33\\Lib;C:\\Python33\\DLLs;C:\\Python33\\Lib\\site-packages</environment>
   </blenderplayer>
 
@@ -337,7 +337,7 @@ This sample configuration file can be used for a cave with three vertical square
 .. code:: xml
 
     <?xml version="1.0"?>
-    <blenderVR>
+    <BlenderVR>
 
       <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
           <config name='console'>console screen</config>
@@ -425,5 +425,5 @@ This sample configuration file can be used for a cave with three vertical square
           <button device='GTK' host='localhost' processor_method='buttons'/>
         </vrpn>
       </plugins>
-    </blenderVR>
+    </BlenderVR>
 

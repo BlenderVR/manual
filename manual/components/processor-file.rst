@@ -2,11 +2,11 @@
 Processor File
 ==============
 
-We want to reduce the impact of blenderVR on the blender file (``.blend``).
-For instance, all the interactions issued from the plugins (VRPN, OSC ...) don't have to be defined inside the ``.blend`` file, since they do not exists outside blenderVR development frame.
+We want to reduce the impact of BlenderVR on the blender file (``.blend``).
+For instance, all the interactions issued from the plugins (VRPN, OSC ...) don't have to be defined inside the ``.blend`` file, since they do not exists outside BlenderVR development frame.
 Moreover, elements to synchronize interaction from master to slaves cannot be defined inside ``.blend`` file.
 
-BlenderVR thus introduces the notion of processor file. It is a Python file associated with the ``.blend`` that contains all the interactions required to use the ``.blend`` file within blenderVR.
+BlenderVR thus introduces the notion of processor file. It is a Python file associated with the ``.blend`` that contains all the interactions required to use the ``.blend`` file within BlenderVR.
 By default (and you should not change it) this file is in the same folder than the ``.blend`` file and its name is the name of the blender file minus ``.blend``, but post-fixed by ``.processor.py``. For instance, the processor file of ``simple.blend`` is ``simple.processor.py``.
 
 Refer to the `Complete API <http://blender-vr.readthedocs.org>`_ for all the available commands and functionality.
@@ -62,8 +62,8 @@ Unlike the `Minimum Processor File <#minimum-processor-file>`_, this one actuall
           def __init__(self, parent):
               super(Processor, self).__init__(parent)
 
-              if self.blenderVR.isMaster():
-                  self.blenderVR.getSceneSynchronizer().\
+              if self.BlenderVR.isMaster():
+                  self.BlenderVR.getSceneSynchronizer().\
                           getItem(bge.logic).activate(True, True)
 
   elif blendervr.is_creating_loader():
@@ -90,7 +90,7 @@ As you have probably seen in `Debug window per screen <user-interface.html#debug
 
 Thus, you cannot use basic ``print`` python commands to help you while debugging.
 
-You should instead use the BlenderVR standard logger usable inside any blenderVR object (due to inheritance):
+You should instead use the BlenderVR standard logger usable inside any BlenderVR object (due to inheritance):
 
 .. code:: python
 
@@ -120,8 +120,8 @@ By default, BlenderVR doesn't synchronize scene objects (blacklisting for effici
 
     # synchronizer.objects.getItem(enable, recursive = True)
     # synchronizer.objects.item_base.Base.activate(enable, recursive = True)
-    if self.blenderVR.isMaster():
-       self.blenderVR.getSceneSynchronizer().getItem(bge.logic).activate(True, True)
+    if self.BlenderVR.isMaster():
+       self.BlenderVR.getSceneSynchronizer().getItem(bge.logic).activate(True, True)
 
 This method will synchronize (first ``True`` as ``activate`` parameter) all elements recursively (second ``True`` as ``activate`` parameter) from the ``bge.logic`` (that is the root of the ``.blend`` file). In other words, it will activate all the objects of the scene. You can also synchronize only a few objects by applying this call to each item (the objects as parameter of ``getItem``).
 
@@ -133,7 +133,7 @@ Processor Inheritance
 
 .. code:: python
 
-   blendervr.processor.appendProcessor(os.path.join(blenderVR_root, 'samples', 'processors.py'))
+   blendervr.processor.appendProcessor(os.path.join(BlenderVR_root, 'samples', 'processors.py'))
 
 This line specifically adds the ``processors.py`` (from folder ``samples`` of BlenderVR) processor to each processor in the sample folder. This processor proposes:
 
@@ -170,7 +170,7 @@ To register your processor, you must call from the constructor of your "virtual 
 
 .. code:: python
 
-  self.blenderVR.addObjectToSynchronize(self, 'main processor')
+  self.BlenderVR.addObjectToSynchronize(self, 'main processor')
 
 The argument in single quote is the name of the processor used by the synchronizer to disambiguate between all synchronized objects. You can use anything else than ``main processor``, but this is a good default choice.
 

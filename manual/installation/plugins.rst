@@ -2,8 +2,8 @@
 Install Plugins
 ===============
 
-blenderVR comes with plugins, e.g. to support the Oculus Rift DK2 or to use VRPN devices.
-This page will lead you through their installation, while none of them is mandatory to run blenderVR.
+BlenderVR comes with plugins, e.g. to support the Oculus Rift DK2 or to use VRPN devices.
+This page will lead you through their installation, while none of them is mandatory to run BlenderVR.
 
 
 Document Sections
@@ -25,8 +25,8 @@ VRPN
 ----
 
 This section briefly exposes the `VRPN <http://www.cs.unc.edu/Research/vrpn/index.html>`__, install.
-In a nutshell, you will have to build VRPN, launch a VRPN server and blenderVR then will act as a VRPN client to fetch the data from your VRPN devices.
-once the VRPN server launched on your machine/network, any device defined in your vrpn.cfg (input of vrpn server) will be handled by the server and its related ``infos`` pulled by the blenderVR VRPN client.
+In a nutshell, you will have to build VRPN, launch a VRPN server and BlenderVR then will act as a VRPN client to fetch the data from your VRPN devices.
+once the VRPN server launched on your machine/network, any device defined in your vrpn.cfg (input of vrpn server) will be handled by the server and its related ``infos`` pulled by the BlenderVR VRPN client.
 See `Getting started with VRPN <http://www.cs.unc.edu/Research/vrpn/vrpn_getting_started.html>`_ for more information.
 
 Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_33.zip>`__ and unzip it into $INSTALL_DIR/plugins/vrpn/.
@@ -52,17 +52,17 @@ Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/oculu
 Oculus Rift DK2
 ---------------
 
-This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`__ with blenderVR.
+This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`__ with BlenderVR.
 The install procedure involves:
 
 * install java
 * install dk2-blender-java-web-sockets
 * install python dependencies
 * install the oculus rift dk2 runtime
-* modify blenderVR configuration file for dk2 support
+* modify BlenderVR configuration file for dk2 support
 
-The dk2 support in blenderVR relies on the `dk2-blender-java-web-sockets <https://github.com/tltmedia/dk2-blender-java-web-sockets>`_.
-This java-websocket is a local server (to be launched on the machine to which the oculus is plugged) that will receive the data from the oculus dk2 and let blenderVR pull them to synchronize the user orientation in the virtual world.
+The dk2 support in BlenderVR relies on the `dk2-blender-java-web-sockets <https://github.com/tltmedia/dk2-blender-java-web-sockets>`_.
+This java-websocket is a local server (to be launched on the machine to which the oculus is plugged) that will receive the data from the oculus dk2 and let BlenderVR pull them to synchronize the user orientation in the virtual world.
 
 Install `Java <https://www.java.com/fr/download/>`_ on your machine (try to type ``java`` in a terminal window to see if it's not already installed).
 

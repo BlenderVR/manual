@@ -61,7 +61,7 @@ Acquiring BlenderVR
 Download Samples Scenes
 -----------------------
 
-Before getting started, you'll probably want to take a look at the available blenderVR ".blend" sample scenes.
+Before getting started, you'll probably want to take a look at the available BlenderVR ".blend" sample scenes.
 
 * Download `All Samples <https://github.com/BlenderVR/samples/archive/master.zip>`_
 
@@ -130,7 +130,7 @@ On Windows:
   $ .\venv\Scripts\activate
   $ pip3 install -r blender-vr\requirements.txt
   $ python3 .\venv\Scripts\pyside_postinstall.py -install
-  $ python3 .\blender-vr\blenderVR
+  $ python3 .\blender-vr\BlenderVR
 
 You may have to add the path to the python binary, e.g.
 
@@ -151,7 +151,7 @@ On OSX/Linux:
 
   $ cd $INSTALL_DIR
   $ source venv/bin/activate
-  $ ./blender-vr/blenderVR
+  $ ./blender-vr/BlenderVR
 
 On Windows:
 
@@ -159,9 +159,9 @@ On Windows:
 
   $ cd $INSTALL_DIR
   $ .\venv\Scripts\activate
-  $ python3 .\blender-vr\blenderVR
+  $ python3 .\blender-vr\BlenderVR
 
-You should now see the blenderVR window popping up (see figure below). Congratulations your installation was a success!
+You should now see the BlenderVR window popping up (see figure below). Congratulations your installation was a success!
 
 .. figure:: /images/user-interface-1.png
   :width: 600px
