@@ -49,7 +49,7 @@ Some elements can be specific to one node, other shared. For instance, the ``ble
 
 In this example, ``left computer`` and ``right computer`` nodes will use ``/usr/local/blender/2.74/bin/blenderplayer`` whereas ``front computer`` node will use ``/usr/bin/blenderplayer``.
 
-The ``system`` section is called *rendundant* as many entries will use the same information.
+The ``system`` section is called *redundant* as many entries will use the same information.
 
 
 Code Execution
@@ -86,7 +86,7 @@ that will raise an exception (which is the point, since your purpose here is to 
 Starter Section
 ---------------
 ..
-  dont forget blender
+  don't forget Blender
 
 This section only concerns the console. It contains all screen sets definitions.
 
@@ -110,7 +110,7 @@ Each ``config`` sub-section must list all screens, separated by commas, used by 
 Anchor
 ------
 
-On some devices, the paths are not homogenous: the root path (repository) of ``.blend`` files on the console is not the same than on the master and/or on the slaves.
+On some devices, the paths are not homogeneous: the root path (repository) of ``.blend`` files on the console is not the same than on the master and/or on the slaves.
 
 To fix that, blenderVR uses the notion of **Anchor**: it is a node specific absolute path on all nodes that prefixes each relative path for blender and processor files.
 
@@ -191,7 +191,7 @@ The ``system`` redundant section defines many things:
     </system>
 
 The ``root`` parameter specifies the root path of blenderVR (where resides the ``blenderVR`` python script, the ``modules`` folder, etc.). By default, it is set to blenderVR root path on the console computer.
-owever, due to `not homogenous paths between nodes <#anchor>`_, you may have to define it for each system.
+However, due to `not homogeneous paths between nodes <#anchor>`_, you may have to define it for each system.
 
 See `Anchor <#anchor>`_ to know the purpose of anchor parameter.
 
@@ -276,17 +276,17 @@ This section defines how to run ``blenderplayer``.
 Screens Section
 ---------------
 
-The screen is the unit of rendering: there is bijection between screen and instance of ``blenderplayer``. Each screen has a ``name`` and a ``computer`` (actually the name of the computer section, above).
+The screen is the unit of rendering: there is a bijection between screen and instance of ``blenderplayer``. Each screen has a ``name`` and a ``computer`` (actually the name of the computer section, above).
 
 .. code:: xml
 
   <screens>
     <display>
-      . . . <!-- screens global informations -->
+      . . . <!-- screens global information -->
     </display>
     <screen name='front screen' computer='front computer'>
       <display>
-        . . . <!-- front screen specific informations -->
+        . . . <!-- front screen specific information -->
       </display>
       <wall>
         . . .
@@ -303,7 +303,7 @@ The ``display`` `redundant section <#redundant-sections>`_ defines several thing
 * ``buffer`` (``mono`` = no stereo, ``left`` graphic buffer or ``right`` graphic buffer,
 * ``user`` (as given inside ``users`` section),
 * ``eye`` of the user (``left``, ``middle`` or ``right``).
-* **viewport** to reduce the screen (usefull if you have occlusion).
+* **viewport** to reduce the screen (useful if you have occlusion).
 
 .. code:: xml
 

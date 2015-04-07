@@ -53,6 +53,6 @@ Downloads
 
 * `Blender-VR Sound Rendering Engine (.zip) <http://dalaifelinto.com/blendervr/ftp/blendervr_sound_rendering_engine_v4.zip>`_ version 4
 
-This is an example of a flexible sound rendering engine developed under MaxMSP which is fully controlled from the OSC messages received from BlenderCave.
+This is an example of a flexible sound rendering engine developed under MaxMSP which is fully controlled from the OSC messages received from BlenderVR.
 
 One may obviously use it with any other software (it's all about dynamic autonomous instantiations, should be modified to be used as a simple GUI Sound Rendering Engine).

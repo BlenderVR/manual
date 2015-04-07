@@ -15,7 +15,7 @@ Document Sections
 * `Acquiring Blender`_
 * `Acquiring BlenderVR`_
 * `Download Samples Scenes`_
-* `Install dependecies`_
+* `Install Dependencies`_
 * `Quick Setup`_
 * `Running`_
 
@@ -78,8 +78,8 @@ To check which samples are available visit the `Samples Repository <https://gith
 (Or simply `svn checkout` the required sample with SVN Tortoise).
 
 
-Install dependecies
--------------------
+Install Dependencies
+--------------------
 
 Install those packages or make sure you have them in your system.
 

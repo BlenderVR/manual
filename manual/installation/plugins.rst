@@ -25,7 +25,7 @@ VRPN
 ----
 
 This section briefly exposes the `VRPN <http://www.cs.unc.edu/Research/vrpn/index.html>`__, install.
-In a nutshell, you will have to build VRPN, launch a VRPN server and blenderVR then will act as a VRPN client to fetch the data from your VRPN deives.
+In a nutshell, you will have to build VRPN, launch a VRPN server and blenderVR then will act as a VRPN client to fetch the data from your VRPN devices.
 once the VRPN server launched on your machine/network, any device defined in your vrpn.cfg (input of vrpn server) will be handled by the server and its related ``infos`` pulled by the blenderVR VRPN client.
 See `Getting started with VRPN <http://www.cs.unc.edu/Research/vrpn/vrpn_getting_started.html>`_ for more information.
 
@@ -68,7 +68,7 @@ Install `Java <https://www.java.com/fr/download/>`_ on your machine (try to type
 
 Download `dk2-blender-java-web-sockets-master.zip <https://github.com/tltmedia/dk2-blender-java-web-sockets/archive/master.zip>`_ or clone the `Git repository <https://github.com/tltmedia/dk2-blender-java-web-sockets>`_, rename it ``dk2-blender-java-web-sockets`` and move it to $INSTALL_DIR/plugins.
 
-Install Python dependecies
+Install Python dependencies
 
 On OSX/Linux:
 

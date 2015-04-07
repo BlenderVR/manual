@@ -41,7 +41,7 @@ The so called ``console`` is the GUI of Blender-VR. It allows you to choose the 
   Console Graphical User Interface (left: ``Configuration`` tab, right: ``Run`` tab)
 
 
-By default, the ``console`` does not "know" anything. You have to manually set configuration file, active screen-set, simulation file ... However, it stores these relevant informations in its internal data store path (see above). So you have to set these informations the first time you run Blender-VR and they remain active (across different running) until you change it with the GUI.
+By default, the ``console`` does not "know" anything. You have to manually set configuration file, active screen-set, simulation file ... However, it stores these relevant information in its internal data store path (see above). So you have to set these information the first time you run Blender-VR and they remain active (across different running) until you change it with the GUI.
 
 Configuration File
 ==================
@@ -90,7 +90,7 @@ They will display ``stdout`` and ``stderr`` of the instance of blenderplayer. Th
 Log Level
 =========
 
-The log level (3b) is usefull when blenderplayer runs properly. It can display errors of your `processor file <processor-file.html>`_ in the log window (3).
+The log level (3b) is useful when blenderplayer runs properly. It can display errors of your `processor file <processor-file.html>`_ in the log window (3).
 
 Daemons
 -------

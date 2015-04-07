@@ -21,8 +21,8 @@ Base Protocol
 
 The communication relies on encapsulation of (command, argument) messages. Each stage of encapsulation is responsible to compose/decompose its information and parse the provided commands. In charge of the central stage to use blendervr.tools.connector.Client class to interact with the daemon and use its send(command, argument = '') method.
 
-The method blendervr.tools.connector.Common.composeMessage(command, argument) must be use to compose a message sended to the peer.
-On the other side, the method blendervr.tools.connector.Common.decomposeMessage(message) must be use to decompose a message and analyse its content.
+The method blendervr.tools.connector.Common.composeMessage(command, argument) must be use to compose a message sent to the peer.
+On the other side, the method blendervr.tools.connector.Common.decomposeMessage(message) must be use to decompose a message and analyze its content.
 
 For instance, if the UI request the blender file name, it should send (supposing client is a blendervr.tools.connector.Client object and composer is an import of blendervr.tools.connector.Common): client.send('get', composer.composeMessage('simulation', 'blender file name'))
 For commodity, in the remaining specs, we will write: ('get', ('simulation', 'blender file name'))
@@ -36,7 +36,7 @@ Unless specified, the daemon will reply to request with the same keywords to ack
 Get/Set Settings
 ----------------
 
-The simulation can request/set many informations from the daemon. For instance, to define the processor file, it must use ('set', ('simulation',('blender processor name', '/home/blender/samples/spider/spider.blend'))) (and the daemon will answer : ('set', ('simulation', ('blender processor name')))).
+The simulation can request/set many information from the daemon. For instance, to define the processor file, it must use ('set', ('simulation',('blender processor name', '/home/blender/samples/spider/spider.blend'))) (and the daemon will answer : ('set', ('simulation', ('blender processor name')))).
 
 
 Simulation

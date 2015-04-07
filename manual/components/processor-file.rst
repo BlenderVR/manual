@@ -9,7 +9,7 @@ Moreover, elements to synchronize interaction from master to slaves cannot be de
 Blender-VR thus introduces the notion of processor file. It is a Python file associated with the ``.blend`` that contains all the interactions required to use the ``.blend`` file within blenderVR.
 By default (and you should not change it) this file is in the same folder than the ``.blend`` file and its name is the name of the blender file minus ``.blend``, but post-fixed by ``.processor.py``. For instance, the processor file of ``simple.blend`` is ``simple.processor.py``.
 
-Refer to the `Complete API <http://blender-vr.readthedocs.org>`_ for all the available commands and funcionality.
+Refer to the `Complete API <http://blender-vr.readthedocs.org>`_ for all the available commands and functionality.
 
 Document Sections
 -----------------
@@ -49,7 +49,7 @@ The minimal processor file contains:
 Basic Processor File
 ----------------------
 
-Unlike the `Minimum Processor File <#minimum-processor-file>`_, this one actually does something (in this case it syncronizes all the objects between the `master and the slaves <../architecture/master-slaves.html>`_. This is file is fully explained in the `Basic Example <http://blender-vrreadthedocs.org/processor-file/examples.html#basic-example>`_ of the Blender-vR API.
+Unlike the `Minimum Processor File <#minimum-processor-file>`_, this one actually does something (in this case it synchronizes all the objects between the `master and the slaves <../architecture/master-slaves.html>`_. This is file is fully explained in the `Basic Example <http://blender-vrreadthedocs.org/processor-file/examples.html#basic-example>`_ of the Blender-VR API.
 
 .. code:: python
 
