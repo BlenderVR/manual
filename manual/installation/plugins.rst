@@ -24,12 +24,12 @@ Add a ``plugins`` directory to your $INSTALL_DIR (see `Folder Structure <install
 VRPN
 ----
 
-This section briefly exposes the `VRPN <http://www.cs.unc.edu/Research/vrpn/index.html>`_, install.
+This section briefly exposes the `VRPN <http://www.cs.unc.edu/Research/vrpn/index.html>`__, install.
 In a nutshell, you will have to build VRPN, launch a VRPN server and blenderVR then will act as a VRPN client to fetch the data from your VRPN deives.
 once the VRPN server launched on your machine/network, any device defined in your vrpn.cfg (input of vrpn server) will be handled by the server and its related ``infos`` pulled by the blenderVR VRPN client.
 See `Getting started with VRPN <http://www.cs.unc.edu/Research/vrpn/vrpn_getting_started.html>`_ for more information.
 
-Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_33.zip>`_ and unzip it into $INSTALL_DIR/plugins/vrpn/.
+Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_33.zip>`__ and unzip it into $INSTALL_DIR/plugins/vrpn/.
 .. Create a ``build`` directory to finally have the following tree:
 
 .. ``//plugins/vrpn/vrpn``
@@ -43,7 +43,7 @@ Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_
 ..   $ cmake -DCMAKE_OSX_ARCHITECTURES=x86_64 ../vrpn
 ..   $ make
 
-then follow compilation instructions from `VRPN Compiling <http://www.cs.unc.edu/Research/vrpn/vrpn_standard_stuff.html>`_.
+then follow compilation instructions from `VRPN Compiling <http://www.cs.unc.edu/Research/vrpn/vrpn_standard_stuff.html>`__.
 
 Add the path of the vrpn python directory (e.g. `$INSTALL_DIR/plugins/vrpn/build/python`) to your `configuration file <components/configuration-file.html>`_ libraries.
 
@@ -52,7 +52,7 @@ Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/oculu
 Oculus Rift DK2
 ---------------
 
-This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`_ with blenderVR.
+This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`__ with blenderVR.
 The install procedure involves:
 
 * install java
