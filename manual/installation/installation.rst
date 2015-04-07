@@ -2,7 +2,7 @@
 Install BlenderVR
 =================
 
-In order to install Blender-VR you need this guide.
+In order to install BlenderVR you need this guide.
 
 .. note ::
 
@@ -26,13 +26,13 @@ Folder Structure
 After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual (the directory holding these files is  referred as $INSTALL_DIR in the next sections).
 
 ``//blender-vr/``
-*Blender-VR Source Code*
+*BlenderVR Source Code*
 
 ``//blender/``
 *Blender Binaries*
 
 ``//samples/``
-*Blender-VR Samples*
+*BlenderVR Samples*
 
 ``//venv/``
 *Python Virtual Environment*
@@ -40,7 +40,7 @@ After all the downloads and installations you should end up with the following f
 Acquiring Blender
 -----------------
 
-Blender-VR requires `Blender 2.74 <http://www.blender.org/download>`_ or newer.
+BlenderVR requires `Blender 2.74 <http://www.blender.org/download>`_ or newer.
 Optionally you can use  a patched version of Blender 2.73a available here for all the supported platforms.
 
 * `Mac OSX 64 bit: Blender 2.73a Patched <http://www.dalaifelinto.com/blendervr/ftp/blender-2.73-5c6ef95-OSX-10.6-x86_64.zip>`_. [1]_
@@ -56,7 +56,7 @@ Optionally you can use  a patched version of Blender 2.73a available here for al
 Acquiring BlenderVR
 -------------------
 
-* `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it **blender-vr**)
+* `BlenderVR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it **blender-vr**)
 
 Download Samples Scenes
 -----------------------
@@ -168,11 +168,11 @@ You should now see the blenderVR window popping up (see figure below). Congratul
   :figwidth: 600px
   :align: center
 
-Once you are done running Blender-VR you can end the virtual environment running the command:
+Once you are done running BlenderVR you can end the virtual environment running the command:
 
 .. code-block:: bash
 
   $ deactivate
 
-For your convenience it is recommended to create a bash script to help re-launching the Blender-VR environment.
+For your convenience it is recommended to create a bash script to help re-launching the BlenderVR environment.
 

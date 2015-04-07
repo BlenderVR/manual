@@ -2,7 +2,7 @@
 Development
 ############
 
-The Blender-VR project is open-source and open for external collaboration.
+The BlenderVR project is open-source and open for external collaboration.
 
 Links
 -----

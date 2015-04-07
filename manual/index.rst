@@ -1,6 +1,6 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
- Blender-VR Manual contents
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+ BlenderVR Manual contents
+%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 .. toctree::
    :maxdepth: 2

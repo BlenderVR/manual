@@ -4,7 +4,7 @@ User Interface
 
 We dissociate the *controlling interface* from the *virtual environment*.
 
-The *controlling interface* (here called ``console``) is the graphical user interface (GUI) that controls Blender-VR. The *virtual environment* is the part of the simulation that runs on each node inside ``blenderplayer``.
+The *controlling interface* (here called ``console``) is the graphical user interface (GUI) that controls BlenderVR. The *virtual environment* is the part of the simulation that runs on each node inside ``blenderplayer``.
 
 To simplify, the ``console`` is run by the user, use PySide but cannot import ``bge`` python module whereas the *virtual environment* is run by ``blenderplayer``, don't have any GUI and can import ``bge`` python module.
 
@@ -29,7 +29,7 @@ Console
 -------
 
 
-The so called ``console`` is the GUI of Blender-VR. It allows you to choose the configuration file, the screen set to use, the simulation file (.blend) or to run blenderVR.
+The so called ``console`` is the GUI of BlenderVR. It allows you to choose the configuration file, the screen set to use, the simulation file (.blend) or to run blenderVR.
 
 .. You can load the ``console`` by invoking ``./blenderVR path/blenderVR`` (clicking on it or running from a ``console``). You can also add ``blenderVR`` inside a ``bin`` folder that is included inside your ``PATH`` environment variable.
 
@@ -41,17 +41,17 @@ The so called ``console`` is the GUI of Blender-VR. It allows you to choose the 
   Console Graphical User Interface (left: ``Configuration`` tab, right: ``Run`` tab)
 
 
-By default, the ``console`` does not "know" anything. You have to manually set configuration file, active screen-set, simulation file ... However, it stores these relevant information in its internal data store path (see above). So you have to set these information the first time you run Blender-VR and they remain active (across different running) until you change it with the GUI.
+By default, the ``console`` does not "know" anything. You have to manually set configuration file, active screen-set, simulation file ... However, it stores these relevant information in its internal data store path (see above). So you have to set these information the first time you run BlenderVR and they remain active (across different running) until you change it with the GUI.
 
 Configuration File
 ==================
 
-You can specify the ``XML`` file inside the ``configuration`` tab (A-1). Don't forget to click on ``> Load configuration`` (A-2) to ask Blender-VR to read the configuration file (and store it inside its internal data file) ! You should go to ``run`` tab (B) and select ``debug`` (3b) inside the log window (3) to see if there is bug inside your configuration file.
+You can specify the ``XML`` file inside the ``configuration`` tab (A-1). Don't forget to click on ``> Load configuration`` (A-2) to ask BlenderVR to read the configuration file (and store it inside its internal data file) ! You should go to ``run`` tab (B) and select ``debug`` (3b) inside the log window (3) to see if there is bug inside your configuration file.
 
 Active Screen Set
 =================
 
-You can choose any screen set (4) that is defined inside your ``XML`` configuration file. You also must click on ``> Load screen set`` (5) to make it active (and register it for further Blender-VR usage). The current active screen set is displayed on the right.
+You can choose any screen set (4) that is defined inside your ``XML`` configuration file. You also must click on ``> Load screen set`` (5) to make it active (and register it for further BlenderVR usage). The current active screen set is displayed on the right.
 
 Simulation File
 ===============
@@ -108,5 +108,5 @@ In other words, the daemon manages blenderplayer. It runs on the computer that w
 Under Linux, this daemon becomes a real UNIX daemon (fork, close input and output ...).
 
 .. note::
-  The daemon script is included inside Blender-VR - you don't have to tweak it.
+  The daemon script is included inside BlenderVR - you don't have to tweak it.
 

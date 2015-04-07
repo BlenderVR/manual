@@ -2,7 +2,7 @@
 Configuration File
 ==================
 
-The Blender-VR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run Blender-VR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
+The BlenderVR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run BlenderVR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
 
 This file must contain at least four sections, plus the ``plugins`` section.
 It also includes a ``blenderVR`` section which only option is the network port used for the synchronization between the rendering nodes.
@@ -80,7 +80,7 @@ If uncertain, we suggest you to simply print the ``self._attributs_inheritance``
 
   <login remote_command="`print(self._attributs_inheritance)`">
 
-that will raise an exception (which is the point, since your purpose here is to create your configuration file, not to run Blender-VR).
+that will raise an exception (which is the point, since your purpose here is to create your configuration file, not to run BlenderVR).
 
 
 Starter Section

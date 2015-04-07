@@ -52,7 +52,7 @@ How to Build
 ------------
 
 .. note::
-  While this generates a local copy of the latest documentation, the Blender-VR project is
+  While this generates a local copy of the latest documentation, the BlenderVR project is
   hooked up with the `ReadTheDocs <http://readthedocs.org>`_ system. This auto-compiles the documentation and
   make it available online everytime something is committed in the system.
 

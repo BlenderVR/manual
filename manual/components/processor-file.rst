@@ -6,7 +6,7 @@ We want to reduce the impact of blenderVR on the blender file (``.blend``).
 For instance, all the interactions issued from the plugins (VRPN, OSC ...) don't have to be defined inside the ``.blend`` file, since they do not exists outside blenderVR development frame.
 Moreover, elements to synchronize interaction from master to slaves cannot be defined inside ``.blend`` file.
 
-Blender-VR thus introduces the notion of processor file. It is a Python file associated with the ``.blend`` that contains all the interactions required to use the ``.blend`` file within blenderVR.
+BlenderVR thus introduces the notion of processor file. It is a Python file associated with the ``.blend`` that contains all the interactions required to use the ``.blend`` file within blenderVR.
 By default (and you should not change it) this file is in the same folder than the ``.blend`` file and its name is the name of the blender file minus ``.blend``, but post-fixed by ``.processor.py``. For instance, the processor file of ``simple.blend`` is ``simple.processor.py``.
 
 Refer to the `Complete API <http://blender-vr.readthedocs.org>`_ for all the available commands and functionality.
@@ -49,7 +49,7 @@ The minimal processor file contains:
 Basic Processor File
 ----------------------
 
-Unlike the `Minimum Processor File <#minimum-processor-file>`_, this one actually does something (in this case it synchronizes all the objects between the `master and the slaves <../architecture/master-slaves.html>`_. This is file is fully explained in the `Basic Example <http://blender-vrreadthedocs.org/processor-file/examples.html#basic-example>`_ of the Blender-VR API.
+Unlike the `Minimum Processor File <#minimum-processor-file>`_, this one actually does something (in this case it synchronizes all the objects between the `master and the slaves <../architecture/master-slaves.html>`_. This is file is fully explained in the `Basic Example <http://blender-vrreadthedocs.org/processor-file/examples.html#basic-example>`_ of the BlenderVR API.
 
 .. code:: python
 
@@ -86,11 +86,11 @@ Unlike the `Minimum Processor File <#minimum-processor-file>`_, this one actuall
 Debugging Processor Through Log Messages
 ----------------------------------------
 
-As you have probably seen in `Debug window per screen <user-interface.html#debug-window-per-screen>`_ , the output of blenderplayer is not displayed by default in the console during Blender-VR runs.
+As you have probably seen in `Debug window per screen <user-interface.html#debug-window-per-screen>`_ , the output of blenderplayer is not displayed by default in the console during BlenderVR runs.
 
 Thus, you cannot use basic ``print`` python commands to help you while debugging.
 
-You should instead use the Blender-VR standard logger usable inside any blenderVR object (due to inheritance):
+You should instead use the BlenderVR standard logger usable inside any blenderVR object (due to inheritance):
 
 .. code:: python
 
@@ -99,7 +99,7 @@ You should instead use the Blender-VR standard logger usable inside any blenderV
 *blah blah ...* is whatever you want, comma separated, as long as there is a "stringification" method (``__str__``) for each element.
 The `logger <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=logger#module-blendervr.tools.logger>`_ object inherits from python ``login`` module. Thus, you can replace ``debug`` by ``info``, ``warning``, ``error``, ``critical``. Depending on the log window level selection (see the screen window of the ``Run`` tab of the `Console <user-interface.html#console>`_), you will see your message or not.
 
-You can also use `self.logger.log_traceback(False) <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=log_traceback#blendervr.tools.logger.Logger.log_traceback>`_ to display the traceback of your program. ``True`` in parenthesis means an error, then Blender-VR will stop running in "Virtual Environment". This traceback is available inside as well as outside an exception.
+You can also use `self.logger.log_traceback(False) <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=log_traceback#blendervr.tools.logger.Logger.log_traceback>`_ to display the traceback of your program. ``True`` in parenthesis means an error, then BlenderVR will stop running in "Virtual Environment". This traceback is available inside as well as outside an exception.
 
 There is also `self.logger.log_position() <http://blender-vr.readthedocs.org/modules/rst/blendervr.tools.logger.html?highlight=log_position#blendervr.tools.logger.Logger.log_position>`_ that simply displays the position of the calling method in ``debug`` level.
 
@@ -114,7 +114,7 @@ You can use a `logger`_ to see what is contained inside the ``info`` argument. Y
 Choose Objects to Synchronize
 -----------------------------
 
-By default, Blender-VR doesn't synchronize scene objects (blacklisting for efficiency issues). You must specify the elements you want to synchronize by explicitly flagging the objects to synchronize by the master node:
+By default, BlenderVR doesn't synchronize scene objects (blacklisting for efficiency issues). You must specify the elements you want to synchronize by explicitly flagging the objects to synchronize by the master node:
 
 .. code:: python
 
@@ -129,13 +129,13 @@ Processor Inheritance
 ---------------------
 
  We commonly use the same interactions on different scenes. For instance, the Head Control Navigation system is useful on most scenes.
- Blender-VR allows the developer to have a "generic" processor that all other processors will be able to use by inheritance. You can add an intermediate processor by adding a line at the beginning of your processor:
+ BlenderVR allows the developer to have a "generic" processor that all other processors will be able to use by inheritance. You can add an intermediate processor by adding a line at the beginning of your processor:
 
 .. code:: python
 
    blendervr.processor.appendProcessor(os.path.join(blenderVR_root, 'samples', 'processors.py'))
 
-This line specifically adds the ``processors.py`` (from folder ``samples`` of Blender-VR) processor to each processor in the sample folder. This processor proposes:
+This line specifically adds the ``processors.py`` (from folder ``samples`` of BlenderVR) processor to each processor in the sample folder. This processor proposes:
 
 Inside the ``virtual environment``:
 

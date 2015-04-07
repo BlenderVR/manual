@@ -9,7 +9,7 @@ Open Sound Control (OSC)
 OSC is a protocol used to send / receive data through applications. See
 http://opensoundcontrol.org.
 
-Blender-VR includes a MaxMSP (http://cycling74.com) Sound Rendering Engine
+BlenderVR includes a MaxMSP (http://cycling74.com) Sound Rendering Engine
 available at `Downloads`_. It is however possible (and advised) to
 make it work with any other OSC client and fathom it for other purposes.
 
@@ -24,7 +24,7 @@ Interaction Setup
 
 While the OSC API allows to easily send OSC (UDP) flags, the MaxMSP associated
 Sound Rendering Engine has been design to receive an process these flags.
-Once you’ve opened the ``Blender-VR_Sound_Rendering_Engine_vX.maxpat`` on the
+Once you’ve opened the ``BlenderVR_Sound_Rendering_Engine_vX.maxpat`` on the
 OSC server as defined in the ``.xml`` configuration file:
 
 .. code:: xml
@@ -40,7 +40,7 @@ OSC server as defined in the ``.xml`` configuration file:
   </processor>
 
 And modified it to fit to your needs (spatializer, speakers mapping, microphone inputs,
-etc.), the rest of the sound adding process takes place in Blender-VR.
+etc.), the rest of the sound adding process takes place in BlenderVR.
 
 .. note::
   You also need to specify the folder containing your osc library in the `configuration file <configuration-file.html#library-path-sub-section>`__.
@@ -51,7 +51,7 @@ LIMSI members, see http://wikivenise.limsi.fr/index.php/Open_Sound_Control .
 Downloads
 ---------
 
-* `Blender-VR Sound Rendering Engine (.zip) <http://dalaifelinto.com/blendervr/ftp/blendervr_sound_rendering_engine_v4.zip>`_ version 4
+* `BlenderVR Sound Rendering Engine (.zip) <http://dalaifelinto.com/blendervr/ftp/blendervr_sound_rendering_engine_v4.zip>`_ version 4
 
 This is an example of a flexible sound rendering engine developed under MaxMSP which is fully controlled from the OSC messages received from BlenderVR.
 

@@ -27,7 +27,7 @@ Document Sections
 Acquiring Blender
 -----------------
 
-Blender-VR requires a vanilla Blender 2.74 or newer.
+BlenderVR requires a vanilla Blender 2.74 or newer.
 
 If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_.
 
@@ -43,7 +43,7 @@ To download the latest blenderVR git version (master HEAD):
 
   $ git clone https://github.com/BlenderVR/blender-vr.git
 
-If you do not intend to modify blenderVR source code, simply download the `Blender-VR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
+If you do not intend to modify blenderVR source code, simply download the `BlenderVR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
 
 Download Samples Scenes
 -----------------------

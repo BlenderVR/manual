@@ -8,12 +8,12 @@ First Run
 
 Document Sections
 -----------------
-  * `Launch Blender-VR`_
+  * `Launch BlenderVR`_
   * `Open the Simulation File`_
   * `Edit the Configuration File`_
   * `Run`_
 
-Launch Blender-VR
+Launch BlenderVR
 -----------------
 
 Start by opening the blenderVR GUI (see `Running BlenderVR <installation/installation.html#running>`_ in the Install section). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
@@ -27,7 +27,7 @@ In the `Simulation File <components/user-interface.html#simulation-file>`_ selec
 Edit the Configuration File
 ---------------------------
 
-You now need a valid `Configuration File <components/configuration-file.html>`_ to run Blender-VR. Make sure to follow the correct instructions and set a correct ``blender`` and ``blenderplayer`` paths.
+You now need a valid `Configuration File <components/configuration-file.html>`_ to run BlenderVR. Make sure to follow the correct instructions and set a correct ``blender`` and ``blenderplayer`` paths.
 
 Remember to `select and load <components/user-interface.html#configuration-file>`_ the configuration file.
 
@@ -38,5 +38,5 @@ Run
 ---
 If there are no errors in the configuration tab, change to the ``Run`` tab and hit `Start <components/user-interface.html#start-stop>`_ .
 
-Congratulations, you can now try the other sample files, configuration options and finally bring your own ``.blend`` files into Blender-VR.
+Congratulations, you can now try the other sample files, configuration options and finally bring your own ``.blend`` files into BlenderVR.
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# Blender-VR Manual documentation build configuration file, created by
+# BlenderVR Manual documentation build configuration file, created by
 # sphinx-quickstart on Thu Nov 27 18:12:34 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -65,7 +65,7 @@ print("Using Index:", master_doc)
 
 
 # General information about the project.
-project = 'Blender-VR Manual'
+project = 'BlenderVR Manual'
 copyright = 'Creative Commons Zero'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -197,7 +197,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Blender-VRManualdoc'
+htmlhelp_basename = 'BlenderVRManualdoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -250,8 +250,8 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'blender-vrmanual', 'Blender-VR Manual Documentation',
-     ['Blender-VR Team'], 1)
+    ('index', 'blender-vrmanual', 'BlenderVR Manual Documentation',
+     ['BlenderVR Team'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -264,8 +264,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Blender-VRManual', 'Blender-VR Manual Documentation',
-   'Blender-VR Team', 'Blender-VRManual', 'One line description of project.',
+  ('index', 'BlenderVRManual', 'BlenderVR Manual Documentation',
+   'BlenderVR Team', 'BlenderVRManual', 'One line description of project.',
    'Miscellaneous'),
 ]
 
