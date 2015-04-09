@@ -10,3 +10,4 @@ How to Use
    configuration-file.rst
    vrpn.rst
    osc.rst
+   dk2.rst
