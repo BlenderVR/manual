@@ -4,426 +4,486 @@ Configuration File
 
 The BlenderVR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run BlenderVR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
 
-This file must contain at least four sections, plus the ``plugins`` section.
-It also includes a ``BlenderVR`` section which only option is the network port used for the synchronization between the rendering nodes.
-
 .. note::
-  Use of space in ``screen`` name should work. Beware still Windows users.
+  For a comprehensive overview of the file specification access its `architecture documentation <../architecture/configuration-file.html>`__.
 
 Document Sections
 -----------------
-
-  * `Redundant Sections`_
-  * `Code Execution`_
-  * `Starter Section`_
-  * `Anchor`_
-  * `Users Section`_
-  * `Computers Section`_
-  * `Screens Section`_
-  * `Sample Configuration File`_
-
-Redundant Sections
-------------------
-
-Some elements can be specific to one node, other shared. For instance, the ``blenderplayer`` executable can be the same for all rendering nodes or different on some nodes. In such case, there will be a section called ``system`` that can be inherited by each ``computer`` sub-section:
+  * `Operating System Disclaimer`_
+  * `Desktop Basic`_
+  * `Desktop Networked`_
+  * `Desktop Oculus DK2`_
+  * `Dual Oculus DK2`_
+  * `CAVE`_ (soon)
+  * `Video Wall`_ (soon)
+  * `SMARTI-2 Video Corner`_ (soon)
 
 
-.. code:: xml
+Operating System Disclaimer
+---------------------------
 
-  <computers>
-    <system>
-      <blenderplayer executable='/usr/local/blender/2.74/bin/blenderplayer' />
-    </system>
-    <computer name='front computer' hostname='front.fqdn'>
-      <system>
-        <blenderplayer executable='/usr/bin/blenderplayer' />
-      </system>
-    </computer>
-    <computer name='left computer' hostname='left.fqdn' />
-    <computer name='right computer' hostname='right.fqdn'>
-      <system>
-        <library path='/usr/local/lib/vrpn/' />
-      </system>
-    </computer>
-  </computers>
+To avoid redudancy and unsynced and outdated documents the instructions to all supported operating system are condensed together in this page.
 
-In this example, ``left computer`` and ``right computer`` nodes will use ``/usr/local/blender/2.74/bin/blenderplayer`` whereas ``front computer`` node will use ``/usr/bin/blenderplayer``.
+In order to use any of the example configuration files in this page you need to first modify it according to the platform of each of your machines.
 
-The ``system`` section is called *redundant* as many entries will use the same information.
+  * `Windows`_
+  * `Mac`_
+  * `Linux`_
+
+Windows
+=======
+
+All samples in this page were written for Windows. All that is required to change is the corresponding path of blender, your system and the blenderplayer executable.
+
+``TODO`` snippets of a sample, and the changed snippets to adapt for a specific computer.
 
 
-Code Execution
---------------
+Mac
+===
 
-In the XML file, you can use back-quote to execute code. First, the XML parser will try to execute this code as python code in BlenderVR environment system (with all variables and import present in the BlenderVR XML parser). If it fails, then, it tries as bash code and take the stdout result. If none is valid it raises an error.
+All samples in this page were written for Windows. There are sections that are not needed for Mac, besides you need to change the corresponding paths of your system.
 
-For instance,
-
-.. code:: xml
-
-  <environment>HOME=`os.environ['HOME']`</environment>
-
-will define an environment variable (passed to the daemon or blenderplayer) called ``HOME`` that contains the current value of ``HOME`` operating system environment variable (with ``os.environ`` python code).
+``TODO`` snippets of a sample, and the changed snippets to adapt for a specific computer.
 
 
-You can even use inherited values from redundant section:
+Linux
+=====
 
-.. code:: xml
-
-  <login remote_command="ssh `self._attributs_inheritance['hostname']`">
-
-used inside the system redundant section will specify that ``remote_command`` will include the hostname as given in the ``computer`` entry.
-
-If uncertain, we suggest you to simply print the ``self._attributs_inheritance`` python dictionary:
-
-.. code:: xml
-
-  <login remote_command="`print(self._attributs_inheritance)`">
-
-that will raise an exception (which is the point, since your purpose here is to create your configuration file, not to run BlenderVR).
+All samples in this page were written for Windows. There are sections that are slightly different for Linux. Besides you need to change the corresponding paths of your system.
 
 
-Starter Section
----------------
-..
-  don't forget Blender
+``TODO`` snippets of a sample, and the changed snippets to adapt for a specific computer.
 
-This section only concerns the console. It contains all screen sets definitions.
 
-.. code:: xml
-
-  <starter blender='/usr/bin/blender'>
-    <config name='console'>console</config>
-    <config name='virtual environment'>console, front screen, left screen, right screen</config>
-    ...
-  </starter>
-
-You can also add a ``hostname`` attribute in case of ``socket.gethostname()`` python function returns wrong hostname. This hostname is used by all *virtual environment* nodes to contact the console for network connection control.
-
-The ``blender`` attribute is required in most of the cases for the `Update Loader <../architecture/run-modes.html#update-loader>`_  process.
-
-Each ``config`` sub-section must list all screens, separated by commas, used by this screen set.
-
-.. note::
-  De facto, the first screen listed here is the `master <../architecture/master-slaves.html#master>`_ node.
-
-Anchor
-------
-
-On some devices, the paths are not homogeneous: the root path (repository) of ``.blend`` files on the console is not the same than on the master and/or on the slaves.
-
-To fix that, BlenderVR uses the notion of **Anchor**: it is a node specific absolute path on all nodes that prefixes each relative path for blender and processor files.
-
-It is a kind of least common multiple path. For instance, with two computers:
-
-* **console** blender files repository: ``/home/me/blender_files``
-* **master node** blender files repository: ``/remote_home/me/blender_files``
-
-This least common path is ``/home`` on the console and ``/remote_home`` on the master node (``me/blender_files`` are common on both systems).
-
-In such case, the starter section (console specific section) will start by:
-
-.. code:: xml
-
-  <starter anchor='/home'>
-
-Whereas system section for the master node will start by:
-
-.. code:: xml
-
-  <system anchor='/remote_home'>
-
-Users Section
+Desktop Basic
 -------------
 
-Each ``user`` must be listed here. Several users will e.g. enable you to attach a head tracker to adapt stereoscopic rendering to different points of view inside the virtual environment.
+This is a very basic configuration file. There is only one computer and one user defined, and there are three screens:
 
-The ``behavior`` `redundant section <#redundant-sections>`_ can define the ``default_position`` (``0.0, 0.0, 0.0`` by default) or the ``eye_separation`` (6 centimeters by default) of the user.
-
-.. code:: xml
-
-  <!-- users section with default values -->
-  <users>
-    <behavior eye_separation='0.06'>
-      <default_position>0.0, 0.0, 0.0</default_position>
-    </behavior>
-    <user name="user A" />
-  </users>
-
-
-Computers Section
------------------
-
-We must describe how each rendering node (computer) works: each computer can have a specific configuration to run blenderplayer (paths, environment variables ...).
-However, most of the time, all computers are equivalent. Redundant section is useful!
-
-Computer itself must have a ``name`` and a ``hostname``. The name will be used by the screen.
-
-.. code:: xml
-
-  <computers>
-    <system>
-      . . . <!-- computers global information -->
-    </system>
-    <computer name='front computer' hostname='front.fqdn'>
-      <system>
-        . . . <!-- front computer specific information -->
-      </system>
-    </computer>
-    <computer name='left computer' hostname='left.fqdn' />
-  </computers>
-
-System Section
-==============
-
-The ``system`` redundant section defines many things:
-
-.. code:: xml
-
-  <system root='C:\\program\\BlenderVR' anchor='U:\\blender_files'>
-    <login remote_command="ssh `self._attributs_inheritance['hostname']`"/>
-      <daemon>
-        <environment>SystemRoot=C:\\Windows</environment>
-      </daemon>
-      <blenderplayer executable='C:\\blenderCave\\blender\\v2.70a\\blenderplayer.exe'>
-        <environment>PYTHONPATH=C:\\Python33\\Lib;</environment>
-      </blenderplayer>
-    </system>
-
-The ``root`` parameter specifies the root path of BlenderVR (where resides the ``BlenderVR`` python script, the ``modules`` folder, etc.). By default, it is set to BlenderVR root path on the console computer.
-However, due to `not homogeneous paths between nodes <#anchor>`_, you may have to define it for each system.
-
-See `Anchor <#anchor>`_ to know the purpose of anchor parameter.
-
-Library Path Sub-Section
-========================
-
-Plugins often relies on external libraries. If the library is not bundled in the ``blenderplayer`` python folder, the library folder can be specified with the ``library`` element.
-If any library is defined in a system section, they all must be defined.
-
-In the example below both OSC and VRPN library folders are specified for the OSX system, while the Linux stations shared the same system as defined in the top of the ``computers`` section.
-
-.. code:: xml
-
-  <computers>
-    <system>
-      <library path="/usr/local/lib/vrpn/" />
-      <library path="/usr/local/lib/osc/" />
-    </system>
-    <computer name='OSX station' hostname='mac'>
-      <system>
-        <library path="/User/dev/vrpn/build/python/" />
-        <library path="/User/dev/osc/lib/" />
-      </system>
-    </computer>
-    <computer name='Linux station A' hostname='linux_a' />
-    <computer name='Linux station B' hostname='linux_b' />
-  </computers>
-
-Login Sub-Section
-=================
-
-This section explains how to connect console and hosts computers.
-
-.. code:: xml
-
-  <login remote_command="ssh me@host" python="/usr/bin/python3"/>
-
-or
-
-.. code:: xml
-
-  <login remote_command="psexec -d \\host" python="C:\\python33\\python.exe"/>
-
-
-* **remote_command** specifies the command, from the computer running the console to connect to the remote host.
-* **python** contains the path and the name of the python3 executable.
-
-Generally, we use redundant system section with code execution to create this section (see example of the redundant section upper).
-
-Daemon Sub-Section
-==================
-
-The daemon sub-section explains how to run the `daemon <#daemon>`_ (now that we know how to connect to the remote computer).
-
-.. code:: xml
-
-  <daemon transmit='True'>
-    <environment>SystemRoot=C:\\Windows</environment>
-  </daemon>
-
-* **transmit** parameter specifies if the daemon must transmit the environment variables to blenderplayer while it runs it.
-* **environment** sub-section adds some specific environment variable to the daemon.
-
-
-.. note::
-  On Windows, you must at least, set the ``SystemRoot`` variable to points towards the path of your Windows installation (generally: ``C:\\Windows``)
-
-Blenderplayer Sub-Section
-=========================
-
-This section defines how to run ``blenderplayer``.
-
-.. code:: xml
-
-  <blenderplayer executable='C:\\BlenderVR\\blender\\v2.74\\blenderplayer.exe'>
-    <environment>PYTHONPATH=C:\\Python33\\Lib;C:\\Python33\\DLLs;C:\\Python33\\Lib\\site-packages</environment>
-  </blenderplayer>
-
-* The **executable** parameter contains the path and the binary name of patched version of blenderplayer.
-* The **environment** sub-sections allows you to add specific environment variables for blenderplayer. You can add ``PYTHONPATH`` environment to specify paths for optional modules (such as for VRPN).
-
-Screens Section
----------------
-
-The screen is the unit of rendering: there is a bijection between screen and instance of ``blenderplayer``. Each screen has a ``name`` and a ``computer`` (actually the name of the computer section, above).
-
-.. code:: xml
-
-  <screens>
-    <display>
-      . . . <!-- screens global information -->
-    </display>
-    <screen name='front screen' computer='front computer'>
-      <display>
-        . . . <!-- front screen specific information -->
-      </display>
-      <wall>
-        . . .
-      </wall>
-    </screen>
-    <screen name='left screen' computer='left computer'>
-  </screens>
-
-The ``display`` `redundant section <#redundant-sections>`_ defines several things:
-
-* **options** passed as argument to ``blenderplayer`` (for instance, ``-f -s hwpageflip`` to request a stereoscopic full screen ``blenderplayer`` window).
-* **environment** to pass specific environment variables to ``blenderplayer``.
-* **graphic_buffer** to associate:
-* ``buffer`` (``mono`` = no stereo, ``left`` graphic buffer or ``right`` graphic buffer,
-* ``user`` (as given inside ``users`` section),
-* ``eye`` of the user (``left``, ``middle`` or ``right``).
-* **viewport** to reduce the screen (useful if you have occlusion).
-
-.. code:: xml
-
-  <display options='-w 400 400'>
-    <viewport>420, 0, 1500, 1080</viewport>
-    <environment>DISPLAY=:0.0</environment>
-    <graphic_buffer buffer='mono' user='user A' eye='middle'/>
-  </display>
-
-Each screen must have one sub-section ``wall`` or ``hmd``.
-
-Wall or HMD differs in the way they manage the projection. Wall screens are fixed in the real world but HMD screen are attached to head of the user, moving along.
-
-Both require a screen definition: three corners (top right, top left and bottom right):
-
-.. code:: xml
-
-  <wall> <!-- or <hmd> -->
-    <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
-    <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
-    <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
-  </wall> <!-- or /<hmd> -->
-
-For Wall, the screens are defined in `vehicle <../architecture/vehicle.html>`_ reference frame. For HMD, the screens are defined in the reference frame of head tracker.
-
-Sample Configuration File
--------------------------
-
-This sample configuration file can be used for a cave with three vertical square (2m x 2m) screens (left, front and right) plus a console computer with a single windowed screen.
+  1. **Fullscreen**: plays the ``.blend`` file in fullscreen.
+  2. **Console**: plays the ``.blend`` file in a small window.
+  3. **Split**: plays the ``.blend`` file in two small windows, side-by-side, completing each other.
 
 .. code:: xml
 
     <?xml version="1.0"?>
     <BlenderVR>
 
-      <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
-          <config name='console'>console screen</config>
-          <config name='virtual environment'>console screen, front screen, left screen, right screen</config>
+      <starter blender='C:/BlenderVR/blender/blender.exe'>
+        <config name='Fullscreen'>fullscreen</config>
+        <config name='Console'>console</config>
+        <config name='Split'>console half left, console half right</config>
       </starter>
 
       <users>
-        <user name='user A' />
+        <user name="user A"/>
       </users>
 
-      <!-- Here, we define the console parameters -->
       <computers>
-        <computer name='console computer' hostname='console.fqdn'/>
+        <system>
+          <daemon transmit='True'>
+            <environment>SystemRoot=C:/Windows</environment>
+          </daemon>
+          <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+        </system>
+        <computer name='Any' hostname='*' />
       </computers>
+
       <screens>
-        <screen name='console screen' computer='console computer'>
-          <display options='-w 600 600'>
-      <environment>DISPLAY=:0.0</environment>
-      <graphic_buffer user='user A'/>
+        <screen name="fullscreen" computer="Any">
+          <display options="-f">
+            <graphic_buffer buffer="mono" user='user A' eye="middle"/>
           </display>
           <wall>
-      <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
-      <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
-      <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
           </wall>
         </screen>
-      </screens>
 
-      <computers>
-        <system root='/usr/local/blender/vr/1.0' anchor='/tmp/node'>
-          <login remote_command="ssh `self._attributs_inheritance['hostname']`" python='/usr/local/blender/2.74/dependencies/bin/python3.3'/>
-          <daemon transmit='True'>
-      <environment>PATH=/usr/bin:/bin</environment>
-          </daemon>
-          <blenderplayer executable='/usr/local/blender/2.74/bin/blenderplayer' />
-        </system>
-        <computer name='front computer' hostname='front.fqdn' />
-        <computer name='right computer' hostname='right.fqdn' />
-        <computer name='left computer' hostname='left.fqdn' />
-      </computers>
-      <screens>
-        <display options='-f -s hwpageflip'>
-          <environment>DISPLAY=:0.0</environment>
-          <graphic_buffer buffer='left' user='user A' eye='left'/>
-          <graphic_buffer buffer='right' user='user A' eye='right'/>
-        </display>
-        <screen name='front screen' computer='front computer'>
+        <screen name="console" computer="Any">
+          <display options="-w 400 400">
+            <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+          </display>
           <wall>
-      <corner name='topRightCorner'>1.0, 1.0, -1.0</corner>
-      <corner name='topLeftCorner'>-1.0, 1.0, -1.0</corner>
-      <corner name='bottomRightCorner'>1.0, -1.0, -1.0</corner>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
           </wall>
         </screen>
-        <screen name='left screen' computer='left computer'>
+
+        <screen name="console half left" computer="Any">
+          <display options="-w 400 400 200 300">
+            <graphic_buffer user='user A'/>
+          </display>
           <wall>
-      <corner name='topRightCorner'>-1.0, 1.0, -1.0</corner>
-      <corner name='topLeftCorner'>-1.0, 1.0, 1.0</corner>
-      <corner name='bottomRightCorner'>-1.0, -1.0, -1.0</corner>
+            <corner name="topRightCorner">0.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">0.0, -1.0, -1.0</corner>
           </wall>
         </screen>
-        <screen name='right screen' computer='right computer'>
+
+        <screen name="console half right" computer="Any">
+          <display options="-w 400 400 600 300">
+            <graphic_buffer user='user A'/>
+          </display>
           <wall>
-      <corner name='topRightCorner'>1.0, 1.0, 1.0</corner>
-      <corner name='topLeftCorner'>1.0, 1.0, -1.0</corner>
-      <corner name='bottomRightCorner'>1.0, -1.0, 1.0</corner>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">0.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
           </wall>
         </screen>
+
       </screens>
 
       <plugins>
-        <vrpn>
-          <floor x='0.0'/>
-          <tracker device='GTK' host='localhost'>
-      <transformation>
-        <post_translation z='-1.6'/>
-        <post_rotation x='1.0' y='1.0' z='1.0' angle="`-2*math.pi/3`"/>
-        <pre_rotation x='1.0' y='1.0' z='1.0' angle="`2*math.pi/3`"/>
-      </transformation>
-      <sensor id='0' processor_method='user_position' users='user A'/>
-      <sensor id='1' processor_method='tracker_1'/>
-      <sensor id='2' processor_method='tracker_2'/>
-      <sensor id='3' processor_method='tracker_3'/>
-          </tracker>
-          <analog device='GTK' host='localhost' processor_method='movements'/>
-          <button device='GTK' host='localhost' processor_method='buttons'/>
-        </vrpn>
+      </plugins>
+
+    </BlenderVR>
+
+
+Desktop Networked
+-----------------
+
+This is an extension of the `Desktop Basic`_ with basic network functionality. There are two computers (the master and the slave) and either is tied to a user.
+The screens are analog to the previous ones:
+
+  1. **Fullscreen Dual**: plays the ``.blend`` file in fullscreen in both computers.
+  2. **Fullscreen Left / Right**: plays the ``.blend`` file in fullscreen in either computer.
+  3. **Console Dual**: plays the ``.blend`` file in a small window in both computers.
+  4. **Console Left / Right**: plays the ``.blend`` file in a small window in either computer.
+
+It's important to make sure the master computer can connect to the slave and to itself using the specified ``ssh`` command.
+Also, don't understimate the console screens, they are great for debugging.
+
+
+.. code:: xml
+
+    <?xml version="1.0"?>
+    <BlenderVR>
+
+      <starter blender='C:/BlenderVR/blender/blender.exe' anchor='C:/BlenderVR/samples'>
+        <config name='Fullscreen Dual'>full left, full right</config>
+        <config name='Fullscreen Left'>full left</config>
+        <config name='Fullscreen Right'>full right</config>
+        <config name='Console Dual'>console left, console right</config>
+        <config name='Console Left'>console left</config>
+        <config name='Console Right'>console right</config>
+      </starter>
+
+      <users>
+        <user name="user A"/>
+        <user name="user B"/>
+      </users>
+
+      <computers>
+
+        <computer name='Left' hostname='192.168.0.1'>
+          <system root='C:/BlenderVR/blender-vr' anchor='C:/BlenderVR/samples'>
+
+            <daemon transmit='True'>
+              <environment>SystemRoot=C:/Windows</environment>
+            </daemon>
+
+            <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+            <login remote_command="ssh master@192.168.0.1" python="C:/Python3.4/Python.exe" />
+          </system>
+        </computer>
+
+        <computer name='Right' hostname='192.168.0.2'>
+          <system root='Z:/BlenderVR/blender-vr' anchor='Z:/BlenderVR/samples'>
+
+            <daemon transmit='True'>
+              <environment>SystemRoot=C:/Windows</environment>
+            </daemon>
+
+            <blenderplayer executable='Z:/BlenderVR/blender/belnderplayer.exe'/>
+            <login remote_command="ssh slave@192.168.0.2" python="D:/MyPython/Python.exe" />
+          </system>
+        </computer>
+
+      </computers>
+
+      <screens>
+
+        <screen name="console left" computer="Left">
+          <display options="-w 720 450 720 450">
+            <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+          </display>
+          <wall>
+            <corner name="topRightCorner">2.16, 1.35, -1.0</corner>
+            <corner name="topLeftCorner">-2.16, 1.35, -1.0</corner>
+            <corner name="bottomRightCorner">2.16, -1.35, -1.0</corner>
+          </wall>
+        </screen>
+
+        <screen name="console right" computer="Right">
+          <display options="-w 720 450 720 450">
+            <graphic_buffer buffer="mono" user='user B' eye="middle"/>
+          </display>
+          <wall>
+            <corner name="topRightCorner">2.16, 1.35, -1.0</corner>
+            <corner name="topLeftCorner">-2.16, 1.35, -1.0</corner>
+            <corner name="bottomRightCorner">2.16, -1.35, -1.0</corner>
+          </wall>
+        </screen>
+
+        <screen name="full left" computer="Left">
+          <display options="-w 720 900 720 900">
+            <graphic_buffer user='user A'/>
+          </display>
+          <wall>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">0.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+        <screen name="full right" computer="Right">
+          <display options="-w 720 900 0 900">
+            <graphic_buffer user='user B'/>
+          </display>
+          <wall>
+            <corner name="topRightCorner">0.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">0.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+      </screens>
+
+      <plugins>
+      </plugins>
+
+    </BlenderVR>
+
+Desktop Oculus DK2
+------------------
+.. note::
+
+  In order to use the Oculus DK2 you need to run a server separately.
+  More on the `sample files <https://github.com/BlenderVR/samples/tree/master/advanced-examples/oculus-rift-dk2>`__
+
+
+This configuration has three screens - the main one to be used for deployment, and two others used for debugging and testing:
+
+  1. **Oculus DK2 Fullscreen**: plays the ``.blend`` file in fullscreen in Oculus DK2 mode.
+  2. **Oculus DK2 Debug**: plays the ``.blend`` file in a small window in Oculus DK2 mode.
+  3. **Console**: plays the ``.blend`` file in a small window in the computer.
+
+Besides that we now define the Oculus DK2 library path to be loaded in the system, as well as the plugin users.
+
+A computer can control only a single Oculus, for a multiple Oculus installation you need networked computers as explained in the `Dual Oculus DK2`_ example.
+
+
+.. code:: xml
+
+    <?xml version="1.0"?>
+    <BlenderVR>
+
+      <starter blender='C:/BlenderVR/blender/blender.exe'>
+        <config name='Oculus DK2 Fullscreen'>oculus dk2 full</config>
+        <config name='Oculus DK2 Debug'>oculus dk2 debug</config>
+        <config name='Console'>console</config>
+      </starter>
+
+      <users>
+        <user name="user A"/>
+      </users>
+
+      <computers>
+
+        <system>
+          <daemon transmit='True'>
+            <environment>SystemRoot=C:/Windows</environment>
+          </daemon>
+          <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+
+          <library path="C:/BlenderVR/venv/lib/python3.4/site-packages" />
+          <library path="C:/BlenderVR/venv/lib/python3.4/site-packages/websocket_client-0.18.0-py3.4.egg-info" />
+
+        </system>
+        <computer name='Any' hostname='*' />
+
+      </computers>
+
+      <screens>
+
+        <screen name="oculus dk2 full" computer="Any">
+          <display options="-f -s sidebyside">
+            <graphic_buffer buffer="left" user='user A' eye="left"/>
+            <graphic_buffer buffer="right" user='user A' eye="right"/>
+          </display>
+          <hmd model="oculus_dk2">
+            <left>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </left>
+            <right>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </right>
+          </hmd>
+        </screen>
+
+        <screen name="oculus dk2 debug" computer="Any">
+            <display options="-w 720 450 720 450 -s sidebyside">
+            <graphic_buffer buffer="left" user='user A' eye="left"/>
+            <graphic_buffer buffer="right" user='user A' eye="right"/>
+          </display>
+          <hmd model="oculus_dk2">
+            <left>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </left>
+            <right>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </right>
+          </hmd>
+        </screen>
+
+        <screen name="console" computer="Any">
+          <display options="-w 400 400">
+            <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+          </display>
+          <wall>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+      </screens>
+
+      <plugins>
+
+        <oculus_dk2>
+          <user host="127.0.0.1" viewer='user A' computer='Any' processor_method="user_position" />
+        </oculus_dk2>
+
       </plugins>
     </BlenderVR>
 
+Dual Oculus DK2
+---------------
+This is a mix of the `Desktop Networked`_ with the `Desktop Oculus DK2`_ examples.
+We now have a server which is running in Mac, while the client is in Windows.
+
+Each computer has an Oculus DK2 device connected to it. And each device controls a ``user`` point of view. We skipped the debug and console configurations in this example, but they can be copied from the previous ones.
+
+It's important to make sure the master computer can connect to the slave and to itself using the specified ``ssh`` command.
+
+.. note::
+  The same configuration file can be used by both computers by changing only the ``starter`` section for each corresponding master station.
+
+.. code:: xml
+
+    <?xml version="1.0"?>
+    <BlenderVR>
+      <starter blender='/Users/MYUSER/BlenderVR/blender/blender.app/Contents/MacOS/blender' hostname='192.168.0.1' anchor='/Users/MYUSER/BlenderVR/blender-vr/samples'>
+        <config name='Oculus DK2 Dual1 Dual'>oculus dk2 left, oculus dk2 right</config>
+      </starter>
+
+      <users>
+        <user name="user A"/>
+        <user name="user B"/>
+      </users>
+
+      <computers>
+
+        <computer name='Left' hostname='192.168.0.1'>
+            <system root='/Users/MYUSER/BlenderVR/blender-vr' anchor='/Users/MYUSER/BlenderVR/samples'>
+                <blenderplayer executable='/Users/MYUSER/BlenderVR/blender/blenderplayer.app/Contents/MacOS/blenderplayer'/>
+                <login remote_command="ssh MYUSER@192.168.0.1" python="/Users/MYUSER/BlenderVR/venv/bin/python3.4"/>
+                <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages" />
+                <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages/websocket_client-0.18.0-py3.4.egg-info" />
+            </system>
+        </computer>
+
+        <computer name='Right' hostname='192.168.0.2'>
+          <system root='C:/BlenderVR/blender-vr' anchor='C:/BlenderVR/samples'>
+            <daemon transmit='True'>
+              <environment>SystemRoot=C:/Windows</environment>
+            </daemon>
+            <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+            <login remote_command="ssh slave@192.168.0.2" python="C:/Python3.4/Python.exe" />
+            <library path="C:/BlenderVR/venv/lib/python3.4/site-packages" />
+            <library path="C:/BlenderVR/venv/lib/python3.4/site-packages/websocket_client-0.18.0-py3.4.egg-info" />
+
+          </system>
+        </computer>
+
+      </computers>
+
+      <screens>
+
+        <screen name="oculus dk2 left" computer="Left">
+          <display options="-f -s sidebyside">
+            <graphic_buffer buffer="left" user='user A' eye="left"/>
+            <graphic_buffer buffer="right" user='user A' eye="right"/>
+          </display>
+          <hmd model="oculus_dk2">
+            <left>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </left>
+            <right>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </right>
+          </hmd>
+        </screen>
+
+        <screen name="oculus dk2 right" computer="Right">
+          <display options="-f -s sidebyside">
+            <environment>DISPLAY=:0.0</environment>
+            <graphic_buffer buffer="left" user='user B' eye="left"/>
+            <graphic_buffer buffer="right" user='user B' eye="right"/>
+          </display>
+          <hmd model="oculus_dk2">
+            <left>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </left>
+            <right>
+              <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+              <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+              <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+            </right>
+          </hmd>
+        </screen>
+
+      </screens>
+
+      <plugins>
+
+        <oculus_dk2>
+          <user host="192.168.0.1" viewer='user A' computer='Left' />
+          <user host="192.168.0.2" viewer='user B' computer='Right' />
+        </oculus_dk2>
+
+      </plugins>
+    </BlenderVR>
+
+CAVE
+----
+.. note::
+  Coming Soon
+
+Video Wall
+----------
+.. note::
+  Coming Soon
+
+SMARTI-2 Video Corner
+---------------------
+.. note::
+  Coming Soon

@@ -8,3 +8,4 @@ Architecture
    master-slaves.rst
    vehicle.rst
    protocols.rst
+   configuration-file.rst
