@@ -43,8 +43,40 @@ Mac
 
 All samples in this page were written for Windows. There are sections that are not needed for Mac, besides you need to change the corresponding paths of your system.
 
-``TODO`` snippets of a sample, and the changed snippets to adapt for a specific computer.
+The first thing that needs to be adapted is the filepaths.
+The following are assorted examples of filepaths in Windows and Mac.
 
+**Windows**:
+
+.. code:: xml
+
+  <starter blender='C:/BlenderVR/blender/blender.exe' anchor='C:/BlenderVR/samples'>
+  <system root='C:/BlenderVR/source' anchor='C:/BlenderVR/samples'>
+  <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+  <login remote_command="ssh windows_login@192.168.0.1" python="C:/Python3.4/Python.exe" />
+  <library path="C:/BlenderVR/venv/lib/python3.4/site-packages" />
+
+**Mac**:
+
+.. code:: xml
+
+  <starter blender='/Users/MYUSER/BlenderVR/blender/blender.app/Contents/MacOS/blender' anchor='/Users/MYUSER/BlenderVR/samples'>
+  <system root='/Users/MYUSER/BlenderVR/source' anchor='/Users/MYUSER/BlenderVR/samples'>
+  <blenderplayer executable='/Users/MYUSER/BlenderVR/blender/blenderplayer.app/Contents/MacOS/blenderplayer'/>
+  <login remote_command="ssh mac_login@192.168.0.1" python="/Users/MYUSER/BlenderVR/venv/bin/python3.4"/>
+  <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages" />
+
+Notice that in Mac the Blender binary is inside the bundle (blender.app), as well as the Blenderplayer (blenderplayer.app).
+Also ``/Users/MYUSER/`` is to be replaced by the location of your BlenderVR installation.
+
+The second thing is the environment XML element which is not required in Mac.
+So the lines below are to be suppressed in the Mac configuration files.
+
+.. code:: xml
+
+            <daemon transmit='True'>
+              <environment>SystemRoot=C:/Windows</environment>
+            </daemon>
 
 Linux
 =====
