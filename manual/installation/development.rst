@@ -1,13 +1,13 @@
-=======================================
-Install for Future BlenderVR Developers
-=======================================
+=================================
+Install for BlenderVR Development
+=================================
 
 This guide walks you over the basic steps of setting up a development environment for BlenderVR.
 
 .. note ::
   For casual BlenderVR users, please refer to the `Install BlenderVR <installation.html>`_ page.
 
-The install is the same than described in `Install BlenderVR <installation.html>`_ but for:
+The install is the same as described in `Install BlenderVR <installation.html>`_ but for:
 
 * git clone of the BlenderVR repository, to freely modify and eventually commit your modifications.
 * svn/git clone of the BlenderVR samples, to eventually add your own demo scenes to the BlenderVR samples repository
@@ -53,15 +53,14 @@ Regarding BlenderVR samples, Git is not a good system to work on binary files, s
 .. code-block:: bash
 
   $ cd $INSTALL_DIR
-  $ svn checkout https://github.com/BlenderVR/samples
+  $ svn checkout https://github.com/BlenderVR/samples/trunk samples
 
 
 Or for an individual sample folder:
 
 .. code-block:: bash
 
-  $ svn checkout https://github.com/BlenderVR/samples/trunk/simple
-
+  $ svn checkout https://github.com/BlenderVR/samples/trunk/basic/basic
 
 Alternatively if you want to access the repository via GIT you can do::
 
