@@ -47,7 +47,7 @@ then follow compilation instructions from `VRPN Compiling <http://www.cs.unc.edu
 
 Add the path of the vrpn python directory (e.g. `$INSTALL_DIR/plugins/vrpn/build/python`) to your `configuration file <components/configuration-file.html>`_ libraries.
 
-Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/oculus_dk2/``.
+Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/plugin/vrpn/basic-vrpn/``.
 
 Oculus Rift DK2
 ---------------
@@ -76,7 +76,7 @@ On OSX/Linux:
 
   $ cd $INSTALL_DIR
   $ source venv/bin/activate
-  $ pip3 install -r blender-vr/requirements-dk2.txt
+  $ pip3 install -r source/requirements-dk2.txt
 
 On Windows:
 
@@ -84,7 +84,7 @@ On Windows:
 
   $ cd $INSTALL_DIR
   $ .\venv\Scripts\activate
-  $ pip3 install -r blender-vr\requirements-dk2.txt
+  $ pip3 install -r source\requirements-dk2.txt
 
 Download and install the `Oculus Runtime <https://developer.oculus.com/downloads/>`_ for your architecture.
 
@@ -93,6 +93,6 @@ Download and install the `Oculus Runtime <https://developer.oculus.com/downloads
   OSX: check on the web to setup your screen configuration for the rift (mirrored display, 90 rotation, etc.), e.g. `here <http://www.reddit.com/r/oculus/comments/2dbxve/041_with_dk2_on_a_mac_incompatible_resolution/>`_
 
 
-Modify your `configuration file <components/configuration-file.html>`_ to add the path to your newly installed libraries. Check the configuration file ``$INSTALL_DIR/blender-vr/configurations/main-dk2.xml`` for guideline.
+Modify your `configuration file <components/configuration-file.html>`_ to add the path to your newly installed libraries. Check the configuration file ``$INSTALL_DIR/source/configurations/main-dk2.xml`` for guideline.
 
-Once done, launch the ``basic-dk2.blend`` scene in ``$INSTALL_DIR/samples/oculus_dk2/``.
+Once done, launch the ``basic-dk2.blend`` scene in ``$INSTALL_DIR/samples/plugin/hmd/``.

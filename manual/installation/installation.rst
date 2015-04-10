@@ -25,7 +25,7 @@ Folder Structure
 
 After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual (the directory holding these files is  referred as $INSTALL_DIR in the next sections).
 
-``//blender-vr/``
+``//source/``
 *BlenderVR Source Code*
 
 ``//blender/``
@@ -56,7 +56,7 @@ Optionally you can use  a patched version of Blender 2.73a available here for al
 Acquiring BlenderVR
 -------------------
 
-* `BlenderVR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it **blender-vr**)
+* `BlenderVR Sources <https://github.com/BlenderVR/source/archive/v1.0.zip>`_ (download and unzip in the top folder, rename it **source**)
 
 Download Samples Scenes
 -----------------------
@@ -73,7 +73,7 @@ To check which samples are available visit the `Samples Repository <https://gith
 
   $ cd $INSTALL_DIR
   $ mkdir -p samples
-  $ svn checkout https://github.com/BlenderVR/samples/trunk/simple samples/
+  $ svn checkout https://github.com/BlenderVR/samples/trunk/basic/basic samples/
 
 (Or simply `svn checkout` the required sample with SVN Tortoise).
 
@@ -110,7 +110,7 @@ On OSX/Linux:
   $ pip3 install virtualenv
   $ pyvenv venv
   $ source venv/bin/activate
-  $ pip3 install -r blender-vr/requirements.txt
+  $ pip3 install -r source/requirements.txt
   $ pyside_postinstall.py -install
 
 .. note::
@@ -128,9 +128,9 @@ On Windows:
   $ pip3 install virtualenv
   $ virtualenv venv
   $ .\venv\Scripts\activate
-  $ pip3 install -r blender-vr\requirements.txt
+  $ pip3 install -r source\requirements.txt
   $ python3 .\venv\Scripts\pyside_postinstall.py -install
-  $ python3 .\blender-vr\BlenderVR
+  $ python3 .\source\blendervr
 
 You may have to add the path to the python binary, e.g.
 
@@ -151,7 +151,7 @@ On OSX/Linux:
 
   $ cd $INSTALL_DIR
   $ source venv/bin/activate
-  $ ./blender-vr/BlenderVR
+  $ ./source/blendervr
 
 On Windows:
 
@@ -159,7 +159,7 @@ On Windows:
 
   $ cd $INSTALL_DIR
   $ .\venv\Scripts\activate
-  $ python3 .\blender-vr\BlenderVR
+  $ python3 .\source\blendervr
 
 You should now see the BlenderVR window popping up (see figure below). Congratulations your installation was a success!
 

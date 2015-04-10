@@ -8,10 +8,10 @@ Links
 -----
 
 * `All Repositories <https://github.com/BlenderVR>`_
-* `Source Code Repository <https://github.com/BlenderVR/blender-vr>`_
+* `Source Code Repository <https://github.com/BlenderVR/source>`_
 * `Manual Repository <https://github.com/BlenderVR/manual>`_
 * `Samples Repository <https://github.com/BlenderVR/samples>`_
-* `Bug List <https://github.com/BlenderVR/blender-vr/issues>`_
+* `Bug List <https://github.com/BlenderVR/source/issues>`_
 
 Development Documents
 ----------------------

@@ -8,7 +8,7 @@ Source Code API [1]_ and the User Manual [2]_.
 Even though those parts are independently hosted and maintained, they
 are both built on the same framework.
 
-.. [1] `code <https://github.com/BlenderVR/blender-vr>`__,  `compiled <http://blender-vr.readthedocs.org>`__
+.. [1] `code <https://github.com/BlenderVR/source>`__,  `compiled <http://blender-vr.readthedocs.org>`__
 .. [2] `code <https://github.com/BlenderVR/manual>`__,  `compiled <http://blender-vr-manual.readthedocs.org>`__
 
 Document Sections:
@@ -44,7 +44,7 @@ Type the following commands in your terminal. If you are developing in Windows w
   $ cd $INSTALL_DIR
   $ git clone https://github.com/BlenderVR/manual.git
   $ source venv/bin/activate
-  $ pip requirements -r blender-vr/docs/requirements.txt
+  $ pip requirements -r source/docs/requirements.txt
   $ pip requirements -r manual/requirements.txt
   $ deactivate
 
@@ -76,11 +76,11 @@ Souce Code API
 
   $ cd $INSTALL_DIR
   $ source venv/bin/activate
-  $ cd blender-vr/docs/
+  $ cd source/docs/
   $ make
   $ deactivate
 
-This will output the documentation to ``$INSTALL_DIR/blender-vr/docs/html``.
+This will output the documentation to ``$INSTALL_DIR/source/docs/html``.
 
 
 How to Edit

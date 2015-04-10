@@ -179,7 +179,7 @@ Also, don't understimate the console screens, they are great for debugging.
       <computers>
 
         <computer name='Left' hostname='192.168.0.1'>
-          <system root='C:/BlenderVR/blender-vr' anchor='C:/BlenderVR/samples'>
+          <system root='C:/BlenderVR/source' anchor='C:/BlenderVR/samples'>
 
             <daemon transmit='True'>
               <environment>SystemRoot=C:/Windows</environment>
@@ -191,7 +191,7 @@ Also, don't understimate the console screens, they are great for debugging.
         </computer>
 
         <computer name='Right' hostname='192.168.0.2'>
-          <system root='Z:/BlenderVR/blender-vr' anchor='Z:/BlenderVR/samples'>
+          <system root='Z:/BlenderVR/source' anchor='Z:/BlenderVR/samples'>
 
             <daemon transmit='True'>
               <environment>SystemRoot=C:/Windows</environment>
@@ -262,7 +262,7 @@ Desktop Oculus DK2
 .. note::
 
   In order to use the Oculus DK2 you need to run a server separately.
-  More on the `sample files <https://github.com/BlenderVR/samples/tree/master/advanced-examples/oculus-rift-dk2>`__
+  More on the `sample files <https://github.com/BlenderVR/samples/tree/master/advanced/oculus-rift-dk2>`__
 
 
 This configuration has three screens - the main one to be used for deployment, and two others used for debugging and testing:
@@ -385,7 +385,7 @@ It's important to make sure the master computer can connect to the slave and to 
 
     <?xml version="1.0"?>
     <blendervr>
-      <starter blender='/Users/MYUSER/BlenderVR/blender/blender.app/Contents/MacOS/blender' hostname='192.168.0.1' anchor='/Users/MYUSER/BlenderVR/blender-vr/samples'>
+      <starter blender='/Users/MYUSER/BlenderVR/blender/blender.app/Contents/MacOS/blender' hostname='192.168.0.1' anchor='/Users/MYUSER/BlenderVR/samples'>
         <config name='Oculus DK2 Dual1 Dual'>oculus dk2 left, oculus dk2 right</config>
       </starter>
 
@@ -397,7 +397,7 @@ It's important to make sure the master computer can connect to the slave and to 
       <computers>
 
         <computer name='Left' hostname='192.168.0.1'>
-            <system root='/Users/MYUSER/BlenderVR/blender-vr' anchor='/Users/MYUSER/BlenderVR/samples'>
+            <system root='/Users/MYUSER/BlenderVR/source' anchor='/Users/MYUSER/BlenderVR/samples'>
                 <blenderplayer executable='/Users/MYUSER/BlenderVR/blender/blenderplayer.app/Contents/MacOS/blenderplayer'/>
                 <login remote_command="ssh MYUSER@192.168.0.1" python="/Users/MYUSER/BlenderVR/venv/bin/python3.4"/>
                 <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages" />
@@ -406,7 +406,7 @@ It's important to make sure the master computer can connect to the slave and to 
         </computer>
 
         <computer name='Right' hostname='192.168.0.2'>
-          <system root='C:/BlenderVR/blender-vr' anchor='C:/BlenderVR/samples'>
+          <system root='C:/BlenderVR/source' anchor='C:/BlenderVR/samples'>
             <daemon transmit='True'>
               <environment>SystemRoot=C:/Windows</environment>
             </daemon>

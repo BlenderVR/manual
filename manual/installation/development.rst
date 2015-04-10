@@ -41,9 +41,9 @@ To download the latest BlenderVR git version (master HEAD):
 
 .. code-block:: bash
 
-  $ git clone https://github.com/BlenderVR/blender-vr.git
+  $ git clone https://github.com/BlenderVR/source.git
 
-If you do not intend to modify BlenderVR source code, simply download the `BlenderVR Sources <https://github.com/BlenderVR/blender-vr/archive/v1.0.zip>`_ zipfile.
+If you do not intend to modify BlenderVR source code, simply download the `BlenderVR Sources <https://github.com/BlenderVR/source/archive/v1.0.zip>`_ zipfile.
 
 Download Samples Scenes
 -----------------------
