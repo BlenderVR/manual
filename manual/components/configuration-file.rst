@@ -35,7 +35,12 @@ Windows
 
 All samples in this page were written for Windows. All that is required to change is the corresponding path of blender, your system and the blenderplayer executable.
 
-``TODO`` snippets of a sample, and the changed snippets to adapt for a specific computer.
+In those examples we assume the BlenderVR files are in ``C:/BlenderVR/``.
+So the source is in ``C:/BlenderVR/source/`` and the samples in ``C:/BlenderVR/samples/``.
+
+Change the folders accordingly to your installation.
+
+
 
 
 Mac
