@@ -5,7 +5,7 @@ Configuration File
 The BlenderVR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run BlenderVR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
 
 This file must contain at least four sections, plus the ``plugins`` section.
-It also includes a ``BlenderVR`` section which only option is the network port used for the synchronization between the rendering nodes.
+It also includes a ``blendervr`` section which only option is the network port used for the synchronization between the rendering nodes.
 
 .. note::
   Use of space in ``screen`` name should work. Beware still Windows users.
@@ -337,7 +337,7 @@ This sample configuration file can be used for a cave with three vertical square
 .. code:: xml
 
     <?xml version="1.0"?>
-    <BlenderVR>
+    <blendervr>
 
       <starter anchor='/tmp/console' blender='/usr/local/blender/2.74/bin/blender'>
           <config name='console'>console screen</config>
@@ -425,5 +425,5 @@ This sample configuration file can be used for a cave with three vertical square
           <button device='GTK' host='localhost' processor_method='buttons'/>
         </vrpn>
       </plugins>
-    </BlenderVR>
+    </blendervr>
 

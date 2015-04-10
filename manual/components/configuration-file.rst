@@ -67,7 +67,7 @@ This is a very basic configuration file. There is only one computer and one user
 .. code:: xml
 
     <?xml version="1.0"?>
-    <BlenderVR>
+    <blendervr>
 
       <starter blender='C:/BlenderVR/blender/blender.exe'>
         <config name='Fullscreen'>fullscreen</config>
@@ -139,7 +139,7 @@ This is a very basic configuration file. There is only one computer and one user
       <plugins>
       </plugins>
 
-    </BlenderVR>
+    </blendervr>
 
 
 Desktop Networked
@@ -160,7 +160,7 @@ Also, don't understimate the console screens, they are great for debugging.
 .. code:: xml
 
     <?xml version="1.0"?>
-    <BlenderVR>
+    <blendervr>
 
       <starter blender='C:/BlenderVR/blender/blender.exe' anchor='C:/BlenderVR/samples'>
         <config name='Fullscreen Dual'>full left, full right</config>
@@ -255,7 +255,7 @@ Also, don't understimate the console screens, they are great for debugging.
       <plugins>
       </plugins>
 
-    </BlenderVR>
+    </blendervr>
 
 Desktop Oculus DK2
 ------------------
@@ -279,7 +279,7 @@ A computer can control only a single Oculus, for a multiple Oculus installation 
 .. code:: xml
 
     <?xml version="1.0"?>
-    <BlenderVR>
+    <blendervr>
 
       <starter blender='C:/BlenderVR/blender/blender.exe'>
         <config name='Oculus DK2 Fullscreen'>oculus dk2 full</config>
@@ -367,7 +367,7 @@ A computer can control only a single Oculus, for a multiple Oculus installation 
         </oculus_dk2>
 
       </plugins>
-    </BlenderVR>
+    </blendervr>
 
 Dual Oculus DK2
 ---------------
@@ -384,7 +384,7 @@ It's important to make sure the master computer can connect to the slave and to 
 .. code:: xml
 
     <?xml version="1.0"?>
-    <BlenderVR>
+    <blendervr>
       <starter blender='/Users/MYUSER/BlenderVR/blender/blender.app/Contents/MacOS/blender' hostname='192.168.0.1' anchor='/Users/MYUSER/BlenderVR/blender-vr/samples'>
         <config name='Oculus DK2 Dual1 Dual'>oculus dk2 left, oculus dk2 right</config>
       </starter>
@@ -471,7 +471,7 @@ It's important to make sure the master computer can connect to the slave and to 
         </oculus_dk2>
 
       </plugins>
-    </BlenderVR>
+    </blendervr>
 
 CAVE
 ----
