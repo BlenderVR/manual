@@ -62,8 +62,8 @@ The following are assorted examples of filepaths in Windows and Mac.
 
   <starter blender='/Users/MYUSER/BlenderVR/blender/blender.app/Contents/MacOS/blender' anchor='/Users/MYUSER/BlenderVR/samples'>
   <system root='/Users/MYUSER/BlenderVR/source' anchor='/Users/MYUSER/BlenderVR/samples'>
-  <blenderplayer executable='/Users/MYUSER/BlenderVR/blender/blenderplayer.app/Contents/MacOS/blenderplayer'/>
-  <login remote_command="ssh mac_login@192.168.0.1" python="/Users/MYUSER/BlenderVR/venv/bin/python3.4"/>
+  <blenderplayer executable='/Users/MYUSER/BlenderVR/blender/blenderplayer.app/Contents/MacOS/blenderplayer' />
+  <login remote_command="ssh mac_login@192.168.0.1" python="/Users/MYUSER/BlenderVR/venv/bin/python3.4" />
   <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages" />
 
 Notice that in Mac the Blender binary is inside the bundle (blender.app), as well as the Blenderplayer (blenderplayer.app).
@@ -84,8 +84,51 @@ Linux
 All samples in this page were written for Windows. There are sections that are slightly different for Linux. Besides you need to change the corresponding paths of your system.
 
 
-``TODO`` snippets of a sample, and the changed snippets to adapt for a specific computer.
+The first thing that needs to be adapted is the filepaths.
+The following are assorted examples of filepaths in Windows and Linux.
 
+**Windows**:
+
+.. code:: xml
+
+  <starter blender='C:/BlenderVR/blender/blender.exe' anchor='C:/BlenderVR/samples'>
+  <system root='C:/BlenderVR/source' anchor='C:/BlenderVR/samples'>
+  <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+  <login remote_command="ssh windows_login@192.168.0.1" python="C:/Python3.4/Python.exe" />
+  <library path="C:/BlenderVR/venv/lib/python3.4/site-packages" />
+
+**Linux**:
+
+.. code:: xml
+
+  <starter blender='/home/MYUSER/BlenderVR/blender/blender' anchor='/home/MYUSER/BlenderVR/samples'>
+  <system root='/home/MYUSER/BlenderVR/source' anchor='/home/MYUSER/BlenderVR/samples'>
+  <blenderplayer executable='/home/MYUSER/BlenderVR/blender/blenderplayer' />
+  <login remote_command="ssh linux_login@192.168.0.1" python="/home/MYUSER/BlenderVR/venv/bin/python3.4"/>
+  <library path="/home/MYUSER/BlenderVR/venv/lib/python3.4/site-packages" />
+
+The location ``/home/MYUSER/`` is to be replaced by the location of your BlenderVR installation.
+
+The second thing is the environment XML element which is not required in Linux.
+So the lines below are to be suppressed in the Mac configuration files.
+
+.. code:: xml
+
+            <daemon transmit='True'>
+              <environment>SystemRoot=C:/Windows</environment>
+            </daemon>
+
+Finally, Linux allows you to specify a unique ``<environment>DISPLAY=:0.0</environment>`` element to specify in which display a screen should run. For example:
+
+.. code:: xml
+
+    (...)
+    <screen name="console" computer="Any">
+      <display options="-w 400 400">
+        <environment>DISPLAY=:0.0</environment>
+        <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+      </display>
+    (...)
 
 Desktop Basic
 -------------
