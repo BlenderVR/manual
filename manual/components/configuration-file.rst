@@ -351,7 +351,7 @@ This configuration has three screens - the main one to be used for deployment, a
   2. **Oculus DK2 Debug**: plays the ``.blend`` file in a small window in Oculus DK2 mode.
   3. **Console**: plays the ``.blend`` file in a small window in the computer.
 
-Besides that we now define the Oculus DK2 library path to be loaded in the system, as well as the plugin users.
+Besides that we now define the Oculus DK2 plugin user.
 
 A computer can control only a single Oculus, for a multiple Oculus installation you need networked computers as explained in the `Dual Oculus DK2`_ example.
 
@@ -378,10 +378,6 @@ A computer can control only a single Oculus, for a multiple Oculus installation 
             <environment>SystemRoot=C:/Windows</environment>
           </daemon>
           <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
-
-          <library path="C:/BlenderVR/venv/lib/python3.4/site-packages" />
-          <library path="C:/BlenderVR/venv/lib/python3.4/site-packages/websocket_client-0.18.0-py3.4.egg-info" />
-
         </system>
         <computer name='Any' hostname='*' />
 
@@ -443,7 +439,7 @@ A computer can control only a single Oculus, for a multiple Oculus installation 
       <plugins>
 
         <oculus_dk2>
-          <user host="127.0.0.1" viewer='user A' computer='Any' processor_method="user_position" />
+          <user viewer='user A' computer='Any' processor_method="user_position" />
         </oculus_dk2>
 
       </plugins>
@@ -480,8 +476,6 @@ It's important to make sure the master computer can connect to the slave and to 
             <system root='/Users/MYUSER/BlenderVR/source' anchor='/Users/MYUSER/BlenderVR/samples'>
                 <blenderplayer executable='/Users/MYUSER/BlenderVR/blender/blenderplayer.app/Contents/MacOS/blenderplayer'/>
                 <login remote_command="ssh MYUSER@192.168.0.1" python="/Users/MYUSER/BlenderVR/venv/bin/python3.4"/>
-                <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages" />
-                <library path="/Users/MYUSER/BlenderVR/venv/lib/python3.4/site-packages/websocket_client-0.18.0-py3.4.egg-info" />
             </system>
         </computer>
 
@@ -492,9 +486,6 @@ It's important to make sure the master computer can connect to the slave and to 
             </daemon>
             <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
             <login remote_command="ssh slave@192.168.0.2" python="C:/Python3.4/Python.exe" />
-            <library path="C:/BlenderVR/venv/lib/python3.4/site-packages" />
-            <library path="C:/BlenderVR/venv/lib/python3.4/site-packages/websocket_client-0.18.0-py3.4.egg-info" />
-
           </system>
         </computer>
 
@@ -546,8 +537,8 @@ It's important to make sure the master computer can connect to the slave and to 
       <plugins>
 
         <oculus_dk2>
-          <user host="192.168.0.1" viewer='user A' computer='Left' />
-          <user host="192.168.0.2" viewer='user B' computer='Right' />
+          <user viewer='user A' computer='Left' />
+          <user viewer='user B' computer='Right' />
         </oculus_dk2>
 
       </plugins>

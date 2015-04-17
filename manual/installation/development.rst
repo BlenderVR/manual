@@ -42,8 +42,11 @@ To download the latest BlenderVR git version (master HEAD):
 .. code-block:: bash
 
   $ git clone https://github.com/BlenderVR/source.git
+  $ cd source
+  $ git submodule update --init --recursive --remote
 
-If you do not intend to modify BlenderVR source code, simply download the `BlenderVR Sources <https://github.com/BlenderVR/source/archive/v1.0.zip>`_ zipfile.
+.. note::
+  In old versions of git (1.6x, 1.7x) the --remote option doesn't exist and thus should be left out
 
 Download Samples Scenes
 -----------------------
@@ -62,7 +65,9 @@ Or for an individual sample folder:
 
   $ svn checkout https://github.com/BlenderVR/samples/trunk/basic/basic
 
-Alternatively if you want to access the repository via GIT you can do::
+Alternatively if you want to access the repository via GIT you can do:
+
+.. code-block:: bash
 
   $ cd $INSTALL_DIR
   $ git clone https://github.com/BlenderVR/samples.git

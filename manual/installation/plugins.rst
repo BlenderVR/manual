@@ -55,44 +55,17 @@ Oculus Rift DK2
 This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`__ with BlenderVR.
 The install procedure involves:
 
-* install java
-* install dk2-blender-java-web-sockets
-* install python dependencies
 * install the oculus rift dk2 runtime
 * modify BlenderVR configuration file for dk2 support
-
-The dk2 support in BlenderVR relies on the `dk2-blender-java-web-sockets <https://github.com/tltmedia/dk2-blender-java-web-sockets>`_.
-This java-websocket is a local server (to be launched on the machine to which the oculus is plugged) that will receive the data from the oculus dk2 and let BlenderVR pull them to synchronize the user orientation in the virtual world.
-
-Install `Java <https://www.java.com/fr/download/>`_ on your machine (try to type ``java`` in a terminal window to see if it's not already installed).
-
-Download `dk2-blender-java-web-sockets-master.zip <https://github.com/tltmedia/dk2-blender-java-web-sockets/archive/master.zip>`_ or clone the `Git repository <https://github.com/tltmedia/dk2-blender-java-web-sockets>`_, rename it ``dk2-blender-java-web-sockets`` and move it to $INSTALL_DIR/plugins.
-
-Install Python dependencies
-
-On OSX/Linux:
-
-.. code-block:: bash
-
-  $ cd $INSTALL_DIR
-  $ source venv/bin/activate
-  $ pip3 install -r source/requirements-dk2.txt
-
-On Windows:
-
-.. code-block:: bash
-
-  $ cd $INSTALL_DIR
-  $ .\venv\Scripts\activate
-  $ pip3 install -r source\requirements-dk2.txt
 
 Download and install the `Oculus Runtime <https://developer.oculus.com/downloads/>`_ for your architecture.
 
 .. note ::
 
-  OSX: check on the web to setup your screen configuration for the rift (mirrored display, 90 rotation, etc.), e.g. `here <http://www.reddit.com/r/oculus/comments/2dbxve/041_with_dk2_on_a_mac_incompatible_resolution/>`_
+  OSX: check on the web to setup your screen configuration for the rift (mirrored display, 90 rotation, etc.). For example: [`here <http://www.reddit.com/r/oculus/comments/2dbxve/041_with_dk2_on_a_mac_incompatible_resolution/>`__]
 
 
-Modify your `configuration file <components/configuration-file.html>`_ to add the path to your newly installed libraries. Check the configuration file ``$INSTALL_DIR/source/configurations/main-dk2.xml`` for guideline.
+Modify your `configuration file <components/configuration-file.html>`_ to add the plugin users.
+Check the Oculus configuration examples for `Desktop Oculus DK2 <../components/configuration-file.html#desktop-oculus-dk2>`_ and `Dual Oculus DK2 <../components/configuration-file.html#dual-oculus-dk2>`_ setups.
 
 Once done, launch the ``basic-dk2.blend`` scene in ``$INSTALL_DIR/samples/plugin/hmd/``.
