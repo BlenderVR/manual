@@ -27,7 +27,7 @@ Document Sections
 Acquiring Blender
 -----------------
 
-BlenderVR requires a vanilla Blender 2.74 or newer.
+BlenderVR requires a vanilla Blender 2.75 or newer.
 
 If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_.
 
