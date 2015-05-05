@@ -11,6 +11,7 @@ Document Sections
 -----------------
   * `Operating System Disclaimer`_
   * `Desktop Basic`_
+  * `Desktop Stereo 3D`_
   * `Desktop Networked`_
   * `Desktop Oculus DK2`_
   * `Dual Oculus DK2`_
@@ -221,6 +222,110 @@ This is a very basic configuration file. There is only one computer and one user
 
     </blendervr>
 
+Desktop Stereo 3D
+-----------------
+
+This is a very basic configuration file. There is only one computer and one user defined, and there are three screens:
+
+  1. **Fullscreen 2D**: plays the ``.blend`` file in fullscreen without stereo 3d.
+  2. **Stereo 3D - Side by Side**: plays the ``.blend`` file in a stereo 3d fullscreen in side by side mode.
+  3. **Stereo 3D - Quadbuffer**: plays the ``.blend`` file in a stereo 3d fullscreen with shutter glasses.
+
+The only differences between those three modes are the ``display`` options. A screen need as many ``display_buffer`` items as eyes being rendered.
+
+Simply said, the stereo 3d screens will need the ``left`` and ``right`` buffers, while the 2d screen only needs the ``mono`` buffer.
+
+.. note::
+  For more advanced ``display_buffer`` arrangements check the `CAVE`_ example.
+
+Apart from the display_buffers, the display ``options`` are considerably different between the screens.
+
+  * **Fullscreen 2D**: ``<display options="-f 1920 1080">``
+  * **Stereo 3D - Side by Side**: ``<display options="-f 1920 1080 -s sidebyside">``
+  * **Stereo 3D - Quadbuffer**: ``<display options="-f 1920 1080 24 120 -s hwpageflip">``
+
+Those options are passed straight as command-line arguments to the ``blenderplayer``.
+For a comprehensive list of arguments run ``blenderplayer`` with the ``--help`` option.
+
+For *Fullscreen 2D* all you need to do is to specify the fullscreen mode ``-f``, and to determines the screen resolution.
+
+For *Stereo 3D - Side by Side* all we need to do, beside the above, is to specify the stereo 3d mode, ``-s sidebyside``.
+
+For *Stereo 3D - Quadbuffer* we specify the stereo 3d mode, ``-s hwpageflip``, and force the screen bits per pixel, ``24``,  and the frequency, ``120``. This is the shuttering speed of the active shutter glasses.
+
+You can't specify the frequency without defining the bits first.
+
+.. note::
+  In order to use the ``hwpageflip`` mode your graphic card must support ``Quadbuffer`` natively.
+
+.. code:: xml
+
+    <?xml version="1.0"?>
+    <blendervr>
+
+      <starter blender='C:/BlenderVR/blender/blender.exe'>
+        <config name='Fullscreen 2D'>fullscreen</config>
+        <config name='Stereo 3D - Side by Side'>sidebyside</config>
+        <config name='Stereo 3D - Quadbuffer'>quadbuffer</config>
+      </starter>
+
+      <users>
+        <user name="user A"/>
+      </users>
+
+      <computers>
+        <system>
+          <daemon transmit='True'>
+            <environment>SystemRoot=C:/Windows</environment>
+          </daemon>
+          <blenderplayer executable='C:/BlenderVR/blender/blenderplayer.exe' />
+        </system>
+        <computer name='Any' hostname='*' />
+      </computers>
+
+      <screens>
+
+        <screen name="fullscreen" computer="Any">
+          <display options="-f 1920 1080">
+            <graphic_buffer buffer="mono" user='user A' eye="middle"/>
+          </display>
+          <wall>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+        <screen name="sidebyside" computer="Any">
+          <display options="-f 1920 1080 -s sidebyside">
+            <graphic_buffer buffer="left" user='user A' eye="left" />
+            <graphic_buffer buffer="right" user='user A' eye="right" />
+          </display>
+          <wall>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+        <screen name="quadbuffer" computer="Any">
+          <display options="-f 1920 1080 24 120 -s hwpageflip">
+            <graphic_buffer buffer="left" user='user A' eye="left" />
+            <graphic_buffer buffer="right" user='user A' eye="right" />
+          </display>
+          <wall>
+            <corner name="topRightCorner">1.0, 1.0, -1.0</corner>
+            <corner name="topLeftCorner">-1.0, 1.0, -1.0</corner>
+            <corner name="bottomRightCorner">1.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+      </screens>
+
+      <plugins>
+      </plugins>
+
+    </blendervr>
 
 Desktop Networked
 -----------------
