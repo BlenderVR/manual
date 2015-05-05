@@ -247,11 +247,12 @@ Apart from the display_buffers, the display ``options`` are considerably differe
 Those options are passed straight as command-line arguments to the ``blenderplayer``.
 For a comprehensive list of arguments run ``blenderplayer`` with the ``--help`` option.
 
-For *Fullscreen 2D* all you need to do is to specify the fullscreen mode ``-f``, and to determines the screen resolution.
+For *Fullscreen 2D* all you need to do is to specify the fullscreen mode ``-f``, and the screen resolution.
 
-For *Stereo 3D - Side by Side* all we need to do, beside the above, is to specify the stereo 3d mode, ``-s sidebyside``.
+For *Stereo 3D - Side by Side*, besides the above, you need to specify the stereo 3d mode, ``-s sidebyside``.
 
-For *Stereo 3D - Quadbuffer* we specify the stereo 3d mode, ``-s hwpageflip``, and force the screen bits per pixel, ``24``,  and the frequency, ``120``. This is the shuttering speed of the active shutter glasses.
+For *Stereo 3D - Quadbuffer* we specify the stereo 3d mode, ``-s hwpageflip``, and force the screen bits per pixel, ``24``,  and the frequency, ``120``.
+This is the shuttering speed of the active shutter glasses.
 
 You can't specify the frequency without defining the bits first.
 
