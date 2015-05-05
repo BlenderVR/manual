@@ -7,6 +7,7 @@ The BlenderVR project is open-source and open for external collaboration.
 Links
 -----
 
+* `BlenderVR Home <http://blendervr.limsi.fr/>`__
 * `All Repositories <https://github.com/BlenderVR>`_
 * `Source Code Repository <https://github.com/BlenderVR/source>`_
 * `Manual Repository <https://github.com/BlenderVR/manual>`_

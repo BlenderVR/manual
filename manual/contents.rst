@@ -2,6 +2,8 @@
  BlenderVR Manual contents
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
+The BlenderVR Manual is part of the `BlenderVR <http://blendervr.limsi.fr>`_ project.
+
 .. toctree::
    :maxdepth: 2
 
