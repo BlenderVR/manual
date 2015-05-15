@@ -16,6 +16,8 @@ Document Sections
   * `Desktop Oculus DK2`_
   * `Dual Oculus DK2`_
   * `CAVE`_
+
+..
   * `Video Wall`_ (soon)
   * `SMARTI-2 Video Corner`_ (soon)
 
@@ -788,12 +790,13 @@ Finally, for an ortostereoscopy experience, the ``.blend`` file should mimics th
     </blendervr>
 
 
-Video Wall
-----------
-.. note::
-  Coming Soon
+..
+  Video Wall
+  ----------
+  .. note::
+    Coming Soon
 
-SMARTI-2 Video Corner
----------------------
-.. note::
-  Coming Soon
+  SMARTI-2 Video Corner
+  ---------------------
+  .. note::
+    Coming Soon
