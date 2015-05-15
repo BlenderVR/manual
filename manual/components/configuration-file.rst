@@ -15,7 +15,7 @@ Document Sections
   * `Desktop Networked`_
   * `Desktop Oculus DK2`_
   * `Dual Oculus DK2`_
-  * `CAVE`_ (soon)
+  * `CAVE`_
   * `Video Wall`_ (soon)
   * `SMARTI-2 Video Corner`_ (soon)
 
@@ -652,8 +652,141 @@ It's important to make sure the master computer can connect to the slave and to 
 
 CAVE
 ----
+This more advanced configuration has a few screens but two modes:
+
+  1. **Console**: plays the ``.blend`` file in a small window in the current computer (for debugging).
+  2. **CAVE**: plays the ``.blend`` file in a CAVE (floor, front, left and right screens).
+
+This `CAVE <http://en.wikipedia.org/wiki/Cave_automatic_virtual_environment>`__ setup is focused on the Linux platform, but it can be adapted for other operating systems as well.
+The head-tracking system is using the `VPRN Plugin <vrpn.html>`__ system.
+
+The dimensions of this CAVE is 4.8m (width) x 3.0m (height) x 2.7m (depth) (i.e., x, y, z).
+
+The parameters to define in the screens walls, are all relate to the head reference frame looking forward.
+Meaning, the screen walls corners coordinates are as width, height, depth (i.e., x, z, y).
+Also the origin of the system is at 0.0 x 0.0 x 1.60 in this particular case.
+
+This also impacts the settings of the head-tracking system (in the plugins vrpn tracker element).
+In this example we are converting the data from the VPRN server so that the translation is also in the head reference frame.
+
+Finally, for an ortostereoscopy experience, the ``.blend`` file should mimics this - The scene camera initial position should be at 1.6 height looking forward (rotation: 90, 0, 0).
+
 .. note::
-  Coming Soon
+
+  The head-tracker device expects the processor method ``user_position``.
+  Since this is also the name of the fallback routine, it doesn't need to be implemented in the `Processor File <processor-file.html>`__.
+
+.. code:: xml
+
+    <?xml version="1.0"?>
+    <blendervr>
+
+      <starter blender="/mnt/softwares/blendervr/blender/blender">
+        <config name="Console">console</config>
+        <config name="CAVE">floor, front, left, right</config>
+      </starter>
+
+      <!-- Users -->
+      <users>
+        <user name="user A"/>
+      </users>
+
+      <!-- System -->
+      <system>
+        <blenderplayer executable="/mnt/softwares/code/64/tools/blender-git/compile/bin/blenderplayer">
+          <environment>PATH=/mnt/softwares/code/64/bin:/mnt/softwares/bin.sh:/usr/bin:/bin</environment>
+          <environment>PYTHONPATH=/mnt/softwares/code/64/python3.2mu</environment>
+          <environment>HOME=`os.environ["HOME"]`</environment>
+        </blenderplayer>
+      </system>
+
+      <!-- Computers -->
+      <computers>
+        <system>
+          <login remote_command="ssh `self._attributs_inheritance["hostname"]`"/>
+        </system>
+
+        <computer name="Control" hostname="localhost" />
+        <computer name="Node 1" hostname="node-`cluster.name`-1" />
+        <computer name="Node 2" hostname="node-`cluster.name`-2" />
+        <computer name="Node 3" hostname="node-`cluster.name`-3" />
+        <computer name="Node 4" hostname="node-`cluster.name`-4" />
+      </computers>
+
+      <!-- Screens -->
+      <screens>
+        <screen name="console" computer="Control">
+          <display options="-w 400 400">
+            <graphic_buffer buffer="mono" user="user A" eye="middle"/>
+          </display>
+
+          <wall>
+            <corner name="topRightCorner">    1.0,  1.0, -1.0</corner>
+            <corner name="topLeftCorner">    -1.0,  1.0, -1.0</corner>
+            <corner name="bottomRightCorner"> 1.0, -1.0, -1.0</corner>
+          </wall>
+        </screen>
+
+        <display options="-f -s hwpageflip">
+          <graphic_buffer buffer="left" user="user A" eye="left"/>
+          <graphic_buffer buffer="right" user="user A" eye="right"/>
+          <environment>DISPLAY=:0.0</environment>
+        </display>
+
+        <screen name="floor" computer="Node 1">
+          <wall>
+            <corner name="topRightCorner">    2.4, -1.6, -1.35</corner>
+            <corner name="topLeftCorner">    -2.4, -1.6, -1.35</corner>
+            <corner name="bottomRightCorner"> 2.4, -1.6,  1.35</corner>
+          </wall>
+        </screen>
+
+        <screen name="front" computer="Node 2">
+          <wall>
+            <corner name="topRightCorner">    2.4,  1.4, -1.35</corner>
+            <corner name="topLeftCorner">    -2.4,  1.4, -1.35</corner>
+            <corner name="bottomRightCorner"> 2.4, -1.6, -1.35</corner>
+          </wall>
+        </screen>
+
+        <screen name="left" computer="Node 3">
+          <display><viewport>420, 0, 1500, 1080</viewport></display>
+          <wall>
+            <corner name="topRightCorner">   -2.4,  1.4, -1.35</corner>
+            <corner name="topLeftCorner">    -2.4,  1.4,  1.35</corner>
+            <corner name="bottomRightCorner">-2.4, -1.6, -1.35</corner>
+          </wall>
+        </screen>
+
+        <screen name="right" computer="Node 4">
+          <display><viewport>420, 0, 1500, 1080</viewport></display>
+          <wall>
+            <corner name="topRightCorner">    2.4,  1.4,  1.35</corner>
+            <corner name="topLeftCorner">     2.4,  1.4, -1.35</corner>
+            <corner name="bottomRightCorner"> 2.4, -1.6,  1.35</corner>
+          </wall>
+        </screen>
+
+      </screens>
+
+      <!-- Plugins -->
+      <plugins>
+
+        <vrpn>
+          <tracker device="HeadCap" host="VPRN_SERVER">
+            <transformation>
+              <post_translation z="-1.6" />
+              <pre_rotation x="1.0" y="1.0" z="1.0" angle="`2.0 * math.pi / 3.0`" />
+              <post_rotation x="1.0" y="1.0" z="1.0" angle="`-2.0 * math.pi / 3.0`" />
+            </transformation>
+            <sensor id="0" processor_method="user_position" users="user A" />
+          </tracker>
+        </vrpn>
+
+      </plugins>
+
+    </blendervr>
+
 
 Video Wall
 ----------
