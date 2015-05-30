@@ -21,6 +21,7 @@ Development Documents
    :maxdepth: 1
 
    documentation.rst
+   build-win-exe.rst
 
 ..
   Talk about git, github, getting involved, ...

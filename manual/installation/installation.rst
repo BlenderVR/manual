@@ -4,6 +4,10 @@ Install BlenderVR
 
 In order to install BlenderVR you need this guide.
 
+.. note::
+
+  Windows users are invited to use the `BlenderVR Excecutable <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/Installer_BlenderVR_W7.zip>`_ (though you are still advised to read through the following installation and how to use guides).
+
 .. note ::
 
   If you need the full development setup make sure to follow the `Development Environment <development.html>`_ guide.
