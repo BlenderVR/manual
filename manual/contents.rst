@@ -12,3 +12,4 @@ The BlenderVR Manual is part of the `BlenderVR <http://blendervr.limsi.fr>`_ pro
    components/index.rst
    architecture/index.rst
    development/index.rst
+   faq.rst
