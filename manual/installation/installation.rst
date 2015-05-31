@@ -1,12 +1,27 @@
+.. figure:: /images/os-logos.png
+  :width: 100px
+  :figwidth: 100px
+  :align: right
+
 =================
 Install BlenderVR
 =================
 
 In order to install BlenderVR you need this guide.
 
-.. note::
+.. figure:: /images/windows-logo.png
+  :width: 40px
+  :figwidth: 40px
+  :align: right
 
-  Windows users are invited to use the `BlenderVR Excecutable <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/Installer_BlenderVR_W7.zip>`_ (though you are still advised to read through the following installation and how to use guides).
+.. tip::
+
+  Windows "standard" (non-developpers) users are invited to download the BlenderVR WebInstall Excecutable (Windows 7):
+
+* `BlenderVR Win7 WebInstall download <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_setup_Win64_Webinstall.exe>`_
+* `BlenderVR Win7 Standalone download <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_setup_Win64.exe>`_
+
+*(though you are still advised to read through the following installation and how to use guides)*
 
 .. note ::
 

@@ -5,7 +5,7 @@ Build Windows Executable
 This section is intented for developers willing to create a BlenderVR.exe (Windows executable) based on BlenderVR source code.
 
 .. note::
-  For casual users, please download the current `BlenderVR Windows Executable <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/Installer_BlenderVR_W7.zip>`_ and refer to the `Installation Guide <../installation/installation.html>`_.
+  For casual users, please download the current `BlenderVR WebInstall Excecutable <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_setup_Win64_Webinstall.exe>`_ or the `BlenderVR Standalone Excecutable <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_setup_Win64.exe>`_ and refer to the `Installation Guide <../installation/installation.html>`_.
 
 This installer was build using `Inno Setup <http://www.jrsoftware.org/>`_ (v5.5.5).
 Please download the `BlenderVR Installer source code <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/Installer_BlenderVR_W7_dev.zip>`_ before reading the next section.
@@ -67,7 +67,7 @@ Create .exe based on InnoSetup files:
 
 .. warning::
   Do not forget to define the working directory with
-  #define MyBaseDir "\\...\sources-of-the-installer-Installer_BlenderVR"
+  #define MyBaseDir "\\...\sources-of-the-installer-Installer_BlenderVR".
 
 
 + Updates
