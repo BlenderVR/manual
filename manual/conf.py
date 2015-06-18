@@ -250,7 +250,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'blender-vrmanual', 'BlenderVR Manual Documentation',
+    ('index', 'blendervr-manual', 'BlenderVR Manual Documentation',
      ['BlenderVR Team'], 1)
 ]
 
