@@ -220,7 +220,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'blender-vrmanual.tex', 'BlenderVR User Manual',
+  ('index', 'blendervr-manual.tex', 'BlenderVR User Manual',
    'BlenderVR Team', 'manual'),
 ]
 
