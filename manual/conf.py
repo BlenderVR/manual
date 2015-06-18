@@ -220,8 +220,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'blender_manual.tex', 'Blender User Manual',
-   'Blender Community', 'manual'),
+  ('index', 'blendervr-manual.tex', 'BlenderVR User Manual',
+   'BlenderVR Team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
