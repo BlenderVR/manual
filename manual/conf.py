@@ -115,9 +115,13 @@ pygments_style = 'sphinx'
 # -- Options for HTML output ---------------------------------------------------
 
 # use http://read-the-docs.readthedocs.org/en/latest/theme.html if available.
-try:
-    import sphinx_rtd_theme
-except ImportError:
+if os.environ.get('READTHEDOCS', False) != 'True':
+    try:
+        import sphinx_rtd_theme
+    except ImportError:
+        sphinx_rtd_theme = None
+else:
+    # read the docs use their theme by default, so no need to specify it
     sphinx_rtd_theme = None
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
