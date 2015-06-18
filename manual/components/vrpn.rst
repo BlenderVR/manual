@@ -71,10 +71,10 @@ Example with a Nintendo Wii Controller
       (...)
 
       def wiiAnalog(self, info):
-        print ("Analog from Wii through VPRN ", info)
+        self.logger.info("Analog from Wii through VPRN ", info)
 
       def wiiButton(self, info):
-        print ("Button from Wii through VPRN ", info)
+        self.logger.info("Button from Wii through VPRN ", info)
 
 Here, both functions will be executed whenever the VRPN server receives data from the
 WiiMote (the wiiButton when your touch a button, the wiiAnalog when you move the
