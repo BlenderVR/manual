@@ -4,9 +4,9 @@ Master and Slaves
 
 Communications inside BlenderVR are organized through a master/slaves structure.
 
-Although inside `virtual environment <run-modes.html>`_, all nodes are equivalent, one node is the master.
+Although inside `virtual environment <../components/processor-file.html#basic-processor-file>`_, all nodes are equivalent, one node is the master.
 
-The master computer is the `console <run-modes.html#console>`_ from the `configuration file <../components/configuration-file.html>`_.
+The master computer is the `console <../components/processor-file.html#basic-processor-file>`_ from the `configuration file <../components/configuration-file.html>`_.
 
 Document Sections
 -----------------

@@ -2,7 +2,7 @@
 Configuration File
 ==================
 
-The BlenderVR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run BlenderVR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
+The BlenderVR XML configuration file is loaded by the console to get the architecture related information to run BlenderVR and send it to each virtual environment rendering node (see `processor file templates <../components/processor-file.html>`_).
 
 .. note::
   For a comprehensive overview of the file specification access its `architecture documentation <../architecture/configuration-file.html>`__.

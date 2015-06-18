@@ -2,7 +2,7 @@
 Configuration File
 ==================
 
-The BlenderVR XML configuration file is loaded by the `console <../architecture/run-modes.html#console>`_ to get the architecture related information to run BlenderVR and send it to each `virtual environment <../architecture/run-modes.html#virtual-environment>`_ rendering node.
+The BlenderVR XML configuration file is loaded by the console to get the architecture related information to run BlenderVR and send it to each virtual environment rendering node.
 
 This file must contain at least four sections, plus the ``plugins`` section.
 It also includes a ``blendervr`` section which only option is the network port used for the synchronization between the rendering nodes.
@@ -100,7 +100,7 @@ This section only concerns the console. It contains all screen sets definitions.
 
 You can also add a ``hostname`` attribute in case of ``socket.gethostname()`` python function returns wrong hostname. This hostname is used by all *virtual environment* nodes to contact the console for network connection control.
 
-The ``blender`` attribute is required in most of the cases for the `Update Loader <../architecture/run-modes.html#update-loader>`_  process.
+The ``blender`` attribute is required in most of the cases for the `is_creating_loader <../components/processor-file.html#basic-processor-file>`_  process.
 
 Each ``config`` sub-section must list all screens, separated by commas, used by this screen set.
 
