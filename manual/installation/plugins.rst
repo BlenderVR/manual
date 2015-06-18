@@ -45,7 +45,7 @@ Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_
 
 then follow compilation instructions from `VRPN Compiling <http://www.cs.unc.edu/Research/vrpn/vrpn_standard_stuff.html>`__.
 
-Add the path of the vrpn python directory (e.g. `$INSTALL_DIR/plugins/vrpn/build/python`) to your `configuration file <components/configuration-file.html>`_ libraries.
+Add the path of the vrpn python directory to your `configuration file <../architecture/configuration-file.html#library-path-sub-section>`_.
 
 Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/plugin/vrpn/basic-vrpn/``.
 

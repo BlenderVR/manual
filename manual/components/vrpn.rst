@@ -56,7 +56,7 @@ Example with a Nintendo Wii Controller
 *Analog will receive accelerometer data from the WiiMote, button only the pressed button states.*
 
 .. note::
-  You also need to specify the folder containing your vrpn library in the `configuration file <configuration-file.html#library-path-sub-section>`__.
+  You also need to specify the folder containing your vrpn library in the `configuration file <../architecture/configuration-file.html#library-path-sub-section>`_.
 
 3. In the ``<blend_file_name>.processor.py`` script (e.g. BlenderVR_API.processor.py), add:
 
