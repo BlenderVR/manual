@@ -94,3 +94,4 @@ In the Linux and OSX environment one can use `InstantRST <https://github.com/Ryk
 with *vim*. Sublime (for OSX) seems to have some tools as well.
 
 * `ReST Quick Reference <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+* `ReST API <http://openalea.gforge.inria.fr/doc/openalea/doc/_build/html/source/sphinx/rest_syntax.html>`_
