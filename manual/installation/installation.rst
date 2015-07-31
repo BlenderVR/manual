@@ -42,7 +42,7 @@ Document Sections
 Folder Structure
 ----------------
 
-After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual (the directory holding these files is  referred as $INSTALL_DIR in the next sections).
+After all the downloads and installations you should end up with the following folder structure. This is a recommendation, and it will be used as reference along this manual (the directory holding these files is referred as $INSTALL_DIR in the next sections).
 
 ``//source/``
 *BlenderVR Source Code*

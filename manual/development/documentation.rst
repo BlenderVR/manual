@@ -1,6 +1,6 @@
-=============
-Documentation
-=============
+======================
+Building Documentation
+======================
 
 There are two parts of the project that are covered by this documents:
 Source Code API [1]_ and the User Manual [2]_.

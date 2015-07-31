@@ -20,6 +20,7 @@ Document Sections
   * `Users Section`_
   * `Computers Section`_
   * `Screens Section`_
+  * `Plugin Section`_
   * `Sample Configuration File`_
 
 Redundant Sections
@@ -201,19 +202,18 @@ Library Path Sub-Section
 Plugins often relies on external libraries. If the library is not bundled in the ``blenderplayer`` python folder, the library folder can be specified with the ``library`` element.
 If any library is defined in a system section, they all must be defined.
 
-In the example below both OSC and VRPN library folders are specified for the OSX system, while the Linux stations shared the same system as defined in the top of the ``computers`` section.
+In the example below, the VRPN library folder is specified for the OSX system, while the Linux stations share the same system as defined in the top of the ``computers`` section.
 
 .. code:: xml
 
   <computers>
     <system>
       <library path="/usr/local/lib/vrpn/" />
-      <library path="/usr/local/lib/osc/" />
     </system>
     <computer name='OSX station' hostname='mac'>
       <system>
+        <!-- define path towards VRPN python shared object-->
         <library path="/User/dev/vrpn/build/python/" />
-        <library path="/User/dev/osc/lib/" />
       </system>
     </computer>
     <computer name='Linux station A' hostname='linux_a' />
@@ -329,10 +329,66 @@ Both require a screen definition: three corners (top right, top left and bottom 
 
 For Wall, the screens are defined in `vehicle <../architecture/vehicle.html>`_ reference frame. For HMD, the screens are defined in the reference frame of head tracker.
 
+Plugin Section
+--------------
+
+So far, the plugin section can hold up to three sub-sections:
+
+* ``<vrpn>``: this section defines how to handle VRPN data sent by your VRPN server.
+* ``<osc>``: this section defines how to handle OSC data sent via OSC (e.g. with the `Sound Rendering Engine addon <https://blendervr.limsi.fr/doku.php?id=addons>`_ for BlenderVR) to an OSC client.
+* ``<oculus_dk2>``: this section defines how to handle data sent by the oculus rift dk2.
+
+The following lines of code defines/assumes:
+
+* ``<vrpn>``: A VRPN server at ``192.168.48.201`` with a device named ``DTrack``, saying that the callback ``user_position_dtrack`` (that has to be defined in the processor file) should be used to handle VRPN data comming from sensor ``22`` of ``DTrack`` device for ``user A``. A VRPN server at ``localhost`` with a device named ``device0``, saying that the callbacks ``space_navigator_analog`` and ``space_navigator_button`` should be used to handle VRPN data comming from ``device0`` device.
+
+* ``<osc>``: An OSC client at ``localhost`` listening to port ``3819``. The remaining flag will send init messages to the OSC client as defined in the `BlenderVR OSC API <http://blender-vr.readthedocs.org/processor-file/osc_api.html>`_.
+
+* ``<oculus_dk2>``: An oculus rift dk2 plugged on computer ``localhost`` (named ``myComputer`` in computers section) saying that the callback ``user_position`` should be used to handle DK2 data (e.g. head orientation) for ``user A``.
+
+.. code:: xml
+
+    <plugins>
+
+      <vrpn>
+        <floor x='0.0'/>
+
+        <--! define DTrack parameters from VRPN server @ distant host -->
+        <tracker device="DTrack" host="192.168.48.201">
+          <transformation>
+            <post_translation z="0.0"/>
+            <post_rotation x="1.0" y="1.0" z="1.0" angle="`-2*math.pi/3`"/>
+            <pre_rotation x="1.0" y="1.0" z="1.0" angle="`2*math.pi/3`"/>
+          </transformation>
+          <sensor id="22" processor_method='user_position_dtrack' users='user A'/>
+        </tracker>
+
+        <--! define device0 parameters from VRPN server @ local host -->
+        <analog device="device0" host="localhost" processor_method="space_navigator_analog"/>
+        <button device="device0" host="localhost" processor_method="space_navigator_button"/>
+
+      </vrpn>
+
+      <--! define OSC parameters for OSC client @ localhost -->
+      <osc host='localhost' port='3819' configuration='Laptop SPAT'>
+        <user listener='Binaural 1' viewer='user A' />
+        <user listener='Binaural 2' viewer='user B' />
+        <user listener='Ambisonic' />
+        <user listener='Stereo' />
+      </osc>
+
+      <--! define oculus dk2 parameters -->
+      <oculus_dk2>
+        <user host="localhost" processor_method="user_position" viewer='user A' computer='myComputer'/>
+      </oculus_dk2>
+
+    </plugins>
+
+
 Sample Configuration File
 -------------------------
 
-This sample configuration file can be used for a cave with three vertical square (2m x 2m) screens (left, front and right) plus a console computer with a single windowed screen.
+This sample configuration file can be used for a CAVE with three vertical square (2m x 2m) screens (left, front and right) plus a console computer with a single windowed screen.
 
 .. code:: xml
 

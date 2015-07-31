@@ -58,8 +58,9 @@ Regarding BlenderVR samples, Git is not a good system to work on binary files, s
   $ cd $INSTALL_DIR
   $ svn checkout https://github.com/BlenderVR/samples/trunk samples
 
+where $INSTALL_DIR is the root BlenderVR folder (see the `Install BlenderVR <installation.html#folder-structure>`_ page for more details).
 
-Or for an individual sample folder:
+Alternatively, to fetch an individual sample folder, you can use:
 
 .. code-block:: bash
 

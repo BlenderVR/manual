@@ -24,12 +24,13 @@ Add a ``plugins`` directory to your $INSTALL_DIR (see `Folder Structure <install
 VRPN
 ----
 
-This section briefly exposes the `VRPN <http://www.cs.unc.edu/Research/vrpn/index.html>`__, install.
+This section briefly exposes the `VRPN <https://github.com/vrpn/vrpn/wiki>`__, install.
 In a nutshell, you will have to build VRPN, launch a VRPN server and BlenderVR then will act as a VRPN client to fetch the data from your VRPN devices.
 once the VRPN server launched on your machine/network, any device defined in your vrpn.cfg (input of vrpn server) will be handled by the server and its related ``infos`` pulled by the BlenderVR VRPN client.
-See `Getting started with VRPN <http://www.cs.unc.edu/Research/vrpn/vrpn_getting_started.html>`_ for more information.
+See VRPN `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started>`_ page for more information.
 
-Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_33.zip>`__ and unzip it into $INSTALL_DIR/plugins/vrpn/.
+* Download `VRPN 07.33.zip <https://github.com/vrpn/vrpn/releases/download/v07.33/vrpn_07_33.zip>`_ and unzip it (e.g. into ``$INSTALL_DIR/plugins/vrpn``).
+
 .. Create a ``build`` directory to finally have the following tree:
 
 .. ``//plugins/vrpn/vrpn``
@@ -43,11 +44,16 @@ Download `VRPN 07.33.zip <http://www.cs.unc.edu/Research/vrpn/downloads/vrpn_07_
 ..   $ cmake -DCMAKE_OSX_ARCHITECTURES=x86_64 ../vrpn
 ..   $ make
 
-then follow compilation instructions from `VRPN Compiling <http://www.cs.unc.edu/Research/vrpn/vrpn_standard_stuff.html>`__.
+* Follow compilation instructions from `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started#compiling>`_ page.
 
-Add the path of the vrpn python directory to your `configuration file <../architecture/configuration-file.html#library-path-sub-section>`_.
+* Add the path of the vrpn python directory to your `configuration file <../architecture/configuration-file.html#library-path-sub-section>`_.
 
-Once done, launch the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/plugin/vrpn/basic-vrpn/``.
+Once done, to test your installation:
+
+* Grab a VRPN device, find it's name in the VRPN server, and define it's associated callback name in the ``<vrpn>`` sub-section of the `configuration file <../architecture/configuration-file.html#plugin-section>`_ (said name is yours to chose).
+
+* Define the callback method in the processor.py attached to your scene (said method being named after the callback declared in the configuration file).
+Use the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/plugin/vrpn/basic-vrpn/`` and its associated processor file for an example of how to use VRPN issued data, modifying the vrpn methods names ``space_navigator_analog`` and ``space_navigator_button`` to fit yours.
 
 Oculus Rift DK2
 ---------------
