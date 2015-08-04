@@ -22,7 +22,7 @@ The BlenderVR project is open-source, opened to external collaboration.
 * `Manual Repository <https://github.com/BlenderVR/manual>`_
 * `Samples Repository <https://github.com/BlenderVR/samples>`_
 * `Bug List <https://github.com/BlenderVR/source/issues>`_
-* `Bug Management <https://waffle.io/blendervr/blender-vr>`_
+* `Bug Management <https://waffle.io/blendervr/source>`_
 
 ..
   Talk about git, github, getting involved, ...
