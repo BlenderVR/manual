@@ -2,57 +2,58 @@
 Open Sound Control (OSC)
 ========================
 
-.. note ::
+Routines based on the `OSC protocol <http://opensoundcontrol.org>`_ (based on UDP) have been added to BlenderVR (`dedicated API <http://blender-vr.readthedocs.org/processor-file/osc_api.html>`_) to be able to easily send data to a third party application that would take care of the audio components related to a given VR scene.
 
-  Document need to be reviewed. Also the documentation need to be tested to see if it is still valid.
+You're welcome to use BlenderVR `Sound Rendering Engine <https://blendervr.limsi.fr/doku.php?id=addons>`_ (SRE, open source, developped in `Max/MSP <http://cycling74.com>`_) if you don't want to develop your own sound server.
+While the OSC API allows to easily send OSC messages, said SRE has been designed to receive an process these flags.
 
-OSC is a protocol used to send / receive data through applications. See
-http://opensoundcontrol.org.
+.. note::
 
-BlenderVR includes a MaxMSP (http://cycling74.com) Sound Rendering Engine
-available at `Downloads`_. It is however possible (and advised) to
-make it work with any other OSC client and fathom it for other purposes.
+  BlenderVR `OSC API <http://blender-vr.readthedocs.org/processor-file/osc_api.html>`_ can easily be adapted to any other OSC client to fathom your own interactions.
 
 Document Sections
 -----------------
 
   * `Interaction Setup`_
-  * `Downloads`_
 
 Interaction Setup
 -----------------
 
-While the OSC API allows to easily send OSC (UDP) flags, the MaxMSP associated
-Sound Rendering Engine has been design to receive an process these flags.
-Once you’ve opened the ``BlenderVR_Sound_Rendering_Engine_vX.maxpat`` on the
-OSC server as defined in the ``.xml`` configuration file:
+This section details how to setup BlenderVR `configuration file <configuration-file.html>`_ to work with its Max/MSP `Sound Rendering Engine <https://blendervr.limsi.fr/doku.php?id=addons>`_.
 
-.. code:: xml
+In the ``<osc>`` subsection of the ``<plugins>`` section in the configuration file are defined the parameters related to OSC and sound rendering, typically:
 
-  <processor>
-    (...)
+.. code-block:: xml
+
     <plugins>
-      <osc host='serverName' port='3819'/>
+
+      <-- (...) -->
+
+      <-- general parameters -->
+      <osc host='localhost' port='3819' configuration='Laptop SPAT' max_audio_objects='8'>
+        <-- user parameters -->
         <user listener='Binaural 1' viewer='user A' />
+        <user listener='Binaural 2' viewer='user B' />
         <user listener='Ambisonic' />
+        <user listener='Stereo' />
       </osc>
+
     </plugins>
-  </processor>
 
-And modified it to fit to your needs (spatializer, speakers mapping, microphone inputs,
-etc.), the rest of the sound adding process takes place in BlenderVR.
+with:
 
-.. note::
-  You also need to specify the folder containing your osc library in the `configuration file <configuration-file.html#library-path-sub-section>`__.
+* ``host`` / ``port``: IP adress and port of the OSC server (computer on which the Max/MSP Sound Rendering Engine is opened).
 
-See ``samples/BlenderCave_OSC.blend`` and ``samples/BlenderCave_OSC_API.blend``.
-LIMSI members, see http://wikivenise.limsi.fr/index.php/Open_Sound_Control .
+* ``configuration``: flag used to dynamically adapt the Sound Rendering Engine to a given architecture specific (e.g. load the patches adapted to a given speaker configuration, rendering technique, etc.)
 
-Downloads
----------
+* ``max_audio_objects``: flag used to pre-allocate N audio objects in the SRE. BlenderVR will use and reuse (once released) these pre-allocated audio objects to add sound to your scenes. This mecanism allows to limit the maximum DSP usage on the OSC server.
 
-* `BlenderVR Sound Rendering Engine (.zip) <http://dalaifelinto.com/blendervr/ftp/blendervr_sound_rendering_engine_v4.zip>`_ version 4
+* user ``listener`` / ``viewer``: these flag allow to associate BlenderVR users (viewers) and Max/MSP sound rendering techniques (listeners). Here, ``<user listener='Binaural 1' viewer='user A' />`` associates BlenderVR viewer ``user A`` to Max/MSP listener ``Binaural 1`` (i.e. to a headset in Max/MSP), e.g. for head-tracking automatic update.
 
-This is an example of a flexible sound rendering engine developed under MaxMSP which is fully controlled from the OSC messages received from BlenderVR.
+Once you've opened the ``BlenderVR_Sound_Rendering_Engine_<version>.maxpat`` on your OSC server, the rest of the sound adding process takes place in BlenderVR `processor file <processor-file.html>`_ through the `OSC API <http://blender-vr.readthedocs.org/processor-file/osc_api.html>`_.
 
-One may obviously use it with any other software (it's all about dynamic autonomous instantiations, should be modified to be used as a simple GUI Sound Rendering Engine).
+.. tip ::
+
+  If you downloaded BlenderVR `samples <../installation/installation.html#download-samples-scenes>`_, see the scenes in the ``samples/plugin/osc`` folder for a direct insight on how to use the OSC API.
+
+.. LIMSI members, see http://wikivenise.limsi.fr/index.php/Open_Sound_Control.
