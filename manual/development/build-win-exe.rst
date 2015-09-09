@@ -5,7 +5,7 @@ Build Windows Executable
 This section is intented for developers willing to create a BlenderVR.exe (Windows executable) based on BlenderVR source code.
 
 .. note::
-  For casual users, please download the current BlenderVR Excecutable, see the `Installation Guide <../installation/installation.html>`_.
+  For casual users, please download the current BlenderVR Excecutable, see the `Installation Guide <../installation/installation-executable.html>`_.
 
 This installer was build using `Inno Setup <http://www.jrsoftware.org/>`_ (v5.5.5).
 Please download the `BlenderVR Installer source code <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/Installer_BlenderVR_W7_dev.zip>`_ before reading the next section.
@@ -37,7 +37,7 @@ Installer Folder Structure
 
 + BlenderVR base folders
 
-(copy of the `Folder Structure <installation.html#folder-structure>`_ suggested during BlenderVR `Installation <installation.html>`_)
+(copy of the `Folder Structure <installation-manual.html#folder-structure>`_ suggested during BlenderVR `Installation <installation-manual.html>`_)
 
 ``//source/``
 *BlenderVR Source Code*

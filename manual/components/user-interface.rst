@@ -56,7 +56,7 @@ You can choose any screen set (4) that is defined inside your ``XML`` configurat
 Simulation File
 ===============
 
-Here, you must select the ``.blend`` file you want to load (6). For the beginning, you should try the ``basic.blend``, that you can get from the `samples repository <../installation/installation.html#getting-samples>`_. You can manually select a processor file (7) or activate the ``NameLink`` (8) for BlenderVR to automatically look for a <name_of_blender_scene>.processor.py file in the directory of the .blend  file. You will learn to create your own .blend scenes and processor files via the samples and going though the `BlenderVR API <http://blender-vr.readthedocs.org>`_.
+Here, you must select the ``.blend`` file you want to load (6). For the beginning, you should try the ``basic.blend``, that you can get from the `samples repository <../installation/installation-manual.html#getting-samples>`_. You can manually select a processor file (7) or activate the ``NameLink`` (8) for BlenderVR to automatically look for a <name_of_blender_scene>.processor.py file in the directory of the .blend  file. You will learn to create your own .blend scenes and processor files via the samples and going though the `BlenderVR API <http://blender-vr.readthedocs.org>`_.
 
 Start/Stop
 ==========

@@ -32,7 +32,7 @@ Requirements
 ------------
 
 Before working in the documentation you need to install all the requirements and the main repository
-from the `installation <../installation/installation.html>`_ guide.
+from the `installation <../installation/installation-manual.html>`_ guide.
 
 Quick Setup
 -----------

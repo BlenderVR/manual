@@ -16,7 +16,7 @@ Document Sections
 Folder Structure
 ----------------
 
-Add a ``plugins`` directory to your $INSTALL_DIR (see `Folder Structure <installation.html#folder-structure>`_, this is once more a recommendation as it will be used as reference along this manual).
+Add a ``plugins`` directory to your $INSTALL_DIR (see `Folder Structure <installation-manual.html#folder-structure>`_, this is once more a recommendation as it will be used as reference along this manual).
 
 .. ``//plugins/``
 .. *BlenderVR Plugins*

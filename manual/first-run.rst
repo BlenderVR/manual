@@ -4,7 +4,7 @@ First Run
 
 
 .. note::
-  After the `installation <installation/installation.html>`_ you should make sure everything is working before going on your own. For this first run you will need at least the basic sample from the `samples repository <installation/installation.html#download-samples-scenes>`_.
+  After the `installation <installation/installation-manual.html>`_ you should make sure everything is working before going on your own. For this first run you will need at least the basic sample from the `samples repository <installation/installation-manual.html#download-samples-scenes>`_.
 
 Document Sections
 -----------------
@@ -16,7 +16,7 @@ Document Sections
 Launch BlenderVR
 -----------------
 
-Start by opening the BlenderVR GUI (see `Running BlenderVR <installation/installation.html#running>`_ in the Install section). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
+Start by opening the BlenderVR GUI (see `Running BlenderVR <installation/installation-manual.html#running>`_ in the Install section). Although in the future you can launch it via a shortcut, for the first run it's better to do it via command-line, to catch any unexpected error.
 It is advised to understand how to manipulate the `User Interface <components/user-interface.html>`_ before going any further.
 
 Open the Simulation File

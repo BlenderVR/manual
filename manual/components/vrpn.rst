@@ -7,12 +7,11 @@ VRPN is a protocol used in Virtual Reality to exchange data with external device
 BlenderVR behaves like a VRPN client. At the other end, a VRPN server will host
 different tracker or sensors that would be as many haptic arms, tracked stereoscopic
 glasses or Wiimote devices. The server will associate a name to these device, along
-with a variable “info” that holds the useful information about
-the considered device.
+with a variable “info” that holds the useful information about the considered device.
 
 In BlenderVR, the receiving of VRPN messages and definition of associated methods
 is done in the ``<blender_scene_name>.processor.py`` script attached to a scene (see
-examples in the `samples <../installation/installation.html#getting-samples>`_ folder).
+examples in the `samples <../installation/installation-manual.html#getting-samples>`_ folder).
 
 Document Sections
 -----------------

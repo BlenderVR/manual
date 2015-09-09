@@ -5,6 +5,7 @@ Installation
 .. toctree::
    :maxdepth: 1
 
-   installation.rst
+   installation-manual.rst
+   installation-executable.rst
    development.rst
    plugins.rst

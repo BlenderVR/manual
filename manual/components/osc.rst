@@ -54,6 +54,6 @@ Once you've opened the ``BlenderVR_Sound_Rendering_Engine_<version>.maxpat`` on 
 
 .. tip ::
 
-  If you downloaded BlenderVR `samples <../installation/installation.html#download-samples-scenes>`_, see the scenes in the ``samples/plugin/osc`` folder for a direct insight on how to use the OSC API.
+  If you downloaded BlenderVR `samples <../installation/installation-manual.html#download-samples-scenes>`_, see the scenes in the ``samples/plugin/osc`` folder for a direct insight on how to use the OSC API.
 
 .. LIMSI members, see http://wikivenise.limsi.fr/index.php/Open_Sound_Control.

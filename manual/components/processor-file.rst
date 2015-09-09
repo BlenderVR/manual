@@ -109,7 +109,7 @@ Keyboard and Mouse
 
 You can get access to keyboard and mouse information of the `master node <../architecture/master-slaves.html#master>`_ by defining the `keyboardAndMouse <http://blender-vr.readthedocs.org/modules/rst/blendervr.processor.base.html?highlight=keyboardandmouse#blendervr.processor.base.Processor.keyboardAndMouse>`_ method. The ``info`` provided has the same format than any provided through the `VRPN plugin <vrpn.html>`_.
 
-You can use a `logger`_ to see what is contained inside the ``info`` argument. You can also have a look at the ``simple.processor.py`` file inside ``simple`` `sample <../installation/installation.html#getting-samples>`_ folder to get an example of how to use this method.
+You can use a `logger`_ to see what is contained inside the ``info`` argument. You can also have a look at the ``simple.processor.py`` file inside ``simple`` `sample <../installation/installation-manual.html#getting-samples>`_ folder to get an example of how to use this method.
 
 Choose Objects to Synchronize
 -----------------------------
