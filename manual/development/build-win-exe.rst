@@ -8,7 +8,7 @@ This section is intented for developers willing to create a BlenderVR.exe (Windo
   For casual users, please download the current BlenderVR Excecutable, see the `Installation Guide <../installation/installation-executable.html>`_.
 
 This installer was build using `Inno Setup <http://www.jrsoftware.org/>`_ (v5.5.5).
-Please download the `BlenderVR Installer source code <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/Installer_BlenderVR_W7_dev.zip>`_ before reading the next section.
+Please download the `BlenderVR Installer source code <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/BlenderVR_Win7_Installer_dev.zip>`_ before reading the next section.
 
 Document Sections:
 ------------------
