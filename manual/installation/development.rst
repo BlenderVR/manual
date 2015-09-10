@@ -5,9 +5,9 @@ Install for BlenderVR Development
 This guide walks you over the basic steps of setting up a development environment for BlenderVR.
 
 .. note ::
-  For casual BlenderVR users, please refer to the `Install BlenderVR <installation-manual.html>`_ page.
+  For casual BlenderVR users, please refer to the `Install BlenderVR <installation-manual.html>`__ page.
 
-The install is the same as described in `Install BlenderVR <installation-manual.html>`_ but for:
+The install is the same as described in `Install BlenderVR <installation-manual.html>`__ but for:
 
 * git clone of the BlenderVR repository, to freely modify and eventually commit your modifications.
 * svn/git clone of the BlenderVR samples, to eventually add your own demo scenes to the BlenderVR samples repository
@@ -31,7 +31,7 @@ BlenderVR requires a vanilla Blender 2.75 or newer.
 
 If you ever need to modify and rebuild Blender for further customizations, please consult the `Blender's official documentation <http://wiki.blender.org/index.php/Dev:Doc/Building_Blender>`_.
 
-Else, download the sources provided in `Acquiring Blender <installation-manual.html#acquiring-blender>`_.
+Else, download the sources provided in `Acquiring Blender <installation-manual.html#acquiring-blender>`__.
 
 
 Acquiring BlenderVR
