@@ -95,6 +95,15 @@ Required for Interface Development
 * `PIP <https://pip.pypa.io/en/latest/installing.html>`_
 * `QT 4.8 <http://download.qt.io/archive/qt/4.8/4.8.6/>`_
 
+.. note::
+
+   Under Linux distros you may install Qt 4.8 via your package manager.
+   For PySide binding build, you need Qt libraries and also *development headers*, which may
+   come from a separate package.
+   By example, on Ubuntu 14.04: ``sudo apt-get install libqt4-dev``.
+   See content of `PySide build scripts <https://github.com/PySide/BuildScripts>`_ for your Linux distro.
+
+
 Quick Setup and Running
 -----------------------
 
