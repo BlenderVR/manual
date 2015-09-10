@@ -29,8 +29,6 @@ In a nutshell, you will have to build VRPN, launch a VRPN server and BlenderVR t
 once the VRPN server launched on your machine/network, any device defined in your vrpn.cfg (input of vrpn server) will be handled by the server and its related ``infos`` pulled by the BlenderVR VRPN client.
 See VRPN `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started>`__ page for more information.
 
-* Download `VRPN 07.33.zip <https://github.com/vrpn/vrpn/releases/download/v07.33/vrpn_07_33.zip>`_ and unzip it (e.g. into ``$INSTALL_DIR/plugins/vrpn``).
-
 .. Create a ``build`` directory to finally have the following tree:
 
 .. ``//plugins/vrpn/vrpn``
@@ -44,15 +42,17 @@ See VRPN `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started>`__
 ..   $ cmake -DCMAKE_OSX_ARCHITECTURES=x86_64 ../vrpn
 ..   $ make
 
-* Follow compilation instructions from `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started#compiling>`__ page.
+* Download `VRPN 07.33.zip <https://github.com/vrpn/vrpn/releases/download/v07.33/vrpn_07_33.zip>`_ and unzip it (e.g. into ``$INSTALL_DIR/plugins/vrpn``)
 
-* Add the path of the vrpn python directory to your `configuration file <../architecture/configuration-file.html#library-path-sub-section>`__.
+* Follow compilation instructions from `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started#compiling>`__ page
 
-Once done, to test your installation:
+* Add the path of the vrpn python directory to your `configuration file <../architecture/configuration-file.html#library-path-sub-section>`__
 
-* Grab a VRPN device, find it's name in the VRPN server, and define it's associated callback name in the ``<vrpn>`` sub-section of the `configuration file <../architecture/configuration-file.html#plugin-section>`__ (said name is yours to chose).
+After finished, test your installation with:
 
-* Define the callback method in the processor.py attached to your scene (said method being named after the callback declared in the configuration file).
+* Grab a VRPN device, find it's name in the VRPN server, and define it's associated callback name in the ``<vrpn>`` sub-section of the `configuration file <../architecture/configuration-file.html#plugin-section>`__ (said name is yours to chose)
+
+* Define the callback method in the processor.py attached to your scene (said method being named after the callback declared in the configuration file)
 
 Use the ``basic-vrpn.blend`` scene in ``$INSTALL_DIR/samples/plugin/vrpn/basic-vrpn/`` and its associated processor file for an example of how to use VRPN issued data, modifying the vrpn methods names ``space_navigator_analog`` and ``space_navigator_button`` to fit yours.
 
