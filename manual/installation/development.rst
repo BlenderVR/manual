@@ -97,11 +97,9 @@ Required for Interface Development
 
 .. note::
 
-   Under Linux distros you may install Qt 4.8 via your package manager.
-   For PySide binding build, you need Qt libraries and also *development headers*, which may
-   come from a separate package.
-   By example, on Ubuntu 14.04: ``sudo apt-get install libqt4-dev``.
-   See content of `PySide build scripts <https://github.com/PySide/BuildScripts>`_ for your Linux distro.
+   Unix users may want to install these libraries via their package manager.
+   If so, note that for PySide binding build, you'll need Qt libraries along with *development headers* that may come from a separate package (for example on Ubuntu 14.04 where ``libqt4-dev`` is required).
+   See `PySide build scripts <https://github.com/PySide/BuildScripts>`_ for more information.
 
 
 Quick Setup and Running
