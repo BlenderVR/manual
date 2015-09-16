@@ -72,7 +72,7 @@ Download and install the `Oculus Runtime <https://developer.oculus.com/downloads
   OSX: check on the web to setup your screen configuration for the rift (mirrored display, 90 rotation, etc.). For example: [`here <http://www.reddit.com/r/oculus/comments/2dbxve/041_with_dk2_on_a_mac_incompatible_resolution/>`__]
 
 
-Modify your `configuration file <components/configuration-file.html>`_ to add the plugin users.
+Modify your `configuration file <../components/configuration-file.html>`_ to add the plugin users.
 Check the Oculus configuration examples for `Desktop Oculus DK2 <../components/configuration-file.html#desktop-oculus-dk2>`_ and `Dual Oculus DK2 <../components/configuration-file.html#dual-oculus-dk2>`_ setups.
 
 Once done, launch the ``basic-dk2.blend`` scene in ``$INSTALL_DIR/samples/plugin/hmd/``.
