@@ -62,7 +62,7 @@ See VRPN `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started>`__
     $ -DPYTHON_INCLUDE_DIR=/<adapt_to_your_architecture>/Headers
     $ -DPYTHON_LIBRARY=/<adapt_to_your_architecture>/lib/libpython3.4.dylib
 
-**2. Test the installation (VRPN itself and its vrpn.so python module)**
+**2. Test the installation (VRPN itself and its shared object python module)**
 
 * Test the installation with the binaries you just compiled, using the pair ``vrpn_print_devices`` and ``vrpn_server`` (see `VRPN Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started#compiling>`__ for more details).
 
