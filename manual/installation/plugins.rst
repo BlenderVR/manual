@@ -66,7 +66,7 @@ See VRPN `Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started>`__
 
 * Test the installation with the binaries you just compiled, using the pair ``vrpn_print_devices`` and ``vrpn_server`` (see `VRPN Getting Started <https://github.com/vrpn/vrpn/wiki/Getting-Started#compiling>`__ for more details).
 
-* Test the compilation of the ``vrpn.so``module: launch python3 and type:
+* Test the compilation of the ``vrpn.so`` (Unix) ``vrpn.pyd`` (Windows) module: launch python3 and type:
 
 .. code-block:: python
 

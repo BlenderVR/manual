@@ -42,3 +42,12 @@ Error: Python permission denied
 **PermissionError: [Errno 13] Permission denied: 'path-to-blender-folder/python/lib/python3.4/encodings/__init__.py'**
 
 Check execution permissions on python files (path-to-blender-folder/python and path-to-blender-folder/scripts (chmod).
+
+Error: Using VRPN library crashes Blenderpayer
+----------------------------------------------
+
+**No log, the Blenderplayer simply crashes every time BlenderVR starts**
+
+Try to compile Blender setting the ``WITH_PYTHON_FRAMEWORK`` option to ``ON`.
+
+
