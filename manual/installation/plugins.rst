@@ -105,19 +105,18 @@ Oculus Rift DK2
 ---------------
 
 This section guides you through the installation required to run the `Oculus Rift DK2 <http://oculus.com/>`__ with BlenderVR.
-The install procedure involves:
+The install procedure involves to:
 
-* install the oculus rift dk2 runtime
-* modify BlenderVR configuration file for dk2 support
-
-Download and install the `Oculus Runtime <https://developer.oculus.com/downloads/>`_ for your architecture.
+* Make sure you followed the instructions to `add the Oculus Python Library to BlenderVR sources <installation-manual.html#acquiring-blendervr>`__
+* Install and test the `Oculus Runtime <https://developer.oculus.com/downloads/>`_ for your architecture.
 
 .. note ::
 
   OSX: check on the web to setup your screen configuration for the rift (mirrored display, 90 rotation, etc.). For example: [`here <http://www.reddit.com/r/oculus/comments/2dbxve/041_with_dk2_on_a_mac_incompatible_resolution/>`__]
 
+* Modify BlenderVR configuration file for dk2 support:
 
 Modify your `configuration file <../components/configuration-file.html>`_ to add the plugin users.
 Check the Oculus configuration examples for `Desktop Oculus DK2 <../components/configuration-file.html#desktop-oculus-dk2>`_ and `Dual Oculus DK2 <../components/configuration-file.html#dual-oculus-dk2>`_ setups.
 
-Once done, launch the ``basic-dk2.blend`` scene in ``$INSTALL_DIR/samples/plugin/hmd/``.
+Once done, launch the ``basic-dk2.blend`` scene in ``$INSTALL_DIR/samples/plugin/hmd/`` to check installation.
