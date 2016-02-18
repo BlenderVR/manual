@@ -5,13 +5,17 @@ Oculus Rift DK2
 Setup with one Oculus Rift, without networking
 ----------------------------------------------
 
+See the `Install Plugin Oculus Section <../installation/plugins.html#oculus-rift-dk2>`_ for installation notes.
+
+
 Basic setup
 ~~~~~~~~~~~
+
 .. note ::
 
   Currently, Blender VR does not support direct mode for the Oculus Rift. To run Oculus Rift with Blender VR, use extended mode (Tools, Rift Display Mode, Extend the HMD to Desktop, Apply in the Windows Oculus Rift Config Utilty).
 
-Select main_dk2.xml as a configuration file in BlenderVR and select, for example, the oculus_dk2.blend in samples/advanced/oculus-rift-dk2.
+Select main_dk2.xml as a basic configuration file in BlenderVR, making sure you understand what's new there by taking a look at the `Oculus configuration file section <./configuration-file.html#desktop-oculus-dk2>`_ and select, for example, the basic-dk2.blend in the ``samples/plugin/hmd`` folder.
 
 
 Additional info relevant for Linux environments

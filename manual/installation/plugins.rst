@@ -108,7 +108,7 @@ This section guides you through the installation required to run the `Oculus Rif
 The install procedure involves to:
 
 * Make sure you followed the instructions to `add the Oculus Python Library to BlenderVR sources <installation-manual.html#acquiring-blendervr>`__
-* Install and test the `Oculus Runtime <https://developer.oculus.com/downloads/>`_ for your architecture.
+* Install and test the `Oculus Runtime <https://developer.oculus.com/downloads/>`_ for your architecture: version 0.6 on Windows (to support Extended mode) and 0.5 on Linux/OSX (last version available on these architectures).
 
 .. note ::
 

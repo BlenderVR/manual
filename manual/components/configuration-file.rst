@@ -447,21 +447,30 @@ Also, don't understimate the console screens, they are great for debugging.
 
 Desktop Oculus DK2
 ------------------
-.. note::
 
-  In order to use the Oculus DK2 you need to run a server separately.
-  More on the `sample files <https://github.com/BlenderVR/samples/tree/master/advanced/oculus-rift-dk2>`__
-
-
-This configuration has three screens - the main one to be used for deployment, and two others used for debugging and testing:
+This configuration is composed of three screens: the main one to be used for deployment, and two others used for debugging and testing:
 
   1. **Oculus DK2 Fullscreen**: plays the ``.blend`` file in fullscreen in Oculus DK2 mode.
   2. **Oculus DK2 Debug**: plays the ``.blend`` file in a small window in Oculus DK2 mode.
   3. **Console**: plays the ``.blend`` file in a small window in the computer.
 
-Besides that we now define the Oculus DK2 plugin user.
+Besides that, the configuration file example below now defines the Oculus DK2 plugin:
+
+.. code:: xml
+
+    <oculus_dk2>
+      <user viewer='user A' computer='Any' processor_method="user_position" />
+    </oculus_dk2>
+
+
+with parameters such as ``viewer`` (which user is concerned) or ``processor_method`` (optional callback that processes oculus tracking data in the processor file, see `sample files <https://github.com/BlenderVR/samples/tree/master/plugin/hmd>`__ for example implementations).
 
 A computer can control only a single Oculus, for a multiple Oculus installation you need networked computers as explained in the `Dual Oculus DK2`_ example.
+
+.. note::
+
+  If you experience a "non full-screen" with the ``fullscreen`` configuration proposed above, or can't drag the blenderplayer window to the Oculus screen, try to replace ``<display options="-f -s sidebyside">`` with ``<display options="-w 1920 1080 0 0 -s sidebyside">``.
+  If it works, try changing the two last values (0 0) - corresponding to blenderplayer window left/top coordinate - to values that will position the blenderplayer window on the Oculus screen at BlenderVR start.
 
 
 .. code:: xml
@@ -552,6 +561,7 @@ A computer can control only a single Oculus, for a multiple Oculus installation 
 
       </plugins>
     </blendervr>
+
 
 Dual Oculus DK2
 ---------------
