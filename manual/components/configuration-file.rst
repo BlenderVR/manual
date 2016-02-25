@@ -472,6 +472,9 @@ A computer can control only a single Oculus, for a multiple Oculus installation 
   If you experience a "non full-screen" with the ``fullscreen`` configuration proposed above, or can't drag the blenderplayer window to the Oculus screen, try to replace ``<display options="-f -s sidebyside">`` with ``<display options="-w 1920 1080 0 0 -s sidebyside">``.
   If it works, try changing the two last values (0 0) - corresponding to blenderplayer window left/top coordinate - to values that will position the blenderplayer window on the Oculus screen at BlenderVR start.
 
+.. note::
+
+  On Windows, the shortcut ``Shift + Windows + Left/Right`` enables you to switch the monitor on which is displayed the current window (even a fullscreen one).
 
 .. code:: xml
 
