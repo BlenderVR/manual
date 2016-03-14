@@ -25,8 +25,8 @@ Windows 7 (64bits)
 
 Download executable:
 
-* `BlenderVR Win7 64bits WebInstall <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/BlenderVR_setup_Win64_Webinstall.exe>`_
-* `BlenderVR Win7 64bits Standalone <ftp://blendervrdownloads:blendervr@echange.limsi.fr/BlenderVR_W7_Installer/BlenderVR_setup_Win64.exe>`_
+* `BlenderVR Win7 64bits WebInstall <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/BlenderVR_W7_Installer/BlenderVR_setup_Win64_Webinstall.exe>`_
+* `BlenderVR Win7 64bits Standalone <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/BlenderVR_W7_Installer/BlenderVR_setup_Win64.exe>`_
 
 
 .. warning ::
