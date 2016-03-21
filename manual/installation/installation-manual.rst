@@ -56,11 +56,11 @@ Acquiring Blender
 BlenderVR requires `Blender 2.75 <http://www.blender.org/download>`_ or newer.
 Optionally you can use a patched version of Blender 2.74 available here for all the supported platforms.
 
-* `Mac OSX 64 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@echange.limsi.fr/compiled/blender-2.74-a8adeeb-OSX-10.6-x86_64.zip>`_. [1]_
-* `Windows 32 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@echange.limsi.fr/compiled/blender-2.74-a8adeeb-win32.zip>`_. [2]_
-* `Windows 64 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@echange.limsi.fr/compiled/blender-2.74-a8adeeb-win64.zip>`_. [2]_
-* `Linux 32 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@echange.limsi.fr/compiled/blender-2.74-a8adeeb-linux-glibc211-i686.tar.bz2>`_. [3]_
-* `Linux 64 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@echange.limsi.fr/compiled/blender-2.74-a8adeeb-linux-glibc211-x86_64.tar.bz2>`_. [3]_
+* `Mac OSX 64 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/compiled/blender-2.74-a8adeeb-OSX-10.6-x86_64.zip>`_. [1]_
+* `Windows 32 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/compiled/blender-2.74-a8adeeb-win32.zip>`_. [2]_
+* `Windows 64 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/compiled/blender-2.74-a8adeeb-win64.zip>`_. [2]_
+* `Linux 32 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/compiled/blender-2.74-a8adeeb-linux-glibc211-i686.tar.bz2>`_. [3]_
+* `Linux 64 bit: Blender 2.74 Patched <ftp://blendervrdownloads:blendervr@ftp.limsi.fr/compiled/blender-2.74-a8adeeb-linux-glibc211-x86_64.tar.bz2>`_. [3]_
 
 .. [1] Requires Mac OSX 10.6+
 .. [2] Compatible with Windows 8, 7, Vista. If Blender reports an error on startup, please install the `Visual C++ 2013 Redistributable Package <http://www.microsoft.com/en-us/download/details.aspx?id=40784>`_.
