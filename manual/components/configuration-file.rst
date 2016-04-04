@@ -7,6 +7,9 @@ The BlenderVR XML configuration file is loaded by the console to get the archite
 .. note::
   For a comprehensive overview of the file specification access its `architecture documentation <../architecture/configuration-file.html>`__.
 
+.. note::
+  Example configuration files can be found in the ``$INSTALL_DIR/source/configurations`` directory.
+
 Document Sections
 -----------------
   * `Operating System Disclaimer`_
