@@ -125,7 +125,11 @@ On OSX/Linux:
   $ pyvenv venv
   $ source venv/bin/activate
   $ pip3 install -r source/requirements.txt
-  $ pyside_postinstall.py -install
+
+If installation prints dont show Executing post install script '/…/bin/pyside_postinstall.py' 
+(it is normally done after pyside build), then you have to do it manually:
+
+  $ python ./venv/bin/pyside_postinstall.py -install
 
 .. note::
   MacOS: running these lines may popup window "download the command line developer tools", go for it.
