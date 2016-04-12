@@ -69,7 +69,7 @@ Optionally you can use a patched version of Blender 2.74 available here for all 
 Acquiring BlenderVR
 -------------------
 
-* `BlenderVR Sources <https://github.com/BlenderVR/source/archive/v1.0.zip>`__ (download and unzip in the top folder, rename it **source**)
+* `BlenderVR Sources <https://github.com/BlenderVR/source/archive/master.zip>`__ (download and unzip in the top folder, rename it **source**)
 * `Oculus Library <https://github.com/BlenderVR/python-ovrsdk/archive/v1.0.zip>`__ (download and unzip it inside the **source/libs** folder, rename it **python-ovrsdk**)
 
 Download Samples Scenes
